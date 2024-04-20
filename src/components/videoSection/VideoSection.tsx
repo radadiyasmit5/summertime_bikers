@@ -7,7 +7,7 @@ import './videosection.scss'
 import Typewriter from 'typewriter-effect'
 const VideoSection = () => {
 
-    const videoRef = useRef(null)
+    const videoRef = useRef<HTMLInputElement | null>(null)
     useEffect(() => {
         setTimeout(() => {
             videoRef.current.className = "hero-video hero-video-visible"
