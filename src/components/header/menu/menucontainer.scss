@@ -1,0 +1,8 @@
+@import "../../utils/scss/variables.scss";
+
+@media #{$media-mobile-480-670} {
+  .MuiPaper-root {
+    position: absolute;
+    top: -200px;
+  }
+}

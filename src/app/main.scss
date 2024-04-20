@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  // background-color: black;
+}
+// video::-webkit-media-controls {
+//   display: none !important;
+// }
+// body {
+//   background-color: #181818;
+// }
