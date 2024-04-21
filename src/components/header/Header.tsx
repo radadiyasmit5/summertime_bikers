@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import React, { useContext } from "react"
 import "./header.scss"
-import summertime_bikers_logo_2_no_bg from '../../../public/summertime_bikers_logo_2_no_bg.png'
+import summertime_bikers_logo_3_no_bg from '../../../public/summertime_bikers_logo_3_no_bg.png'
 import Image from 'next/image'
 import SociealBar from './socielBar/SocielBar'
 import MenuIcon from '@mui/icons-material/Menu';
@@ -42,7 +42,7 @@ const Header = () => {
 
                     {/* <div style={{ width: "10%" }} className="header-logo-div"> */}
                     <span>
-                        <Image className="logo-img" src={summertime_bikers_logo_2_no_bg} alt="nothing" />
+                        <Image className="logo-img" src={summertime_bikers_logo_3_no_bg} alt="nothing" />
                     </span>
                     {/* </div> */}
                     <ul className="Nav-links">
@@ -57,7 +57,7 @@ const Header = () => {
                         </li>
                         <li>
                             <Link
-                                href="/about"
+                                href="about"
                                 className="nav-link-item"
                             // onClick={() => handleSectionchange(experienceRef)}
                             >
@@ -66,7 +66,7 @@ const Header = () => {
                         </li>
                         <li>
                             <Link
-                                href="/skills"
+                                href="pricing"
                                 className="nav-link-item"
                             // onClick={() => handleSectionchange(technologiesRef)}
                             >
@@ -75,8 +75,9 @@ const Header = () => {
                         </li>
                         <li>
                             <Link
-                                href="#"
+                                href="contactus"
                                 className="nav-link-item"
+                                as={'contactus'}
                             // onClick={() => handleSectionchange(contactRef)}
                             >
                                 Contact us

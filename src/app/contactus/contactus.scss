@@ -1,0 +1,49 @@
+@import "../../components/utils/scss/variables.scss";
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 69px;
+  height: 270vh;
+  background-color: rgb(255, 255, 255);
+  filter: invert(1);
+}
+
+.form-inner-container {
+  height: 100%;
+  min-width: 100%;
+  filter: hue-rotate(189.73deg) saturate(18.61%) brightness(96.86%);
+}
+
+.Header {
+  background-color: black;
+}
+
+// @media #{$media-desktop-min-1200} {
+
+// }
+
+// @media #{$media-desktop-1000-1200} {
+
+// }
+
+// @media #{$media-tablet-768-1000} {
+
+// }
+
+// @media #{$media-tablet-670-768} {
+
+// }
+
+@media #{$media-mobile-480-670} {
+  .form-container {
+    height: 350vh;
+  }
+}
+@media #{$media-mobile-480} {
+  .form-container {
+    height: 360vh;
+  }
+}

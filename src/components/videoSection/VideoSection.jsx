@@ -1,11 +1,15 @@
 "use client"
-
 import React, {useEffect, useRef} from "react"
 import TypeWriter from "../typeWriter/TypeWriter"
 // import video from './bikevideo1.mp4'
 import "./videosection.scss"
 import Typewriter from "typewriter-effect"
 import bikevideo2 from "../../../public/bikevideo2.mp4"
+// import summertime_bikers_logo_2_no_bg from "../../../public/summertime_bikers_logo_2_no_bg.png"
+import bullet_bike from '../../../public/bullet_bike.jpg'
+import harley1 from '../../../public/harley1.jpg'
+import Image from 'next/image'
+
 const VideoSection = () => {
   const videoRef = useRef(null)
   useEffect(() => {
@@ -22,16 +26,19 @@ const VideoSection = () => {
           autoPlay={true}
           muted
           loop
+        //   playsinline
           className="hero-video"
           ref={videoRef}
           controls={false}
+          preload="auto"
+          poster={harley1.src}
         >
           <source
             type="video/mp4"
-            //  src='_next/static/media/bikevideo2.mp4'
             src={bikevideo2}
-            // src={"../../../public/bikevideo2.mp4"}
+            
           />
+        {/* <Image  src={bullet_bike} alt="nothing"/> */}
           your browser does not support video
         </video>
       </div>

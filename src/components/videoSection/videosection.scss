@@ -1,8 +1,9 @@
+@import "../utils/scss/variables.scss";
 .hero-video {
   width: 100%;
-  //   height: calc(100vh - 269px);
   object-fit: cover;
   height: 100vh;
+  //   height: calc(100vh - 269px);
   // uncomment for transition effect
   // height: 0px;
   // transition: height 4s ease-in-out;
@@ -22,15 +23,6 @@
   // background-color:rgba(0, 0, 0, 0.5);
 }
 
-.content {
-  // background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  // width: 50%;
-  padding: 20px;
-  font-size: 4rem;
-  margin-top: 100px;
-}
-
 .video-mask {
   position: fixed;
   bottom: 0;
@@ -41,8 +33,61 @@
   height: 100vh;
 }
 
-// .dummy-filler-div {
-//   height: calc(100vh - 269px);
-//   width: 100%;
-//   background-color: black;
+.content {
+  // background: rgba(0, 0, 0, 0.5);
+  // width: 50%;
+  color: #f1f1f1;
+  padding: 20px;
+  font-size: 4rem;
+  margin-top: 200px;
+}
+
+@media #{$media-desktop-min-1200} {
+}
+
+@media #{$media-desktop-1000-1200} {
+}
+
+@media #{$media-tablet-768-1000} {
+}
+
+@media #{$media-tablet-670-768} {
+}
+
+@media #{$media-mobile-480-670} {
+  .content {
+    padding: 20px;
+    font-size: 2.5rem;
+    margin-top: 180px;
+  }
+}
+@media #{$media-mobile-480} {
+  .content {
+    padding: 20px;
+    font-size: 2.5rem;
+    margin-top: 180px;
+  }
+}
+
+// @media #{$media-desktop-min-1200} {
+
+// }
+
+// @media #{$media-desktop-1000-1200} {
+
+// }
+
+// @media #{$media-tablet-768-1000} {
+
+// }
+
+// @media #{$media-tablet-670-768} {
+
+// }
+
+// @media #{$media-mobile-480-670} {
+
+// }
+// @media #{$media-mobile-480} {
+
 // }
