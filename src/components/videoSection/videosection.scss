@@ -1,4 +1,15 @@
 @import "../utils/scss/variables.scss";
+.video-mask {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
 .hero-video {
   width: 100%;
   object-fit: cover;
@@ -17,20 +28,10 @@
 }
 
 .video-container {
-  position: fixed;
-  width: 100vw;
+  // position: fixed;
+  width: 100%;
   z-index: -100;
   // background-color:rgba(0, 0, 0, 0.5);
-}
-
-.video-mask {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100vh;
 }
 
 .content {
@@ -39,7 +40,7 @@
   color: #f1f1f1;
   padding: 20px;
   font-size: 4rem;
-  margin-top: 200px;
+  // margin-top: 0px;
 }
 
 @media #{$media-desktop-min-1200} {
@@ -67,6 +68,12 @@
     font-size: 2.5rem;
     margin-top: 180px;
   }
+}
+
+
+.link-wrapper-container{
+  opacity: 0.9;
+  
 }
 
 // @media #{$media-desktop-min-1200} {

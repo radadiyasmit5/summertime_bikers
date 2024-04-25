@@ -1,4 +1,4 @@
-"use client"
+'use client';
 // import { Link, Outlet } from "react-router-dom"
 import Link from 'next/link'
 import React, { useContext } from "react"
@@ -10,6 +10,9 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Button from '@mui/material/Button';
+import { useRouter } from 'next/navigation';
+import { SectionContext } from '../context/SectionScrollContext';
+import DP_logo_final from '../../../public/DP_logo_final.png'
 
 // import { SectionContext } from "../../context/SectionScrollContext"
 // import { Mentions, Menu } from "antd"
@@ -17,14 +20,17 @@ import Button from '@mui/material/Button';
 // import SociealBar from "./socialBar/SociealBar"
 
 const Header = () => {
-    // const {
-    //     handleSectionchange,
-    //     heroRef,
-    //     experienceRef,
-    //     technologiesRef,
-    //     headerRef,
-    //     contactRef,
-    // } = useContext(SectionContext)
+    const router = useRouter()
+    const {
+        handleSectionchange,
+        moreInfoRef,
+        experienceRef,
+        technologiesRef,
+        headerRef,
+        contactRef,
+    } = useContext(SectionContext)
+
+
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -33,19 +39,24 @@ const Header = () => {
     const handleClose = () => {
         setAnchorEl(null);
     };
+
+    const onLogoClick = () => {
+        router.push('/')
+    }
     return (
         <>
             <header className="Header"
-            // ref={headerRef}
+                // ref={headerRef}
+                ref={headerRef}
             >
                 <nav className="Navbar">
 
                     {/* <div style={{ width: "10%" }} className="header-logo-div"> */}
-                    <span>
-                        <Image className="logo-img" src={summertime_bikers_logo_3_no_bg} alt="nothing" />
+                    <span className='flex-1'>
+                        <Image className="logo-img" src={summertime_bikers_logo_3_no_bg} alt="nothing" onClick={onLogoClick} />
                     </span>
                     {/* </div> */}
-                    <ul className="Nav-links">
+                    <ul className="Nav-links flex-2">
                         <li>
                             <Link
                                 href="/"
@@ -84,7 +95,7 @@ const Header = () => {
                             </Link>
                         </li>
                     </ul>
-                    <div className="social-bar-container">
+                    <div className="social-bar-container flex-3">
                         <SociealBar />
                     </div>
                     <div className='menu-container'>

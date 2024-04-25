@@ -5,7 +5,7 @@
 }
 
 .Header {
-  // background-color: rgb(0, 0, 0, 0.6);
+  background-color: rgb(0, 0, 0);
   padding: 0 0;
   // font-family: "Nunito", sans-serif;
   font-optical-sizing: auto;
@@ -16,9 +16,19 @@
   top: 0;
   width: 100%;
   z-index: 1000;
+  cursor: pointer;
   /* border: 2px solid red; */
 }
 
+.flex-1{
+  flex: 1;
+}
+.flex-2{
+  flex: 1;
+}
+.flex-3{
+  flex: 0.5;
+}
 .Navbar {
   width: 100%;
   display: flex;
@@ -48,7 +58,7 @@
 .Nav-links a {
   text-decoration: none;
   color: var(--main-txt-color);
-  font-size: 18px;
+  font-size: 1.3rem;
   padding: 0px 20px;
 }
 
@@ -57,7 +67,7 @@
 }
 
 .nav-link-item {
-  font-size: 1.3rem !important;
+  font-size: 1.5rem;
 }
 .menuOutlinedcontainer {
   display: none;
@@ -134,19 +144,25 @@
   .menu-container {
     display: none;
   }
+  .Nav-links a {
+    text-decoration: none;
+    color: var(--main-txt-color);
+    font-size: 1.2rem;
+    padding: 0px 20px;
+  }
   .social-bar-container {
-    min-width: 400px !important;
-    margin-right: 20px;
+    // min-width: 400px !important;
+    // margin-right: 20px;
     // background-color: wheat;
   }
 }
 
 @media #{$media-desktop-1000-1200} {
   .social-bar-container {
-    min-width: 150px !important;
+    // min-width: 150px !important;
   }
   .Nav-links a {
-    font-size: 18px !important;
+    font-size: 1rem !important;
     padding: 0px 10px;
   }
   .logo-img {
@@ -163,8 +179,9 @@
 
 @media #{$media-tablet-768-1000} {
   .Nav-links {
-    max-width: 250px;
-    margin-right: 80px;
+    // max-width: 250px;
+    // margin-right: 80px;
+    min-width: 400px;
   }
   .Nav-links a {
     font-size: 17px !important;
@@ -189,11 +206,13 @@
 
 @media #{$media-tablet-670-768} {
   .Nav-links {
-    max-width: 100px;
-    margin-right: 170px;
+    // max-width: 100px;
+    // margin-right: 170px;
+    min-width: 350px;
+
   }
   .Nav-links a {
-    font-size: 16px !important;
+    font-size: 0.89rem !important;
     padding: 0px 6px;
     margin: 0 0 0 10px;
   }

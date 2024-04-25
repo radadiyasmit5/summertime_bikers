@@ -1,14 +1,16 @@
 "use client"
-import React, {useEffect, useRef} from "react"
+import React, {useContext, useEffect, useRef} from "react"
 import TypeWriter from "../typeWriter/TypeWriter"
 // import video from './bikevideo1.mp4'
 import "./videosection.scss"
 import Typewriter from "typewriter-effect"
 import bikevideo2 from "../../../public/bikevideo2.mp4"
 // import summertime_bikers_logo_2_no_bg from "../../../public/summertime_bikers_logo_2_no_bg.png"
-import bullet_bike from '../../../public/bullet_bike.jpg'
-import harley1 from '../../../public/harley1.jpg'
-import Image from 'next/image'
+import bullet_bike from "../../../public/bullet_bike.jpg"
+import harley1 from "../../../public/harley1.jpg"
+import Image from "next/image"
+import LinksWrapper from "../utils/LinkWrapper/LinksWrapper"
+import {SectionContext} from "../context/SectionScrollContext"
 
 const VideoSection = () => {
   const videoRef = useRef(null)
@@ -17,7 +19,14 @@ const VideoSection = () => {
       videoRef.current.className = "hero-video hero-video-visible"
     }, 500)
   }, [])
-
+  const {
+    handleSectionchange,
+    moreInfoRef,
+    experienceRef,
+    technologiesRef,
+    headerRef,
+    contactRef,
+  } = useContext(SectionContext)
   return (
     <>
       {/* <div className='dummy-filler-div'></div> */}
@@ -26,19 +35,15 @@ const VideoSection = () => {
           autoPlay={true}
           muted
           loop
-        //   playsinline
+          //   playsinline
           className="hero-video"
           ref={videoRef}
           controls={false}
           preload="auto"
           poster={harley1.src}
         >
-          <source
-            type="video/mp4"
-            src={bikevideo2}
-            
-          />
-        {/* <Image  src={bullet_bike} alt="nothing"/> */}
+          <source type="video/mp4" src={bikevideo2} />
+          <Image src={harley1.src} alt="nothing" width={100} height={100}/>
           your browser does not support video
         </video>
       </div>
@@ -48,13 +53,22 @@ const VideoSection = () => {
             options={{
               strings: [
                 "Get Riding This Season!",
-                "Don't get behind the Wheels, GET ON THE WHEELS!",
+                "Not Behind the Wheel, GET ON THE WHEELS!",
+                "Live full Throttle",
+                "Every Motorcycle Ride is a Tiny Vacation",
+                "When Life Takes a Curve, Lean On It",
               ],
               delay: 90,
               autoStart: true,
               loop: true,
             }}
           />
+        </div>
+        <div
+          className="link-wrapper-container text-white"
+          onClick={() => handleSectionchange(moreInfoRef)}
+        >
+          <LinksWrapper />
         </div>
       </div>
     </>
