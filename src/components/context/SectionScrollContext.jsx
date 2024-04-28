@@ -4,16 +4,13 @@ import React, {createContext, useRef} from "react"
 export const SectionContext = createContext(null)
 export const SectionScrollContext = ({children}) => {
   const handleSectionchange = (elementRef) => {
-    console.log()
     window.scrollTo({
-      top: elementRef.current.offsetTop 
-      // - headerRef?.current?.offsetHeight
-      ,
+      top: elementRef.current.offsetTop - headerRef?.current?.offsetHeight,
       behavior: "smooth",
     })
   }
   const moreInfoRef = useRef(null)
-  const experienceRef = useRef(null)
+  const footerRef = useRef(null)
   const technologiesRef = useRef(null)
   const headerRef = useRef(null)
   const contactRef = useRef(null)
@@ -22,7 +19,7 @@ export const SectionScrollContext = ({children}) => {
       value={{
         handleSectionchange,
         moreInfoRef,
-        experienceRef,
+        footerRef,
         technologiesRef,
         headerRef,
         contactRef,

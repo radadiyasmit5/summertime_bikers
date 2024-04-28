@@ -1,7 +1,7 @@
 
 import Header from '@/components/header/Header'
 import React from 'react'
-import './contactus.scss'
+import './callbackGform.scss'
 const page = () => {
     return (<>
         <div className='form-outer-container'>

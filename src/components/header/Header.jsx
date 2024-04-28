@@ -24,7 +24,7 @@ const Header = () => {
   const {
     handleSectionchange,
     moreInfoRef,
-    experienceRef,
+    footerRef,
     technologiesRef,
     headerRef,
     contactRef,
@@ -90,10 +90,10 @@ const Header = () => {
             </li>
             <li>
               <Link
-                href="contactus"
+                href="#"
                 className="nav-link-item"
-                as={"contactus"}
-                // onClick={() => handleSectionchange(contactRef)}
+                // as={"contactus"}
+                onClick={() => handleSectionchange(footerRef)}
               >
                 Contact us
               </Link>

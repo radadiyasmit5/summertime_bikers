@@ -11,6 +11,7 @@ import harley1 from "../../../public/harley1.jpg"
 import Image from "next/image"
 import LinksWrapper from "../utils/LinkWrapper/LinksWrapper"
 import {SectionContext} from "../context/SectionScrollContext"
+import StickyGformbtn from "../buttons/StickyGformbtn"
 
 const VideoSection = () => {
   const videoRef = useRef(null)
@@ -40,12 +41,22 @@ const VideoSection = () => {
           ref={videoRef}
           controls={false}
           preload="auto"
-          poster={harley1.src}
+          // poster={harley1.src}
         >
           <source type="video/mp4" src={bikevideo2} />
-          <Image src={harley1.src} alt="nothing" width={100} height={100}/>
+          {/* <Image src={harley1.src} alt="nothing" width={100} height={100} /> */}
           your browser does not support video
         </video>
+      </div>
+      <div className="img-container">
+        <Image
+          className="hero-img"
+          ref={videoRef}
+          src={harley1.src}
+          alt="nothing"
+          width={100}
+          height={100}
+        />
       </div>
       <div className="video-mask">
         <div className="content text-white-900 h-1 font-bold">

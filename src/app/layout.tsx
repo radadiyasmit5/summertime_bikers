@@ -16,6 +16,7 @@ export default function RootLayout({
       <body>
         <SectionScrollContext>
           {children}
+          
         </SectionScrollContext>
       </body>
     </html>
