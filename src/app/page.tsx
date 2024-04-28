@@ -7,7 +7,6 @@ import React from 'react'
 import './main.scss'
 import MoreInfoHomePage from '../components/pages/MoreInfoHomePage'
 import MoreInfoSection from '../components/pages/MoreInfoSection'
-import SpecialOffer from '../components/pages/SpecialOffer'
 import StickyGformbtn from '../components/buttons/StickyGformbtn'
 import Footer from '@/components/footer/Footer'
 const page = () => {
