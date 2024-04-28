@@ -13,15 +13,10 @@ const page = () => {
   return (
     <>
       <Header />
-      {/* <TypeWriter /> */}
       <VideoSection />
-      {/* <MoreInfoHomePage /> */}
       <MoreInfoSection />
-      {/* <Footer /> */}
+      <Footer />
       <StickyGformbtn />
-
-      {/* <SpecialOffer /> */}
-
     </>
   )
 }
