@@ -54,7 +54,7 @@
             cursor: pointer;
             background-color: white;
             margin: 1rem;
-            padding: 1rem;
+            padding: 0.5rem;
             border-radius: 2rem;
             .social-icons {
               font-size: 2rem;
@@ -62,12 +62,15 @@
           }
         }
       }
+      .inquiry-btn {
+        height: 20px;
+      }
       .footer-flext-1-child-2 {
         .footer-credits-container {
           display: flex;
           flex-direction: column;
           font-family: "Montserrat", sans-serif;
-          p{
+          p {
             letter-spacing: 0.2rem;
           }
         }

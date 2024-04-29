@@ -8,6 +8,7 @@ import Image from "../../../node_modules/next/image"
 import {Instagram} from "@mui/icons-material"
 import FacebookIcon from "@mui/icons-material/Facebook"
 import SociealBar from "../header/socielBar/SocielBar"
+import Button from '../Button'
 const Footer = () => {
   const {footerRef} = useContext(SectionContext)
 
@@ -31,6 +32,9 @@ const Footer = () => {
             </iframe>
           </div>
         </div>
+        <div>
+      
+        </div>
         <div className="footer-flex-2 pt-14">
           <div className="footer-flext-1-child-1">
             <Image
@@ -39,7 +43,6 @@ const Footer = () => {
               alt="nothing"
               // onClick={onLogoClick}
             />
-
             <ul className="social-item-container">
               <li className="social-item">
                 <FacebookIcon className="social-icons" />
@@ -50,6 +53,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+          <button className="text inquiry-btn">Submit a Personalised Inquiry</button>
+
           <div className="footer-flext-1-child-2">
             <div className="footer-credits-container">
               <h2 className="text text-white text-2xl ">Get In Touch</h2>

@@ -33,7 +33,12 @@
       height: "100%";
       position: "relative";
       flex: 1;
+      .ant-card:hover{
+        border: 2px solid blue;
+      }
       .card {
+        border-radius: 1rem;
+        border: 2p solid blue !important;
         // min-width: 240px;
         height: 300px;
         display: flex;

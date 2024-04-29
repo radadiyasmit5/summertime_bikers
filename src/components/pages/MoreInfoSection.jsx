@@ -9,14 +9,13 @@ import "./moreinfoHomePage.scss"
 import {useRouter} from "next/navigation"
 const MoreInfoSection = () => {
   const {moreInfoRef} = useContext(SectionContext)
-  const router = useRouter();
+  const router = useRouter()
 
   const navigateToInfoPage = (option) => {
-    if (option ==='withoutLicence') {
-      router.push('/withoutLicence')
-    }
-    else{
-      router.push('/withLicence')
+    if (option === "withoutLicence") {
+      router.push("/withoutLicence")
+    } else {
+      router.push("/withLicence")
     }
   }
   return (
@@ -69,8 +68,8 @@ const MoreInfoSection = () => {
                   You Don’t have a regular Driver&#39;s Licence
                 </div>
                 <p className="text p-3 font-palanquin text-justify info-text ">
-                  You do not have a Valid Class 7 Licence or You Do not have a
-                  Licence From any Other Countries
+                  You don't have a Valid Class 7 Licence or You don't have a
+                  Licence From any Other Country
                 </p>
                 <div className="text text-center text-2xl eyeIcon-Wrapper">
                   <VisibilityIcon className="eyeIcon" />

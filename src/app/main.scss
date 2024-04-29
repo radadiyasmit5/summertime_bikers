@@ -1,10 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif !important;
+
   // overflow-x: hidden;
   // background-color: black;
 }
@@ -15,48 +18,47 @@
 //   background-color: #181818;
 // }
 
-
 @layer components {
   .max-container {
-      max-width: 1440px;
-      margin: 0 auto;
+    max-width: 1440px;
+    margin: 0 auto;
   }
 
   .input {
-      @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
+    @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
   }
 }
 
 @layer utilities {
   .padding {
-      @apply sm:px-16 px-8 sm:py-24 py-12;
+    @apply sm:px-16 px-8 sm:py-24 py-12;
   }
 
   .padding-x {
-      @apply sm:px-16 px-8;
+    @apply sm:px-16 px-8;
   }
 
   .padding-y {
-      @apply sm:py-24 py-12;
+    @apply sm:py-24 py-12;
   }
 
   .padding-l {
-      @apply sm:pl-16 pl-8;
+    @apply sm:pl-16 pl-8;
   }
 
   .padding-r {
-      @apply sm:pr-16 pr-8;
+    @apply sm:pr-16 pr-8;
   }
 
   .padding-t {
-      @apply sm:pt-24 pt-12;
+    @apply sm:pt-24 pt-12;
   }
 
   .padding-b {
-      @apply sm:pb-24 pb-12;
+    @apply sm:pb-24 pb-12;
   }
 
   .info-text {
-      @apply font-montserrat text-slate-gray text-lg leading-7;
+    @apply font-montserrat text-slate-gray text-lg leading-7;
   }
 }
