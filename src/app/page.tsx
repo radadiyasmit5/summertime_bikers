@@ -10,6 +10,8 @@ import MoreInfoSection from '../components/pages/MoreInfoSection'
 import StickyGformbtn from '../components/buttons/StickyGformbtn'
 import Footer from '@/components/footer/Footer'
 const page = () => {
+  console.log('jane loda');
+  
   return (
     <>
       <Header />

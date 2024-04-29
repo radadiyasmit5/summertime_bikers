@@ -64,7 +64,7 @@ const MoreInfoSection = () => {
             className="card-1 card"
             cover={
               <div className="card-cover-conatiner">
-                <div className="text text-center text-2xl my-4 font-serif">
+                <div className="text text-center text-2xl my-4">
                   You Don’t have a regular Driver&#39;s Licence
                 </div>
                 <p className="text p-3 font-palanquin text-justify info-text ">
@@ -93,7 +93,7 @@ const MoreInfoSection = () => {
             className="card-2 card"
             cover={
               <div className="card-cover-conatiner">
-                <div className="text text-center text-2xl my-4 font-serif">
+                <div className="text text-center text-2xl my-4 ">
                   You have a regular Driver&#39;s Licence
                 </div>
                 <p className="text p-3 font-palanquin text-justify info-text ">
