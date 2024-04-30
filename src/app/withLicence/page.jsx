@@ -1,17 +1,17 @@
 "use client"
 import Header from "@/components/header/Header"
-import React, {useRef} from "react"
-import {useEffect, useState} from "react"
+import {useRef as UseRef} from "react"
+import {useEffect as UseEffect, useState as UseState} from "react"
 import {Card} from "antd"
 import "./withLicence.scss"
 const page = () => {
-  const [scrollTop, setScrollTop] = useState(0)
-  const stage1 = useRef(null)
-  const stage2 = useRef(null)
-  const stage3 = useRef(null)
-  const progressbarRef = useRef(null)
+  // const [scrollTop, setScrollTop] = UseState(0)
+  const stage1 = UseRef(null)
+  const stage2 = UseRef(null)
+  const stage3 = UseRef(null)
+  const progressbarRef = UseRef(null)
 
-  const [stage, setStage] = useState(1)
+  const [stage, setStage] = UseState(1)
   const onScroll = () => {
     if (
       stage1.current.getBoundingClientRect().top -
@@ -31,7 +31,7 @@ const page = () => {
     }
    
   }
-  useEffect(() => {
+  UseEffect(() => {
     window.addEventListener("scroll", onScroll)
     return () => window.removeEventListener("scroll", onScroll)
   }, [])

@@ -35,11 +35,11 @@ const MoreInfoSection = () => {
             <span className="mt-6 lg:max-w-lg p-5 info-text-span">
               <ol className="list-disc">
                 <li className="my-2">
-                  A separate Motorcycle Driver&#39;s Licence, or.
+                  A separate Motorcycle Driver's Licence, or.
                 </li>
                 <li className="">
-                  An add-on to their regular Driver&#39;s Licence (called an
-                  &quot;endorsement&quot;) -- which lets them drive a motorcycle
+                  An add-on to their regular Driver's Licence (called an
+                  'endorsement') -- which lets them drive a motorcycle
                   as well as a regular passenger vehicle.
                 </li>
               </ol>
@@ -65,7 +65,7 @@ const MoreInfoSection = () => {
             cover={
               <div className="card-cover-conatiner">
                 <div className="text text-center text-2xl my-4">
-                  You Don’t have a regular Driver&#39;s Licence
+                  You Don’t have a regular Driver's Licence
                 </div>
                 <p className="text p-3 font-palanquin text-justify info-text ">
                   You don't have a Valid Class 7 Licence or You don't have a
@@ -94,7 +94,7 @@ const MoreInfoSection = () => {
             cover={
               <div className="card-cover-conatiner">
                 <div className="text text-center text-2xl my-4 ">
-                  You have a regular Driver&#39;s Licence
+                  You have a regular Driver's Licence
                 </div>
                 <p className="text p-3 font-palanquin text-justify info-text ">
                   You have a Valid Class 7 Licence or You Do have a Licence From

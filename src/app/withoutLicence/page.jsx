@@ -1,18 +1,18 @@
 "use client"
 import Header from "@/components/header/Header"
-import React, {useRef} from "react"
-import {useEffect, useState} from "react"
+import {useRef as UseRef} from "react"
+import {useEffect as UseEffect, useState as UseState} from "react"
 import {Card} from "antd"
 import "./withoutLicence.scss"
 const page = () => {
-  const [scrollTop, setScrollTop] = useState(0)
-  const level1 = useRef(null)
-  const level2 = useRef(null)
-  const level3 = useRef(null)
-  const headerRef = useRef(null)
-  const progressbarRef = useRef(null)
+  const [scrollTop, setScrollTop] = UseState(0)
+  const level1 = UseRef(null)
+  const level2 = UseRef(null)
+  const level3 = UseRef(null)
+  const headerRef = UseRef(null)
+  const progressbarRef = UseRef(null)
 
-  const [level, setlevel] = useState(1)
+  const [level, setlevel] = UseState(1)
   const onScroll = () => {
     // console.log(level1.current.getBoundingClientRect().top)
     if (
@@ -40,7 +40,7 @@ const page = () => {
       setlevel(3)
     }
   }
-  useEffect(() => {
+  UseEffect(() => {
     // Fires when the document view has been scrolled
     window.addEventListener("scroll", onScroll)
     // console.log(level2.current.getBoundingClientRect().top)
@@ -49,7 +49,7 @@ const page = () => {
     //
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
-  useEffect(() => {
+  UseEffect(() => {
     console.log(level)
   }, [level])
   const casualtext = "text text-lg  mt-4 italic text-gray-600"
