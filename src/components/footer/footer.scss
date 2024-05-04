@@ -23,16 +23,35 @@
       justify-content: space-around;
       padding: 5rem 0;
       flex-wrap: wrap;
-      .signup-text {
+      .typewriter-container-footer {
         font-size: 2rem;
         font-family: "Montserrat", sans-serif;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 5rem;
-        //  min-width: 400px;
+        padding: 6rem 5rem;
+        min-width: 50%;
       }
       .map-container {
+        position: relative;
+        .NS_map_img {
+          // width: 100%;
+          object-fit: contain;
+        }
+        .haifax_pin {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transition: all 1s ease-in-out;
+        }
+        .haifax_pin:hover {
+          font-size: 2rem;
+        }
+        .pin_common {
+          cursor: pointer;
+          color: rgb(0, 0, 0);
+          font-size: 1.3rem;
+        }
       }
     }
     .footer-flex-2 {

@@ -67,7 +67,7 @@ const MoreInfoSection = () => {
                 <div className="text text-center text-2xl my-4">
                   You Don’t have a regular Driver's Licence
                 </div>
-                <p className="text p-3 font-palanquin text-justify info-text ">
+                <p className="text p-3 font-palanquin text-justify info-text info-text-1">
                   You don't have a Valid Class 7 Licence or You don't have a
                   Licence From any Other Country
                 </p>
@@ -96,7 +96,7 @@ const MoreInfoSection = () => {
                 <div className="text text-center text-2xl my-4 ">
                   You have a regular Driver's Licence
                 </div>
-                <p className="text p-3 font-palanquin text-justify info-text ">
+                <p className="text p-3 font-palanquin text-justify info-text info-text-2">
                   You have a Valid Class 7 Licence or You Do have a Licence From
                   any Other Countries
                 </p>

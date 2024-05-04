@@ -52,7 +52,7 @@ const Header = () => {
         <nav className="Navbar">
           {/* <div style={{ width: "10%" }} className="header-logo-div"> */}
           <span className="flex-1">
-            <a href="https://summertime-bikers.vercel.app/">
+            <a href="/">
               <Image
                 className="logo-img"
                 src={summertime_bikers_logo_3_no_bg}

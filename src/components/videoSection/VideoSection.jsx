@@ -1,10 +1,12 @@
 "use client"
 import React, {useContext, useEffect, useRef} from "react"
-import TypeWriter from "../typeWriter/TypeWriter"
+import TypeWriterWrapper from "../typeWriter/TypeWriterWrapper"
 // import video from './bikevideo1.mp4'
 import "./videosection.scss"
 import Typewriter from "typewriter-effect"
 import bikevideo2 from "../../../public/bikevideo2.mp4"
+import bikevideo2webm from "../../../public/bikevideo2.webm"
+import bikevideo2ogv from "../../../public/bikevideo2.ogv"
 // import summertime_bikers_logo_2_no_bg from "../../../public/summertime_bikers_logo_2_no_bg.png"
 import bullet_bike from "../../../public/bullet_bike.jpg"
 import harley1 from "../../../public/harley1.jpg"
@@ -41,9 +43,11 @@ const VideoSection = () => {
           ref={videoRef}
           controls={false}
           preload="auto"
-          // poster={harley1.src}
+          poster={harley1.src}
         >
           <source type="video/mp4" src={bikevideo2} />
+          <source type="video/webm" src={bikevideo2webm} />
+          <source type="video/ogg" src={bikevideo2ogv} />
           {/* <Image src={harley1.src} alt="nothing" width={100} height={100} /> */}
           your browser does not support video
         </video>

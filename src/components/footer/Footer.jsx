@@ -8,7 +8,12 @@ import Image from "../../../node_modules/next/image"
 import {Instagram} from "@mui/icons-material"
 import FacebookIcon from "@mui/icons-material/Facebook"
 import SociealBar from "../header/socielBar/SocielBar"
-import Button from '../Button'
+import Button from "../Button"
+import nova_scotia_map from "../../../public/nova_scotia_map.png"
+import PinDropIcon from "@mui/icons-material/PinDrop"
+import {Tooltip} from "antd"
+import TypeWriterWrapper from '../typeWriter/TypeWriterWrapper'
+import Typewriter from 'typewriter-effect'
 const Footer = () => {
   const {footerRef} = useContext(SectionContext)
 
@@ -16,25 +21,35 @@ const Footer = () => {
     <section id="footer" ref={footerRef}>
       <div className="footer-main-container">
         <div className="footer-flex-1">
-          <div className="signup-text">Reach Out To Us</div>
+          <div className="typewriter-container-footer">
+          <Typewriter
+                    options={{
+                        strings: [
+                            "Get Riding This Season!",
+                            "Not Behind the Wheel, GET ON THE WHEELS!",
+                            "Live full Throttle",
+                            "Every Motorcycle Ride is a Tiny Vacation",
+                            "When Life Takes a Curve, Lean On It",
+                        ],
+                        delay: 90,
+                        autoStart: true,
+                        loop: true,
+                    }}
+                />
+          </div>
           <div className="map-container">
-            <iframe
-              // style={{}}
-              width="100%"
-              height="300"
-              frameborder="0"
-              scrolling="no"
-              marginheight="0"
-              marginwidth="0"
-              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=nova%20scotia+(summertime%20bikers)&amp;t=&amp;z=7&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
-            >
-              <a href="https://www.gps.ie/">gps devices</a>
-            </iframe>
+            <Image
+              src={nova_scotia_map.src}
+              width={700}
+              height={100}
+              className="NS_map_img"
+            />
+            <Tooltip title="halifax location" placement="top" arrow>
+              <PinDropIcon className="haifax_pin pin_common"  />
+            </Tooltip>
           </div>
         </div>
-        <div>
-      
-        </div>
+        <div></div>
         <div className="footer-flex-2 pt-14">
           <div className="footer-flext-1-child-1">
             <Image
@@ -53,13 +68,17 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <button className="text inquiry-btn">Submit a Personalised Inquiry</button>
+          <button className="text inquiry-btn">
+            Submit a Personalised Inquiry
+          </button>
 
           <div className="footer-flext-1-child-2">
             <div className="footer-credits-container">
               <h2 className="text text-white text-2xl ">Get In Touch</h2>
-              <p className='text text-white text-sm pt-10'>EmailAddress@gmail.com</p>
-              <p className='text text-white text-sm pt-10'>+1 9023456785</p>
+              <p className="text text-white text-sm pt-10">
+                EmailAddress@gmail.com
+              </p>
+              <p className="text text-white text-sm pt-10">+1 9023456785</p>
             </div>
           </div>
         </div>
