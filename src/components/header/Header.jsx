@@ -125,9 +125,34 @@ const Header = () => {
                 "aria-labelledby": "basic-button",
               }}
             >
-              <MenuItem onClick={handleClose}>Profile</MenuItem>
-              <MenuItem onClick={handleClose}>My account</MenuItem>
-              <MenuItem onClick={handleClose}>Logout</MenuItem>
+              <Link
+                href="/"
+                // className="nav-link-item"
+                // onClick={() => handleSectionchange(heroRef)}
+              >
+                <MenuItem onClick={handleClose}>Home</MenuItem>
+              </Link>
+              <Link
+                href="about"
+                // className="nav-link-item"
+                // onClick={() => handleSectionchange(heroRef)}
+              >
+                <MenuItem onClick={handleClose}>About</MenuItem>
+              </Link>
+              <Link
+                href="pricing"
+                // className="nav-link-item"
+                // onClick={() => handleSectionchange(heroRef)}
+              >
+                <MenuItem onClick={handleClose}>Pricing</MenuItem>
+              </Link>
+              <Link
+                href="#"
+                // className="nav-link-item"
+                onClick={() => handleSectionchange(footerRef)}
+              >
+                <MenuItem onClick={handleClose}>Contact us</MenuItem>
+              </Link>
             </Menu>
           </div>
         </nav>
