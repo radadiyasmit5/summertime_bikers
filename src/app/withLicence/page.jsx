@@ -15,7 +15,7 @@ const page = () => {
   const [stage, setStage] = UseState(1)
   const onScroll = () => {
     if (
-      stage1.current.getBoundingClientRect().top -
+      stage1.current?.getBoundingClientRect().top -
         69 -
         progressbarRef.current.clientHeight <=
       100
@@ -23,7 +23,7 @@ const page = () => {
       setStage(1)
     }
     if (
-      stage2.current.getBoundingClientRect().top -
+      stage2.current?.getBoundingClientRect().top -
         69 -
         progressbarRef.current.clientHeight <=
       100

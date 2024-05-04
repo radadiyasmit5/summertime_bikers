@@ -14,7 +14,7 @@ const page = () => {
   // const [levelintitalPositions, setlevelintitalPositions] = UseState(null)
   const onScroll = (e) => {
     if (
-      level1.current.getBoundingClientRect().top -
+      level1.current?.getBoundingClientRect().top -
         69 -
         progressbarRef.current.clientHeight <=
       0
@@ -22,7 +22,7 @@ const page = () => {
       setlevel(1)
     }
     if (
-      level2.current.getBoundingClientRect().top -
+      level2.current?.getBoundingClientRect().top -
         69 -
         progressbarRef.current.clientHeight <=
       100
@@ -30,7 +30,7 @@ const page = () => {
       setlevel(2)
     }
     if (
-      level3.current.getBoundingClientRect().top -
+      level3.current?.getBoundingClientRect().top -
         69 -
         progressbarRef.current.clientHeight <=
       100

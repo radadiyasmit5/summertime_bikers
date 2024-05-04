@@ -102,4 +102,11 @@
   .logo-footer {
     width: 300px !important;
   }
+  .footer-main-container {
+    .footer-flex-1 {
+      .typewriter-container-footer {
+        display: none !important;
+      }
+    }
+  }
 }
