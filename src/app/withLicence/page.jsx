@@ -18,7 +18,7 @@ const page = () => {
       stage1.current.getBoundingClientRect().top -
         69 -
         progressbarRef.current.clientHeight <=
-      0
+      100
     ) {
       setStage(1)
     }
@@ -26,7 +26,7 @@ const page = () => {
       stage2.current.getBoundingClientRect().top -
         69 -
         progressbarRef.current.clientHeight <=
-      0
+      100
     ) {
       setStage(2)
     }
