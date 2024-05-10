@@ -6,7 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif !important;
+  // font-family: "Roboto", sans-serif !important;
   // overflow-x: hidden;
   // background-color: black;
 }
@@ -58,7 +58,7 @@
     @apply sm:pb-24 pb-12;
   }
 
-  .info-text {
-    @apply font-montserrat text-slate-gray text-lg leading-7;
-  }
+  // .info-text {
+  //   @apply font-montserrat text-slate-gray text-lg leading-7;
+  // }
 }

@@ -25,7 +25,7 @@ const MoreInfoHomePage = () => {
             flexDirection: "column",
           }}
         >
-          <legend className="text dark:text-black font-bold text-4xl mt-10 ">
+          <legend className="text dark:text-black font-bold text-4xl mt-10">
             Who Needs This Licence?
           </legend>
           <span className="text text-black text-xl my-7  ">

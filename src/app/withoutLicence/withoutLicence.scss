@@ -1,23 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "../.././components/utils/scss/variables.scss";
 .main-conatiner {
-  font-family: "Montserrat", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
 }
 .progress-bar {
-  height: 10vh;
+  height: 5vh;
   width: 100%;
   position: fixed;
-  padding: 0 2rem;
+  padding: 0 1rem;
   top: 0;
   margin-top: 75px;
   background-color: white;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  // align-items: center;
   z-index: 1000;
 }
 .level-container {
-  margin-top: calc(10vh + 69px);
+  margin-top: calc(5vh + 69px);
   position: relative;
+  .level-card {
+    background-color: #f5f5f7;
+    border-radius: 22px;
+    cursor: default;
+    .level-heading {
+      font-size: 1.7rem;
+      // font-size: 40px;
+      line-height: 1.1;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+    .level-subHeading{
+      font-size: 1.45rem;
+    }
+    .level-subheading-2{
+      font-size: 1.3rem;
+      color: #86868b;
+    }
+    .stage-heading {
+      color: #86868b;
+      font-size: 21px;
+      line-height: 1.1904761905;
+      font-weight: 600;
+      letter-spacing: 0.011em;
+      margin-top: 2rem;
+    }
+    ul {
+      font-weight: 400;
+      line-height: 1.33;
+      letter-spacing: -0.01em;
+    }
+  }
   .level-1 {
     height: 100%;
     border-radius: 1rem;
@@ -38,7 +72,7 @@
 
 .level-label {
   width: 100%;
-  height: 100%;
+  height: 2rem;
   border: 2px solid #86868b;
   background-color: white;
   border-radius: 1rem;
@@ -47,10 +81,46 @@
   align-items: center;
   margin: 0.4rem;
   z-index: 1000;
+  cursor: pointer;
 }
 .active {
   background-color: rgb(231, 239, 241);
   color: rgb(74, 67, 67);
   border: 2px solid #0071e3;
   border-radius: 1rem;
+}
+
+// @media #{$media-desktop-min-1200} {
+
+// }
+
+// @media #{$media-desktop-1000-1200} {
+
+// }
+
+// @media #{$media-tablet-768-1000} {
+
+// }
+
+// @media #{$media-tablet-670-768} {
+
+// }
+
+// @media #{$media-mobile-480-670} {
+
+// }
+@media #{$media-mobile-480} {
+  .level-container {
+    .level-card {
+      .level-heading {
+        // font-size: 1.5rem;
+      }
+    }
+    .level-1 {
+    }
+    .level-2 {
+    }
+    .level-3 {
+    }
+  }
 }

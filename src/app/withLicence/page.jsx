@@ -13,7 +13,14 @@ const page = () => {
   const progressbarRef = UseRef(null)
 
   const [stage, setStage] = UseState(1)
+  const [progressBarSticky, setprogressBarSticky] = UseState(false)
   const onScroll = () => {
+    const stickyprogressBarOfset = progressbarRef.current.offsetTop
+    if (window.pageYOffset > stickyprogressBarOfset) {
+      setprogressBarSticky(true)
+    } else {
+      setprogressBarSticky(false)
+    }
     if (
       stage1.current?.getBoundingClientRect().top -
         69 -
@@ -54,22 +61,62 @@ const page = () => {
   const casualtext = "text text-lg  mt-4 italic text-gray-600"
   return (
     <>
-      <div className="main-conatiner">
+      <div className="main-conatiner-wl">
+        <div className="beofre-card-content-wl text-lg">
+          <h1 className="text pt-2 before-content-heading">
+            Having an NS drivers licence make things much easier
+          </h1>
+          <p>
+            Now you only have 2 stages to complete.To be honest you just need
+            stage 1 completed to get riding on the road. Yes, there are some
+            restrictions that are explained later.
+          </p>
+          <h1 className="py-3 font-bold letstalkmoney-heading">
+            LET’S TALK <span className="text-black">MONEY</span> FIRST !
+          </h1>
+          <span>Given that you pass everything on the first attempt,</span>
+          <span>
+            Stage 1, that is your learner&#39;s licence will cost you $15.15. In
+            stage 2, you will change your
+          </span>
+          <span>
+            licence to a full licence with a road test which will cost you $53.
+          </span>
+          <p className="text py-2">
+            So $68.15 is all you will be spending on a motorcycle licence if you
+            know someone who can come with you with a motorcycle for your tests.
+          </p>
+          <p className='text rightplace-para font-bold text-center py-3'>
+            If you don’t know anyone like that then you are at the{" "}
+            <span className='text text-black font-bold'>right place</span>. Keep reading, you will find out why !
+          </p>
+        </div>
         <div style={{postion: "relative"}}>
           <Header />
-          <div className="progress-bar" ref={progressbarRef}>
-            <div className={`${stage == 1 ? "active" : ""} stage-label`}   onClick={() => handleLevelClick(1)}>
+          <div
+            className={`progress-bar-wl ${
+              progressBarSticky ? "progressBarSticky" : ""
+            }`}
+            ref={progressbarRef}
+          >
+            <div
+              className={`${stage == 1 ? "active-wl" : ""} stage-label-wl`}
+              onClick={() => handleLevelClick(1)}
+            >
               stage 1
             </div>
-            <div className={`${stage == 2 ? "active" : ""} stage-label`}   onClick={() => handleLevelClick(2)}>
+            <div
+              className={`${stage == 2 ? "active-wl" : ""} stage-label-wl`}
+              onClick={() => handleLevelClick(2)}
+            >
               stage 2
             </div>
           </div>
         </div>
-        <div className="stage-container">
+        <div className="stage-container-wl">
           <div className={`stage-1 p-10`} ref={stage1}>
             <Card hoverable className="stage-1-card">
-              <div className="stage-1">
+              <div className="stage-1-wl">
                 <h1 className="text text-center text-2xl pt-2">
                   (LEVEL 1) LEARNER MOTORCYCLE LICENCE (CLASS LM)
                 </h1>
@@ -216,9 +263,9 @@ const page = () => {
             </Card>
           </div>
 
-          <div className={`stage-2 p-10`} ref={stage2}>
+          <div className={`stage-2-wl p-10`} ref={stage2}>
             <Card hoverable className="stage-2-card">
-              <div className="stage-2">
+              <div className="stage-2-wl">
                 <h1 className="text text-center text-2xl pt-2">
                   (LEVEL 2) NEWLY LICENSED MOTORCYCLE DRIVER&#39;S LICENCE
                   (CLASS 6N).

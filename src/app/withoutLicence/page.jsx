@@ -114,16 +114,19 @@ const page = () => {
           </div>
         </div>
         <div className="level-container">
-          <div className={`level-1 p-10`} ref={level1}>
-            <Card hoverable className="level-1-card">
+          <div className={`level-1 p-5`} ref={level1}>
+            <Card  className="level-1-card level-card">
+              <h1 className="text pt-2 level-heading text-center">(Level 1)</h1>
+              <p className="text text-center font-bold level-subHeading">
+                {" "}
+                Learner Motorcycle Licence{" "}
+              </p>
+              <p className="text text-center level-subheading-2 font-bold">
+                (class LM)
+              </p>
               <div className="stage-1">
-                <h1 className="text text-center text-2xl pt-2">
-                  (LEVEL 1) LEARNER MOTORCYCLE LICENCE (CLASS LM)
-                </h1>
                 <h5 className={`${casualtext}`}>So, it has two stages</h5>
-                <h2 className=" text-2xl capitalize lg:max-w-lg font-bold text-blue-600 mt-4">
-                  Stage 1
-                </h2>
+                <h2 className="capitalize mt-4 stage-heading">Stage 1</h2>
                 <ul className="text text-lg mt-3 ">
                   <li>
                     <span className="font-bold">
@@ -158,9 +161,7 @@ const page = () => {
                   </li>
                 </ul>
               </div>
-              <h2 className=" text-2xl capitalize lg:max-w-lg font-bold text-blue-600 mt-7">
-                Stage 2
-              </h2>
+              <h2 className=" capitalize mt-4 stage-heading">Stage 2</h2>
               <ul className="text text-lg mt-3">
                 <li>
                   <span className="font-bold">
@@ -263,13 +264,20 @@ const page = () => {
             </Card>
           </div>
 
-          <div className={`level-2 p-10`} ref={level2}>
-            <Card hoverable className="level-2-card">
+          <div className={`level-2 p-5`} ref={level2}>
+            <Card  className="level-2-card level-card">
               <div className="stage-2">
-                <h1 className="text text-center text-2xl pt-2">
-                  (LEVEL 2) NEWLY LICENSED MOTORCYCLE DRIVER&#39;S LICENCE
-                  (CLASS 6N).
+                <h1 className="text pt-2 level-heading text-center">
+                  (Level 2)
                 </h1>
+                <p className="text text-center font-bold level-subHeading">
+                  {" "}
+                  Newly Licenced Motorcycle Driver&#39;S Licence{" "}
+                </p>
+                <p className="text text-center level-subheading-2 font-bold">
+                  {" "}
+                  (class 6N).
+                </p>
                 <ul className="text text-lg mt-3 ">
                   <li className="text pt-2">
                     To get this, you have to have your{" "}
@@ -359,12 +367,17 @@ const page = () => {
               </div>
             </Card>
           </div>
-          <div className={`level-3 p-10`} ref={level3}>
-            <Card hoverable className="level-3-card">
+          <div className={`level-3 p-5`} ref={level3}>
+            <Card  className="level-3-card level-card">
               <div className="stage-3">
-                <h1 className="text text-center text-2xl pt-2">
-                  (LEVEL 3) RESTRICTED INDIVIDUAL WITH CONDITION 47
+                <h1 className="text pt-2 level-heading text-center">
+                  (Level 3)
                 </h1>
+                <p className="text text-center font-bold level-subHeading">
+                  {" "}
+                  Restricted Individual with Condition 47
+                </p>
+
                 <ul className="text text-lg mt-3 ">
                   <li className="text pt-2">
                     For motorcycle drivers, this is the third level in the
