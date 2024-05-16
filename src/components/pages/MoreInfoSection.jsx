@@ -1,7 +1,7 @@
 "use client"
 // import {shoe8} from "../assets/images"
 import {useContext} from "react"
-import Button from "../Button"
+import Button from "../buttons/Button"
 import {SectionContext} from "../context/SectionScrollContext"
 import {Card} from "antd"
 import VisibilityIcon from "@mui/icons-material/Visibility"
@@ -20,14 +20,14 @@ const MoreInfoSection = () => {
   }
   return (
     <section id="about-us" ref={moreInfoRef}>
-      <h2 className="more-info-heading capitalize font-bold pb-2 ">
-        <span className="whoNeedsthis"> Who Needs This</span>
-        <span className="text-black "> Licence?</span>
+      <h2 className="more-info-heading capitalize font-bold ">
+        <span className="whoNeedsthis"> Get Your Motorcycle Licence in </span>
+        <span className="text-black ">Nova Scotia</span>
         {/* <span className="text-blue-600">Quality </span> */}
       </h2>
-      <Card bordered={true} className="more-info-parent-card ">
-        <div className="flex justify-between items-center max-lg:flex-col gap-10 w-full max-container parent-flex-1-container">
-          <div className="flex flex-1 flex-col align-middle  content-outer-div">
+      <div bordered={true} className="more-info-parent-card ">
+        <div className="flex justify-between items-start max-lg:flex-col w-full max-container parent-flex-container">
+          <div className="flex flex-1 flex-col align-top  content-outer-div">
             <div className="content-inner-div">
               <p className="mt-1  info-text-para">
                 Anyone living in
@@ -52,74 +52,80 @@ const MoreInfoSection = () => {
                 on to their regular Driver's Licence.This will let them drive a
                 motorcycle as well as a regular passenger vehicle.
               </p>
-              {/* <span className="mt-6  px-5 info-text-span"></span> */}
-              {/* <div className="mt-11">
-          <Button label="View details" />
-        </div> */}
             </div>
           </div>
-          <div
-            className=" flex justify-between items-center card-1-div card-common-div"
-            // style={{height: "100%", position: "relative"}}
-            onClick={() => navigateToInfoPage("withoutLicence")}
-          >
-            <Card
-              hoverable
-              bordered={true}
-              // style={{
-              //   width: 400,
-              //   //  border: "2px solid orange"
-              // }}
-              className="card-1 card"
-              cover={
-                <div className="card-cover-conatiner">
-                  <div className="text pt-2 licence-options-heading text-center">
-                    <span className="text text-black">You Don’t</span> have a
-                    regular Driver's Licence
-                  </div>
-                  <p className="text p-3 font-palanquin text-justify info-text info-text-1">
-                    You don't have a Valid Class 7 Licence or You don't have a
-                    Licence From any Other Country
-                  </p>
-                  {/* <div className="text text-center text-2xl eyeIcon-Wrapper">
+          <Card className="options-parent-container">
+            <div>
+              <h1 className="selectOptionHeading">
+                Select The{" "}
+                <span className="text text-black">
+                  Option Which Applies to You
+                </span>
+              </h1>
+            </div>
+            <div
+              className=" flex justify-between items-center card-1-div card-common-div"
+              // style={{height: "100%", position: "relative"}}
+              onClick={() => navigateToInfoPage("withoutLicence")}
+            >
+              <Card
+                hoverable
+                bordered={true}
+                // style={{
+                //   width: 400,
+                //   //  border: "2px solid orange"
+                // }}
+                className="card-1 card"
+                cover={
+                  <div className="card-cover-conatiner">
+                    <div className="text pt-2 licence-options-heading text-center">
+                      <span className="text text-black">You Don’t</span> have a
+                      regular <p> Driver's Licence</p>
+                    </div>
+                    <p className="text p-3 font-palanquin  text-justify info-text info-text ">
+                      You dont't have a valid licence from Nova Scotia or any other
+                      Provice
+                    </p>
+                    {/* <div className="text text-center text-2xl eyeIcon-Wrapper">
                   <VisibilityIcon className="eyeIcon" />
                 </div> */}
-                </div>
-              }
-            ></Card>
-          </div>
-          <div
-            className=" flex justify-between items-center card-2-div card-common-div"
-            // style={{height: "100%", position: "relative"}}
-            onClick={() => navigateToInfoPage("withLicence")}
-          >
-            <Card
-              hoverable
-              bordered={true}
-              // style={{
-              //   width: 400,
-              //   // border: "2px solid green"
-              // }}
-              className="card-2 card"
-              cover={
-                <div className="card-cover-conatiner">
-                  <div className="text pt-2 licence-options-heading text-center">
-                    <span className="text text-black"> You have</span> a regular
-                    Driver's Licence
                   </div>
-                  <p className="text p-3 font-palanquin text-justify info-text info-text-2">
-                    You have a Valid Class 7 Licence or You Do have a Licence
-                    From any Other Countries
-                  </p>
-                  {/* <div className="text text-center text-2xl eyeIcon-Wrapper">
+                }
+              ></Card>
+            </div>
+            <div
+              className=" flex justify-between items-center card-2-div card-common-div"
+              // style={{height: "100%", position: "relative"}}
+              onClick={() => navigateToInfoPage("withLicence")}
+            >
+              <Card
+                hoverable
+                bordered={true}
+                // style={{
+                //   width: 400,
+                //   // border: "2px solid green"
+                // }}
+                className="card-2 card"
+                cover={
+                  <div className="card-cover-conatiner">
+                    <div className="text pt-2 licence-options-heading text-center">
+                      <span className="text text-black"> You have</span> a
+                      regular <p> Driver's Licence</p>
+                    </div>
+                    <p className="text p-3 font-palanquin text-justify info-text info-text ">
+                      You have a Valid Class 5,Class 7 or a licence from any
+                      other Province
+                    </p>
+                    {/* <div className="text text-center text-2xl eyeIcon-Wrapper">
                   <VisibilityIcon className="eyeIcon" />
                 </div> */}
-                </div>
-              }
-            ></Card>
-          </div>
+                  </div>
+                }
+              ></Card>
+            </div>
+          </Card>
         </div>
-      </Card>
+      </div>
       {/* <div className="extra-info-div">
         <p className="mt-6 info-text extra-info-para">
           Visitors or newcomers who already have a valid Motorcycle Driver

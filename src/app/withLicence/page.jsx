@@ -11,6 +11,7 @@ const page = () => {
   const stage2 = UseRef(null)
   const stage3 = UseRef(null)
   const progressbarRef = UseRef(null)
+  const beforeCardsContainerRef = UseRef(null)
 
   const [stage, setStage] = UseState(1)
   const [progressBarSticky, setprogressBarSticky] = UseState(false)
@@ -32,7 +33,8 @@ const page = () => {
     if (
       stage2.current?.getBoundingClientRect().top -
         69 -
-        progressbarRef.current.clientHeight <=
+        progressbarRef.current.clientHeight -
+        beforeCardsContainerRef.current.clientHeight <=
       100
     ) {
       setStage(2)
@@ -47,13 +49,14 @@ const page = () => {
     if (l == 1) {
       window.scroll({
         top: stage1.current.offsetTop,
-
         behavior: "smooth",
       })
     } else if (l == 2) {
       window.scroll({
-        top: stage2.current.offsetTop,
-
+        top:
+          stage2.current.offsetTop +
+          beforeCardsContainerRef.current.clientHeight -
+          69,
         behavior: "smooth",
       })
     }
@@ -62,7 +65,10 @@ const page = () => {
   return (
     <>
       <div className="main-conatiner-wl">
-        <div className="beofre-card-content-wl text-lg">
+        <div
+          className="before-card-content-wl text-lg"
+          ref={beforeCardsContainerRef}
+        >
           <h1 className="text pt-2 before-content-heading">
             Having an NS drivers licence make things much easier
           </h1>
@@ -86,9 +92,10 @@ const page = () => {
             So $68.15 is all you will be spending on a motorcycle licence if you
             know someone who can come with you with a motorcycle for your tests.
           </p>
-          <p className='text rightplace-para font-bold text-center py-3'>
+          <p className="text rightplace-para font-bold text-center py-3">
             If you don’t know anyone like that then you are at the{" "}
-            <span className='text text-black font-bold'>right place</span>. Keep reading, you will find out why !
+            <span className="text text-black font-bold">right place</span>. Keep
+            reading, you will find out why !
           </p>
         </div>
         <div style={{postion: "relative"}}>
@@ -115,115 +122,80 @@ const page = () => {
         </div>
         <div className="stage-container-wl">
           <div className={`stage-1 p-10`} ref={stage1}>
-            <Card hoverable className="stage-1-card">
+            <Card hoverable className="stage-1-card stage-card">
               <div className="stage-1-wl">
-                <h1 className="text text-center text-2xl pt-2">
-                  (LEVEL 1) LEARNER MOTORCYCLE LICENCE (CLASS LM)
+                <h1 className="text pt-2 stage-heading text-center">
+                  (STAGE 1)
                 </h1>
-                <h5 className={`${casualtext}`}>So, it has two stages</h5>
-                <h2 className=" text-2xl capitalize lg:max-w-lg font-bold text-blue-600 mt-4">
-                  Stage 1
-                </h2>
+                <p className="text text-center font-bold stage-subHeading">
+                  {" "}
+                  INTERIM LEARNER MOTORCYCLE LICENCE
+                </p>
+                <p className="text text-center stage-subheading-2 font-bold">
+                  (CLASS 5 LM)
+                </p>
+
+                <h5 className={`${casualtext}`}>
+                  To get this, you have to pass 2 tests:
+                </h5>
+
                 <ul className="text text-lg mt-3 ">
                   <li>
-                    <span className="font-bold">
-                      Get yourself a class 7 licence
-                    </span>{" "}
-                    (General Learner&#39;s licence)
+                    <span className="font-bold">A knowledge test</span>
                   </li>
-                  <li className="pt-4">
-                    This is the learner&#39;s licence that you will need in any
-                    case you wanna be driving a car or riding a motorcycle on
-                    public roads.
-                  </li>
-                  <li className="text font-bold pt-3">How to do that?</li>
-                  <li className={`${casualtext} pb-3`}>
-                    We will let the government take the lead here
-                  </li>
-                  <li className="pt-1">
-                    Go pass your test today! Make Sure to read chapters 1-6 from
+                  <li className="pt-4">What you’re tested on</li>
+                  <li className="text font-bold pt-3">
+                    You need to review the{" "}
                     <a
-                      href="https://novascotia.ca/sns/rmv/safe/handbook.asp"
-                      target={"_blank"}
                       className="text text-blue-700 underline pl-2"
+                      href="https://novascotia.ca/sns/rmv/handbook/DH-Chapter8.pdf"
+                      target="_blank"
                     >
                       Driver&#39;s Handbook
-                    </a>
+                    </a>{" "}
+                    to prepare for the Knowledge Test.
+                  </li>
+                  <li className={`${casualtext} pb-3`}>
+                    The Knowledge Test assesses your knowledge of the rules for
+                    safe motorcycle driving. The test has 20 multiple-choice
+                    questions. To pass, you need to answer at least 16
+                    correctly.{" "}
                   </li>
                   <li className="pt-1">
-                    We heard that you can do the test online.
+                    If you don’t pass the Knowledge Test, you need to pay for
+                    another test and take the test again on the spot if it works
+                    for you
                   </li>
+                  <li className="pt-1">After you pass the Knowledge Test </li>
                   <li className="pt-1">
-                    Follow the next step after you have passed, All the best!
+                    You need to pass the Balance Test and get your Motorcycle
+                    Learner Licence within 12 months of taking the Knowledge
+                    Test (if not, you need to take the Knowledge Test again)
                   </li>
                 </ul>
               </div>
-              <h2 className=" text-2xl capitalize lg:max-w-lg font-bold text-blue-600 mt-7">
-                Stage 2
-              </h2>
+              <h4 className="text text-2xl font-bold pt-4">Balance Test</h4>
               <ul className="text text-lg mt-3">
-                <li>
-                  <span className="font-bold">
-                    Get motorcycle learner&#39;s licence
-                  </span>
-                </li>
                 <li className="pt-4 italic">
-                  To be honest you just need till stage 2 completed to get
-                  riding on the road. Yes, there are some restrictions that are
-                  explained later This comes in two parts,
-                </li>
-                <li className="text font-bold pt-3">A knowledge test</li>
-                <li className={`${casualtext}`}>What you’re tested on ? </li>
-                <li className="pt-1">
-                  Go pass your test today! Make Sure to read chapters 1-6 from
-                  <a
-                    className="text text-blue-700 underline pl-2"
-                    target={"_blank"}
-                    href="https://novascotia.ca/sns/rmv/handbook/DH-Chapter8.pdf"
-                  >
-                    Driver&#39;s Handbook
-                  </a>
-                </li>
-                <li className="pt-2">
-                  The Knowledge Test assesses your knowledge of the rules for
-                  safe motorcycle driving. The test has 20 multiple-choice
-                  questions. To pass, you need to answer at least 16 correctly.
-                </li>
-                <li className="pt-2">
-                  If you don’t pass the Knowledge Test, you need to pay for
-                  another test and take the test again on the spot if it works
-                  for you
-                </li>
-                <li className="text font-bold pt-3">
-                  After you pass the Knowledge Test
-                </li>
-                <li className="text pt-3">
-                  You need to pass the Balance Test and get your Motorcycle
-                  Learner Licence within 12 months of taking the Knowledge Test
-                  (if not, you need to take the Knowledge Test again)
-                </li>
-
-                <h4 className="text text-2xl font-bold pt-4">Balance Test</h4>
-                <li className="text pt-3">
                   Balance Tests are only available seasonally (tests are not
                   available from late fall to early spring). Availability also
                   depends on weather conditions.
                 </li>
-                <li className="text pt-3">
+
+                <li className="pt-1">
                   You need to pass a Balance Test before you can get your
                   Motorcycle Learner Licence. The Balance Test includes basic
                   motorcycle balancing manoeuvres and braking techniques.
                 </li>
-
-                <li className="text pt-4 font-bold text-xl">
-                  You need to bring a motorcycle to the test !!
+                <li className="text font-bold pt-3">
+                  Now the problem comes here for a lot of people BUT not for you
+                  !{" "}
                 </li>
 
-                <h4 className="text pt-4 font-bold">
-                  Now the problem comes here for a lot of people BUT not for you
-                </h4>
-
-                <p className="text pt-3">
+                <li className="pt-2">
+                  You need to bring a motorcycle to the test !!{" "}
+                </li>
+                <li className="pt-2">
                   You need to transport your own or someone else’s motorcycle by
                   trailer or have someone who has a Motorcycle Licence drive it
                   to the test for you (you can’t drive the motorcycle to the
@@ -232,73 +204,103 @@ const page = () => {
                   needs to have a valid licence plate and vehicle permit (or
                   temporary vehicle permit). You need to provide proof of motor
                   vehicle inspection(MVI) and insurance for the motorcycle.
-                </p>
-
-                <h4 className="text text-xl font-bold pt-3">
-                  Here we come to a rescue !
-                </h4>
-                <h5 className="text text-xl font-bold pt-3">
+                </li>
+                <li className="pt-2">Here we come to a rescue !</li>
+                <li className="text font-bold pt-3">
                   We will come with you to your test with our Motorcycle !
-                </h5>
-                <h5 className="text text-xl pt-3">
+                </li>
+                <li className="text font-bold pt-3">
                   Licence plate, Vehicle permit, MVI, Insurance WE TAKE CARE OF
-                  IT ALL !!
-                </h5>
+                  IT ALL !!{" "}
+                </li>
 
-                <p className="text pt-3">
+                <li className="text pt-3">
                   A driving school might provide you with a motorcycle for your
                   test but it is really expensive and time consuming to do the
                   course. It is recommended to do a course if you do not have
                   experience with motorcycles at all. But if you have some
                   experience with motorcycles, maybe an off-road dirt bike or an
                   experience of riding in another country, then it does not
-                  really make sense to spend months waiting and $600 to $800!
-                </p>
+                  really make sense to spend months and $600 to $800!
+                </li>
+
                 <li className="text pt-3">
                   Instead, we can do that for way cheaper. Depending upon where
                   you get the appointment, we can be with you for as cheap as
                   $199
                 </li>
+
+                <li className="text pt-3">
+                  When you pass those two tests, you will get a paper licence
+                  indicating that you are qualified as a Motorcycle Learner.
+                </li>
+
+                <li className="text pt-4 font-bold text-xl">
+                  Note: whenever you are driving a motorcycle, you must always
+                  carry this licence with you -- AND you must also carry your
+                  regular Driver&#39;s Licence with you as well.
+                </li>
+
+                <h4 className="text pt-4 font-bold">
+                  Note: until you actually have this licence, you are NOT
+                  allowed to drive a motorcycle on any highway.{" "}
+                </h4>
+
+                <p className="text pt-3">
+                  Once you have this licence, there are special restrictions on
+                  your motorcycle driving; see{" "}
+                  <a
+                    className="text text-blue-700 underline pl-2"
+                    href="https://novascotia.ca/sns/rmv/handbook/DH-Chapter8.pdf"
+                    target="_blank"
+                  >
+                    {" "}
+                    Additional Information (B).{" "}
+                  </a>
+                </p>
               </ul>
             </Card>
           </div>
 
-          <div className={`stage-2-wl p-10`} ref={stage2}>
-            <Card hoverable className="stage-2-card">
+          <div className={`stage-2 p-10`} ref={stage2}>
+            <Card hoverable className="stage-2-card stage-card">
               <div className="stage-2-wl">
-                <h1 className="text text-center text-2xl pt-2">
-                  (LEVEL 2) NEWLY LICENSED MOTORCYCLE DRIVER&#39;S LICENCE
-                  (CLASS 6N).
+                <h1 className="text pt-2 stage-heading text-center">
+                  (STAGE 2)
                 </h1>
+                <p className="text text-center font-bold stage-subHeading">
+                  {" "}
+                  MOTORCYCLE ENDORSEMENT
+                </p>
+
                 <ul className="text text-lg mt-3 ">
                   <li className="text pt-2">
-                    To get this, you have to have your{" "}
+                    Now that you have got your learner&#39;s licence, you might
+                    wanna move to a full licence.
                     <span className="text font-bold">
                       {" "}
-                      Learner Motorcycle Licence{" "}
+                      To get a regular Motorcycle Endorsement, you have to do 3
+                      things
                     </span>
-                    and pass an &quot;advanced skills&quot; test (which is a{" "}
-                    <span className="test font-bold"> Road test </span> Driving
-                    Examination)
                   </li>
-                  <li className="text pt-3">
-                    Complete a{" "}
-                    <span className="text font-bold">practice period </span> .
-                    Before you can take your &quot;advanced skills&quot; road
-                    test, you usually need to have your Learner&#39;s Motorcycle
-                    Licence for at least 6 months.
-                  </li>
+                  <ul>
+                    <li>Have an Interim Learner Motorcycle Licence.</li>
+                    <li>Complete a waiting period of 3 months</li>
+                    <li>
+                      Pass &quot;advanced skills&quot; test. Which is another
+                      road test (Driving Examination).
+                    </li>
+                  </ul>
+
                   <li className={`${casualtext} ml-4`}>
-                    However, that can be reduced to 3 months if you pass an
-                    approved motorcycle driver training course.
+                    You need to bring a motorcycle to the test !!
                   </li>
+
                   <li className="text pt-4 font-bold text-xl">
-                    Again, You need to bring a motorcycle to the test !!{" "}
-                  </li>
-                  <h4 className="text pt-4 font-bold">
                     Now the problem comes here again for a lot of people BUT not
                     for you !{" "}
-                  </h4>
+                  </li>
+
                   <li className="text pt-3">
                     Your motorcycle must pass a pre-trip inspection before the
                     Balance Test can start. The motorcycle needs to have a valid
@@ -329,31 +331,12 @@ const page = () => {
                     cheap as
                     <span className="text font-bold"> $199</span>
                   </li>
-
-                  <li className="text text-center pt-5 font-bold">
-                    The fee for this test is $53.00 (tax included). An
-                    appointment is required. See the{" "}
-                    <a
-                      href="https://novascotia.ca/sns/paal/rmv/paal379.asp#additionalF"
-                      className="text text-blue-700 underline"
-                    >
-                      {" "}
-                      Newly Licenced Driver&#39;s Licence, Additional
-                      Information (F)
-                    </a>
-                    , on how to arrange a road test. See also the N.S.
-                    Driver&#39;s Handbook.
-                  </li>
-                  <li className="text text-center pt-5 font-bold">
-                    Once you have this licence, there are special restrictions
-                    on your motorcycle driving; see
-                    <a
-                      href="https://novascotia.ca/sns/paal/rmv/paal380.asp#add%20C"
-                      className="text text-blue-700 underline"
-                    >
-                      {" "}
-                      Additional Information (C).
-                    </a>
+                  <li className="text pt-3">
+                    Once you fulfil those 3 requirements, a Motorcycle
+                    Endorsement is placed on your regular Driver&#39;s Licence .
+                    (This is in the form of a large letter: A, D, etc.) There is
+                    no further waiting period, and all special driving
+                    restrictions are lifted.{" "}
                   </li>
                 </ul>
               </div>

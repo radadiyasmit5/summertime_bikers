@@ -5,18 +5,22 @@ import {useEffect as UseEffect, useState as UseState} from "react"
 import {Card} from "antd"
 import "./withoutLicence.scss"
 import StickyGformbtn from "@/components/buttons/StickyGformbtn"
+import Button from "@/components/buttons/Button"
+import {useRouter as UseRouter} from "next/navigation"
+import Link from "next/link"
 const page = () => {
   const level1 = UseRef(null)
   const level2 = UseRef(null)
   const level3 = UseRef(null)
   const progressbarRef = UseRef(null)
   const [level, setlevel] = UseState(1)
+  const router = UseRouter()
   // const [levelintitalPositions, setlevelintitalPositions] = UseState(null)
   const onScroll = (e) => {
     if (
       level1.current?.getBoundingClientRect().top -
         69 -
-        progressbarRef.current.clientHeight <=
+        progressbarRef.current?.clientHeight <=
       0
     ) {
       setlevel(1)
@@ -24,7 +28,7 @@ const page = () => {
     if (
       level2.current?.getBoundingClientRect().top -
         69 -
-        progressbarRef.current.clientHeight <=
+        progressbarRef.current?.clientHeight <=
       100
     ) {
       setlevel(2)
@@ -32,7 +36,7 @@ const page = () => {
     if (
       level3.current?.getBoundingClientRect().top -
         69 -
-        progressbarRef.current.clientHeight <=
+        progressbarRef.current?.clientHeight <=
       100
     ) {
       setlevel(3)
@@ -40,13 +44,13 @@ const page = () => {
   }
   UseEffect(() => {
     // Fires when the document view has been scrolled
-    window.addEventListener("scroll", onScroll)
+    const scrollEventListener = window.addEventListener("scroll", onScroll)
     // setlevelintitalPositions({
     //   level1: level1.current.getBoundingClientRect().top,
     //   level2: level2.current.getBoundingClientRect().top,
     //   level3: level3.current.getBoundingClientRect().top,
     // })
-
+    handleLevelClick(1)
     //
     return () => window.removeEventListener("scroll", onScroll)
   }, [])
@@ -87,6 +91,21 @@ const page = () => {
     // setisautomatedScroll(false)
   }
   const casualtext = "text text-lg  mt-4 italic text-gray-600"
+  const gfromInquiryBtn = () => {
+    const onbtnClick = () => {
+      router.push("/callbackGform")
+    }
+    return (
+      <div className="gforminquirybtn">
+        <Link href={"/callbackGform"} target="_blank">
+          <Button
+            label="Find out how to borrow a Motorcycle"
+           
+          />
+        </Link>
+      </div>
+    )
+  }
   return (
     <>
       <div className="main-conatiner">
@@ -113,9 +132,9 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="level-container">
-          <div className={`level-1 p-5`} ref={level1}>
-            <Card  className="level-1-card level-card">
+        <div className="level-container ">
+          <div className={`level-1 `} ref={level1}>
+            <Card className="level-1-card level-card">
               <h1 className="text pt-2 level-heading text-center">(Level 1)</h1>
               <p className="text text-center font-bold level-subHeading">
                 {" "}
@@ -147,14 +166,22 @@ const page = () => {
                     Go pass your test today! Make Sure to read chapters 1-6 from
                     <a
                       href="https://novascotia.ca/sns/rmv/safe/handbook.asp"
-                      target={"_blank"}
+                      target="_blank"
                       className="text text-blue-700 underline pl-2"
                     >
                       Driver&#39;s Handbook
                     </a>
                   </li>
                   <li className="pt-1">
-                    We heard that you can do the test online.
+                    We heard that you can do the{" "}
+                    <a
+                      className="text text-blue-700 underline"
+                      href="https://beta.novascotia.ca/take-driver-knowledge-test-learners-licence-class-7"
+                      target="_blank"
+                    >
+                      test
+                    </a>{" "}
+                    online.
                   </li>
                   <li className="pt-1">
                     Follow the next step after you have passed, All the best!
@@ -176,14 +203,15 @@ const page = () => {
                 <li className="text font-bold pt-3">A knowledge test</li>
                 <li className={`${casualtext}`}>What you’re tested on ? </li>
                 <li className="pt-1">
-                  Go pass your test today! Make Sure to read chapters 1-6 from
+                  You need to review the
                   <a
                     className="text text-blue-700 underline pl-2"
-                    target={"_blank"}
+                    target="_blank"
                     href="https://novascotia.ca/sns/rmv/handbook/DH-Chapter8.pdf"
                   >
-                    Driver&#39;s Handbook
+                    Driver&#39;s Handbook{" "}
                   </a>
+                  to prepare for the Knowledge Test
                 </li>
                 <li className="pt-2">
                   The Knowledge Test assesses your knowledge of the rules for
@@ -258,21 +286,22 @@ const page = () => {
                 <li className="text pt-3">
                   Instead, we can do that for way cheaper. Depending upon where
                   you get the appointment, we can be with you for as cheap as
-                  $199
+                  <span className="text text-black font-bold"> $199</span>
                 </li>
               </ul>
+              {gfromInquiryBtn()}
             </Card>
           </div>
 
           <div className={`level-2 p-5`} ref={level2}>
-            <Card  className="level-2-card level-card">
+            <Card className="level-2-card level-card">
               <div className="stage-2">
                 <h1 className="text pt-2 level-heading text-center">
                   (Level 2)
                 </h1>
                 <p className="text text-center font-bold level-subHeading">
                   {" "}
-                  Newly Licenced Motorcycle Driver&#39;S Licence{" "}
+                  Newly Licenced Motorcycle Driver&#39;s Licence{" "}
                 </p>
                 <p className="text text-center level-subheading-2 font-bold">
                   {" "}
@@ -344,6 +373,7 @@ const page = () => {
                     <a
                       href="https://novascotia.ca/sns/paal/rmv/paal379.asp#additionalF"
                       className="text text-blue-700 underline"
+                      target="_blank"
                     >
                       {" "}
                       Newly Licenced Driver&#39;s Licence, Additional
@@ -358,6 +388,7 @@ const page = () => {
                     <a
                       href="https://novascotia.ca/sns/paal/rmv/paal380.asp#add%20C"
                       className="text text-blue-700 underline"
+                      target="_blank"
                     >
                       {" "}
                       Additional Information (C).
@@ -365,10 +396,11 @@ const page = () => {
                   </li>
                 </ul>
               </div>
+              {gfromInquiryBtn()}
             </Card>
           </div>
           <div className={`level-3 p-5`} ref={level3}>
-            <Card  className="level-3-card level-card">
+            <Card className="level-3-card level-card">
               <div className="stage-3">
                 <h1 className="text pt-2 level-heading text-center">
                   (Level 3)
@@ -385,20 +417,20 @@ const page = () => {
                     you have to do 3 things:
                   </li>
 
-                  <ul className="text text-center flex flex-col justify-center pt-3 m-auto table">
-                    <li className="text list-disc pt-3">
+                  <ul className="text  flex flex-col  pt-3 table list-inside list-decimal">
+                    <li className="text  pt-3">
                       Have a{" "}
                       <span className="text font-bold">
                         {" "}
                         Newly Licensed Motorcycle Driver&#39;s Licence.{" "}
                       </span>
                     </li>
-                    <li className="text list-disc pt-3">
+                    <li className="text  pt-3">
                       Complete a{" "}
                       <span className="text font-bold">driving period </span> of
                       at least <span className="text font-bold">2 years. </span>
                     </li>
-                    <li className="text list-disc p-3">
+                    <li className="text py-3">
                       Pass an approved motorcycle{" "}
                       <span className="text font-bold">
                         Driver Improvement Program
@@ -406,36 +438,17 @@ const page = () => {
                       (including a 6-hour &quot;defensive driving&quot; course).
                     </li>
                   </ul>
-                  <li className="text pt-2">
-                    There are 2 kinds of Driver Improvement Programs; for more
-                    information, see the{" "}
-                    <span className="text font-bold">
-                      {" "}
-                      N.S. Driver&#39;s Handbook{" "}
-                    </span>{" "}
-                    or contact the Department (see{" "}
+
+                  <li>
+                    And put “refer to access nova scotia website to know more
+                    about{" "}
                     <a
-                      href="https://novascotia.ca/sns/paal/rmv/paal380.asp#where%20u%20can%20get"
+                      href="https://novascotia.ca/sns/paal/rmv/paal380.asp"
+                      target="_blank"
                       className="text text-blue-700 underline"
                     >
-                      {" "}
-                      Where can you get
-                    </a>{" "}
-                    ...., above.)
-                  </li>
-
-                  <li className="text pt-2">
-                    Note: you have to give the Department a copy of the
-                    Certificate you get when you pass the Driver Improvement
-                    Program. (This is kept in the Department records.)
-                  </li>
-
-                  <li className="text pt-2">
-                    After graduating to the Restricted Individual stage with
-                    condition 47, you must complete an additional 2 year driving
-                    period. While you are in the Restricted Individual stage,
-                    you cannot be a &quot;supervising driver&quot; for another
-                    driver.
+                      defensive driving course
+                    </a>
                   </li>
                   <li className="text pt-2">
                     Once the 2 year driving period has been completed, you will
@@ -446,6 +459,7 @@ const page = () => {
                   </li>
                 </ul>
               </div>
+              {gfromInquiryBtn()}
             </Card>
           </div>
         </div>

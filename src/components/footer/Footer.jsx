@@ -8,12 +8,12 @@ import Image from "../../../node_modules/next/image"
 import {Instagram} from "@mui/icons-material"
 import FacebookIcon from "@mui/icons-material/Facebook"
 import SociealBar from "../header/socielBar/SocielBar"
-import Button from "../Button"
+import Button from "../buttons/Button"
 import nova_scotia_map from "../../../public/nova_scotia_map.png"
 import PinDropIcon from "@mui/icons-material/PinDrop"
 import {Tooltip} from "antd"
-import TypeWriterWrapper from '../typeWriter/TypeWriterWrapper'
-import Typewriter from 'typewriter-effect'
+import TypeWriterWrapper from "../typeWriter/TypeWriterWrapper"
+import Typewriter from "typewriter-effect"
 const Footer = () => {
   const {footerRef} = useContext(SectionContext)
 
@@ -22,31 +22,51 @@ const Footer = () => {
       <div className="footer-main-container">
         <div className="footer-flex-1">
           <div className="typewriter-container-footer">
-          <Typewriter
-                    options={{
-                        strings: [
-                            "Get Riding This Season!",
-                            "Not Behind the Wheel, GET ON THE WHEELS!",
-                            "Live full Throttle",
-                            "Every Motorcycle Ride is a Tiny Vacation",
-                            "When Life Takes a Curve, Lean On It",
-                        ],
-                        delay: 90,
-                        autoStart: true,
-                        loop: true,
-                    }}
-                />
-          </div>
-          <div className="map-container">
-            <Image
-              src={nova_scotia_map.src}
-              width={700}
-              height={100}
-              className="NS_map_img"
+            <Typewriter
+              options={{
+                strings: [
+                  "Get Riding This Season!",
+                  "Not Behind the Wheel, GET ON THE WHEELS!",
+                  "Live full Throttle",
+                  "Every Motorcycle Ride is a Tiny Vacation",
+                  "When Life Takes a Curve, Lean On It",
+                ],
+                delay: 90,
+                autoStart: true,
+                loop: true,
+              }}
             />
-            <Tooltip title="halifax location" placement="top" arrow>
-              <PinDropIcon className="haifax_pin pin_common"  />
-            </Tooltip>
+          </div>
+          <div className="map-wrapper-container">
+            <div className="map-container">
+              <Image
+                src={nova_scotia_map.src}
+                width={700}
+                height={100}
+                className="NS_map_img"
+              />
+              <Tooltip title="halifax location" placement="top" arrow>
+                <PinDropIcon className="haifax_pin pin_common" />
+              </Tooltip>
+              <Tooltip title="Dartmouth location" placement="top" arrow>
+                <PinDropIcon className="Dartmouth_pin pin_common" />
+              </Tooltip>
+              <Tooltip title="sackville location" placement="top" arrow>
+                <PinDropIcon className="sackville_pin pin_common" />
+              </Tooltip>
+              <Tooltip title="Amherst location" placement="top" arrow>
+                <PinDropIcon className="Amherst_pin pin_common" />
+              </Tooltip>
+              <Tooltip title="Antigonish location" placement="top" arrow>
+                <PinDropIcon className="Antigonish_pin pin_common" />
+              </Tooltip>
+              <Tooltip title="Bridgewater location" placement="top" arrow>
+                <PinDropIcon className="Bridgewater_pin pin_common" />
+              </Tooltip>
+              <Tooltip title="Digby location" placement="top" arrow>
+                <PinDropIcon className="Digby_pin pin_common" />
+              </Tooltip>
+            </div>
           </div>
         </div>
         <div></div>
