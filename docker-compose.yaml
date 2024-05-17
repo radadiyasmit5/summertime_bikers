@@ -1,0 +1,12 @@
+version: "1.0"
+
+services:
+  summertimeBikers:
+    build: ./
+    container_name: backend
+    restart: always
+    ports:
+      - "3000:3000"
+    # depends_on:
+    #   - mongodb
+    # environment:
