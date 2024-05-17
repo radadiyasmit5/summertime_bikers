@@ -4,6 +4,6 @@ WORKDIR /app
 COPY . .
 RUN rm -rf node_modules/
 RUN npm install
-EXPOSE 3000
+EXPOSE 8080
 
 CMD npm run build && npm run start
