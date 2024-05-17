@@ -1,5 +1,5 @@
 "use client"
-import React, {useContext, useEffect, useRef} from "react"
+import React, {Suspense, useContext, useEffect, useRef} from "react"
 import TypeWriterWrapper from "../typeWriter/TypeWriterWrapper"
 // import video from './bikevideo1.mp4'
 import "./videosection.scss"
@@ -14,6 +14,7 @@ import Image from "next/image"
 import LinksWrapper from "../utils/LinkWrapper/LinksWrapper"
 import {SectionContext} from "../context/SectionScrollContext"
 import StickyGformbtn from "../buttons/StickyGformbtn"
+import {LoadingSpinner} from "../loadingSpinners/LoadingSpinner"
 
 const VideoSection = () => {
   const videoRef = useRef(null)
@@ -60,6 +61,7 @@ const VideoSection = () => {
           alt="nothing"
           width={100}
           height={100}
+          loading="eager"
           // style={{width: "100%", height: "100%"}}
         />
       </div>
