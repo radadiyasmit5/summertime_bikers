@@ -25,7 +25,7 @@ const MoreInfoSection = () => {
         <span className="text-black ">Nova Scotia</span>
         {/* <span className="text-blue-600">Quality </span> */}
       </h2>
-      <div bordered={true} className="more-info-parent-card ">
+      <div bordered="true" className="more-info-parent-card ">
         <div className="flex justify-between items-start max-lg:flex-col w-full max-container parent-flex-container">
           <div className="flex flex-1 flex-col align-top  content-outer-div">
             <div className="content-inner-div">
@@ -70,7 +70,7 @@ const MoreInfoSection = () => {
             >
               <Card
                 hoverable
-                bordered={true}
+                bordered="true"
                 // style={{
                 //   width: 400,
                 //   //  border: "2px solid orange"
@@ -83,8 +83,8 @@ const MoreInfoSection = () => {
                       regular <p> Driver's Licence</p>
                     </div>
                     <p className="text p-3 font-palanquin  text-justify info-text info-text ">
-                      You don't have a valid licence from Nova Scotia or any other
-                      Provice
+                      You don't have a valid licence from Nova Scotia or any
+                      other Provice
                     </p>
                     {/* <div className="text text-center text-2xl eyeIcon-Wrapper">
                   <VisibilityIcon className="eyeIcon" />
@@ -100,7 +100,7 @@ const MoreInfoSection = () => {
             >
               <Card
                 hoverable
-                bordered={true}
+                bordered="true"
                 // style={{
                 //   width: 400,
                 //   // border: "2px solid green"

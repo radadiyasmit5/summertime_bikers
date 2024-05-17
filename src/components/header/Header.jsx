@@ -13,7 +13,7 @@ import Button from "@mui/material/Button"
 import {useRouter} from "next/navigation"
 import {SectionContext} from "../context/SectionScrollContext"
 import logo_dp from "../../../public/logo_dp.png"
-
+import CloseIcon from "@mui/icons-material/Close"
 // import { SectionContext } from "../../context/SectionScrollContext"
 // import { Mentions, Menu } from "antd"
 
@@ -31,9 +31,11 @@ const Header = () => {
   } = useContext(SectionContext)
 
   const [anchorEl, setAnchorEl] = useState(null)
+  const [isMenuOpen, setisMenuOpen] = useState(false)
   const open = Boolean(anchorEl)
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget)
+    setisMenuOpen(!isMenuOpen)
   }
   const handleClose = () => {
     setAnchorEl(null)
@@ -113,10 +115,10 @@ const Header = () => {
               onClick={handleClick}
             >
               <span style={{color: "white"}}>
-                <MenuIcon />
+                {!isMenuOpen ? <MenuIcon /> : <CloseIcon />}
               </span>
             </Button>
-            <Menu
+            {/* <Menu
               id="basic-menu"
               anchorEl={anchorEl}
               open={open}
@@ -153,9 +155,41 @@ const Header = () => {
               >
                 <MenuItem onClick={handleClose}>Contact us</MenuItem>
               </Link>
-            </Menu>
+            </Menu> */}
           </div>
         </nav>
+        {isMenuOpen && (
+          <div className="header-expand-container">
+            <Link
+              href="/"
+              className="nav-link-item"
+              // onClick={() => handleSectionchange(heroRef)}
+            >
+              Home
+            </Link>
+            <Link
+              href="about"
+              className="nav-link-item"
+              // onClick={() => handleSectionchange(heroRef)}
+            >
+              About
+            </Link>
+            <Link
+              href="pricing"
+              className="nav-link-item"
+              // onClick={() => handleSectionchange(heroRef)}
+            >
+              Pricing
+            </Link>
+            <Link
+              href="#"
+              className="nav-link-item"
+              onClick={() => handleSectionchange(footerRef)}
+            >
+              Contactus
+            </Link>
+          </div>
+        )}
       </header>
     </>
   )

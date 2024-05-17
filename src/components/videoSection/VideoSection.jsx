@@ -60,6 +60,7 @@ const VideoSection = () => {
           alt="nothing"
           width={100}
           height={100}
+          // style={{width: "100%", height: "100%"}}
         />
       </div>
       <div className="video-mask">
