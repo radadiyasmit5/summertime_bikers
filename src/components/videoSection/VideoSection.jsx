@@ -1,5 +1,5 @@
 "use client"
-import React, {Suspense, useContext, useEffect, useRef} from "react"
+import React, {useContext, useEffect, useRef} from "react"
 import TypeWriterWrapper from "../typeWriter/TypeWriterWrapper"
 // import video from './bikevideo1.mp4'
 import "./videosection.scss"
@@ -7,14 +7,10 @@ import Typewriter from "typewriter-effect"
 import bikevideo2 from "../../../public/bikevideo2.mp4"
 import bikevideo2webm from "../../../public/bikevideo2.webm"
 import bikevideo2ogv from "../../../public/bikevideo2.ogv"
-// import summertime_bikers_logo_2_no_bg from "../../../public/summertime_bikers_logo_2_no_bg.png"
-import bullet_bike from "../../../public/bullet_bike.jpg"
 import harley1 from "../../../public/harley1.jpg"
 import Image from "next/image"
 import LinksWrapper from "../utils/LinkWrapper/LinksWrapper"
 import {SectionContext} from "../context/SectionScrollContext"
-import StickyGformbtn from "../buttons/StickyGformbtn"
-import {LoadingSpinner} from "../loadingSpinners/LoadingSpinner"
 
 const VideoSection = () => {
   const videoRef = useRef(null)
