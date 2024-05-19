@@ -75,6 +75,11 @@
         font-weight: 600;
         letter-spacing: 0;
       }
+      .gforminquirybtn{
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+      }
       .stage-subHeading {
         font-size: 1.45rem;
       }
@@ -92,6 +97,7 @@
       height: 100%;
       border-radius: 1rem;
       padding: 1.25rem;
+      padding-top: 3.25rem;
       .stage-1-card {
         .stage-1-wl {
           height: 100%;

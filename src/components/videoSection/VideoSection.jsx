@@ -11,13 +11,14 @@ import harley1 from "../../../public/harley1.jpg"
 import Image from "next/image"
 import LinksWrapper from "../utils/LinkWrapper/LinksWrapper"
 import {SectionContext} from "../context/SectionScrollContext"
+import homePage_mobile_view from "../../../public/homePage_mobile_view.png"
 
 const VideoSection = () => {
   const videoRef = useRef(null)
   useEffect(() => {
-    setTimeout(() => {
-      videoRef.current.className = "hero-video hero-video-visible"
-    }, 500)
+    // setTimeout(() => {
+    //   videoRef.current.className = "hero-video hero-video-visible"
+    // }, 500)
   }, [])
   const {
     handleSectionchange,
@@ -53,11 +54,12 @@ const VideoSection = () => {
         <Image
           className="hero-img"
           ref={videoRef}
-          src={harley1.src}
+          src={homePage_mobile_view.src}
           alt="nothing"
           width={100}
           height={100}
           loading="eager"
+          objectFit='contain'
           // style={{width: "100%", height: "100%"}}
         />
       </div>

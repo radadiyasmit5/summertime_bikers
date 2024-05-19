@@ -15,10 +15,10 @@ import {Tooltip} from "antd"
 import TypeWriterWrapper from "../typeWriter/TypeWriterWrapper"
 import Typewriter from "typewriter-effect"
 const Footer = () => {
-  const {footerRef} = useContext(SectionContext)
+  // const {footerRef} = useContext(SectionContext)
 
   return (
-    <section id="footer" ref={footerRef}>
+    <section id="footer">
       <div className="footer-main-container">
         <div className="footer-flex-1">
           <div className="typewriter-container-footer">
@@ -95,10 +95,11 @@ const Footer = () => {
           <div className="footer-flext-1-child-2">
             <div className="footer-credits-container">
               <h2 className="text text-white text-2xl ">Get In Touch</h2>
-              <p className="text text-white text-sm pt-10">
-                EmailAddress@gmail.com
+              <p className="text text-white text-m pt-10">
+                <a href="mailto:info@summertimebikers.com">
+                  info@summertimebikers.com
+                </a>
               </p>
-              <p className="text text-white text-sm pt-10">+1 9023456785</p>
             </div>
           </div>
         </div>

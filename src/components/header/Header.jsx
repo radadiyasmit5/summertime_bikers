@@ -83,7 +83,7 @@ const Header = () => {
                 About
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 href="pricing"
                 className="nav-link-item"
@@ -91,13 +91,13 @@ const Header = () => {
               >
                 Pricing
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
-                href="#"
+                href="callbackGform"
                 className="nav-link-item"
                 // as={"contactus"}
-                onClick={() => handleSectionchange(footerRef)}
+                // onClick={() => handleSectionchange(footerRef)}
               >
                 Contact us
               </Link>

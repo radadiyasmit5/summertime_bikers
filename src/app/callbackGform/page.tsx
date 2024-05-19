@@ -10,13 +10,16 @@ const page = () => {
             <div className='form-container'>
                 <div className='form-inner-container'>
                     <Suspense fallback={<LoadingSpinner />}>
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd46svSrMMTpQsc52pQbhFNacI_-v_8ySIK986t-dmZVj1L_A/viewform?embedded=true" height="100%" scrolling="no"
-                            style={{ width: "100%" }} className="ifram-cls"
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd46svSrMMTpQsc52pQbhFNacI_-v_8ySIK986t-dmZVj1L_A/viewform?embedded=true"
+                            // height="100%" 
+                            // scrolling="no"
+                            style={{ width: "100%", color: 'black', position: 'fixed', top: '75px', left: 0, bottom: 0, right: 0, height: '100%', border: 'none', margin: 0, padding: 0, overflow: 'scroll', zIndex: '999999' }} className="ifram-cls"
+                            allowFullScreen={true}
                         >Loading…</iframe>
                     </Suspense>
                 </div>
             </div>
-        </div>
+        </div >
     </>
     )
 }

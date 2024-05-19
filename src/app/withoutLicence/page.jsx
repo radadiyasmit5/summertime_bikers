@@ -98,10 +98,7 @@ const page = () => {
     return (
       <div className="gforminquirybtn">
         <Link href={"/callbackGform"} target="_blank">
-          <Button
-            label="Find out how to borrow a Motorcycle"
-           
-          />
+          <Button label="Find out how to borrow a Motorcycle" />
         </Link>
       </div>
     )
@@ -141,7 +138,7 @@ const page = () => {
                 Learner Motorcycle Licence{" "}
               </p>
               <p className="text text-center level-subheading-2 font-bold">
-                (class LM)
+                Class LM
               </p>
               <div className="stage-1">
                 <h5 className={`${casualtext}`}>So, it has two stages</h5>
@@ -211,7 +208,7 @@ const page = () => {
                   >
                     Driver&#39;s Handbook{" "}
                   </a>
-                  to prepare for the Knowledge Test
+                  to prepare for the Knowledge Test.
                 </li>
                 <li className="pt-2">
                   The Knowledge Test assesses your knowledge of the rules for
@@ -221,17 +218,17 @@ const page = () => {
                 <li className="pt-2">
                   If you don’t pass the Knowledge Test, you need to pay for
                   another test and take the test again on the spot if it works
-                  for you
+                  for you.
                 </li>
                 <li className="text font-bold pt-3">
                   After you pass the Knowledge Test
                 </li>
                 <li className="text pt-3">
                   You need to pass the Balance Test and get your Motorcycle
-                  Learner Licence within 12 months of taking the Knowledge Test
-                  (if not, you need to take the Knowledge Test again)
+                  Learner Licence within 12 months of taking the Knowledge Test.
+                  (If not, then you will need to take the Knowledge test again.)
                 </li>
-
+                <br/>
                 <h4 className="text text-2xl font-bold pt-4">Balance Test</h4>
                 <li className="text pt-3">
                   Balance Tests are only available seasonally (tests are not
@@ -239,17 +236,47 @@ const page = () => {
                   depends on weather conditions.
                 </li>
                 <li className="text pt-3">
-                  You need to pass a Balance Test before you can get your
-                  Motorcycle Learner Licence. The Balance Test includes basic
+                  You need to pass a Balance test before you can get your
+                  Motorcycle Learner Licence. The Balance test includes basic
                   motorcycle balancing manoeuvres and braking techniques.
                 </li>
+                <br/>
+                <p className="text pt-3 font-bold">
+                  {" "}
+                  It is recommended to do a 
+                
+                <a
+                      href="https://novascotia.ca/sns/paal/rmv/paal380.asp"
+                      className="text text-blue-700 underline"
+                      target="_blank"
+                    >
+                      {" "}
+                      Course
+                    </a>
+                
+                  {" "}
+                  if you do not have experience
+                  with motorcycles at all.{" "}
+                </p>
+                
+                <br/>
+                <p className="text pt-3 ">
+                  A driving school might provide you with a motorcycle for your
+                  test but it is really expensive and time consuming to do the
+                  course. But if you have some experience with motorcycles, maybe
+                  an off-road dirt bike or an experience of riding a motorcycle in another
+                  country, then it does not really make sense to spend months
+                  waiting and $600 to $800!
+                </p>
+                <br/>
 
                 <li className="text pt-4 font-bold text-xl">
                   You need to bring a motorcycle to the test !!
                 </li>
+                <br/>
 
                 <h4 className="text pt-4 font-bold">
-                  Now the problem comes here for a lot of people BUT not for you
+                  Now the problem comes here for a lot of people BUT not for you. Because we can help you in that!
                 </h4>
 
                 <p className="text pt-3">
@@ -263,31 +290,24 @@ const page = () => {
                   vehicle inspection(MVI) and insurance for the motorcycle.
                 </p>
 
-                <h4 className="text text-xl font-bold pt-3">
-                  Here we come to a rescue !
-                </h4>
+                
                 <h5 className="text text-xl font-bold pt-3">
-                  We will come with you to your test with our Motorcycle !
+                Here we come to a rescue, We will come with you to your test with our Motorcycle !
                 </h5>
+                <br/>
                 <h5 className="text text-xl pt-3">
                   Licence plate, Vehicle permit, MVI, Insurance WE TAKE CARE OF
                   IT ALL !!
                 </h5>
-
-                <p className="text pt-3">
-                  A driving school might provide you with a motorcycle for your
-                  test but it is really expensive and time consuming to do the
-                  course. It is recommended to do a course if you do not have
-                  experience with motorcycles at all. But if you have some
-                  experience with motorcycles, maybe an off-road dirt bike or an
-                  experience of riding in another country, then it does not
-                  really make sense to spend months waiting and $600 to $800!
-                </p>
+                
+                
+                {/* https://novascotia.ca/sns/paal/rmv/paal380.asp */}
                 <li className="text pt-3">
-                  Instead, we can do that for way cheaper. Depending upon where
+                  We can do that for way cheaper. Depending upon where
                   you get the appointment, we can be with you for as cheap as
                   <span className="text text-black font-bold"> $199</span>
                 </li>
+                <br/>
               </ul>
               {gfromInquiryBtn()}
             </Card>
@@ -305,8 +325,9 @@ const page = () => {
                 </p>
                 <p className="text text-center level-subheading-2 font-bold">
                   {" "}
-                  (class 6N).
+                  Class 6N
                 </p>
+                <br/>
                 <ul className="text text-lg mt-3 ">
                   <li className="text pt-2">
                     To get this, you have to have your{" "}
@@ -314,14 +335,15 @@ const page = () => {
                       {" "}
                       Learner Motorcycle Licence{" "}
                     </span>
-                    and pass an &quot;advanced skills&quot; test (which is a{" "}
+                    and pass an &quot;Advanced skills&quot; test (which is a{" "}
                     <span className="test font-bold"> Road test </span> Driving
                     Examination)
                   </li>
+                  <br/>
                   <li className="text pt-3">
                     Complete a{" "}
-                    <span className="text font-bold">practice period </span> .
-                    Before you can take your &quot;advanced skills&quot; road
+                    <span className="text font-bold">Practice period </span> .
+                    Before you can take your &quot;Advanced skills&quot; road
                     test, you usually need to have your Learner&#39;s Motorcycle
                     Licence for at least 6 months.
                   </li>
@@ -329,13 +351,11 @@ const page = () => {
                     However, that can be reduced to 3 months if you pass an
                     approved motorcycle driver training course.
                   </li>
+                  <br/>
                   <li className="text pt-4 font-bold text-xl">
                     Again, You need to bring a motorcycle to the test !!{" "}
                   </li>
-                  <h4 className="text pt-4 font-bold">
-                    Now the problem comes here again for a lot of people BUT not
-                    for you !{" "}
-                  </h4>
+                  
                   <li className="text pt-3">
                     Your motorcycle must pass a pre-trip inspection before the
                     Balance Test can start. The motorcycle needs to have a valid
@@ -343,16 +363,16 @@ const page = () => {
                     permit). You need to provide proof of motor vehicle
                     inspection(MVI) and insurance for the motorcycle.
                   </li>
+                  <br/>
+                  
                   <li className="text pt-4 font-bold text-xl">
-                    Here we come to a rescue !
-                  </li>
-                  <li className="text pt-4 font-bold text-xl">
-                    We will come with you to your test with our Motorcycle !{" "}
+                  Here we come to a rescue, We will come with you to your test with our Motorcycle !{" "}
                   </li>
                   <h5 className="text text-xl pt-3">
                     Licence plate, Vehicle permit, MVI, Insurance WE TAKE CARE
                     OF IT ALL !!
                   </h5>
+                  <br/>
 
                   <li className="text pt-3">
                     A driving school might provide you with a motorcycle for
@@ -366,6 +386,8 @@ const page = () => {
                     cheap as
                     <span className="text font-bold"> $199</span>
                   </li>
+                  <br/>
+                  
 
                   <li className="text text-center pt-5 font-bold">
                     The fee for this test is $53.00 (tax included). An
@@ -394,6 +416,7 @@ const page = () => {
                       Additional Information (C).
                     </a>
                   </li>
+                  <br/>
                 </ul>
               </div>
               {gfromInquiryBtn()}
@@ -409,6 +432,7 @@ const page = () => {
                   {" "}
                   Restricted Individual with Condition 47
                 </p>
+                <br/>
 
                 <ul className="text text-lg mt-3 ">
                   <li className="text pt-2">
@@ -435,20 +459,22 @@ const page = () => {
                       <span className="text font-bold">
                         Driver Improvement Program
                       </span>{" "}
-                      (including a 6-hour &quot;defensive driving&quot; course).
+                      (including a 6-hour &quot;Defensive driving&quot; course).
                     </li>
+                    <br/>
                   </ul>
 
                   <li>
-                    And put “refer to access nova scotia website to know more
+                    Refer to access nova scotia website to know more
                     about{" "}
                     <a
                       href="https://novascotia.ca/sns/paal/rmv/paal380.asp"
                       target="_blank"
                       className="text text-blue-700 underline"
                     >
-                      defensive driving course
+                      Defensive driving course
                     </a>
+                    <br/>
                   </li>
                   <li className="text pt-2">
                     Once the 2 year driving period has been completed, you will
@@ -459,7 +485,6 @@ const page = () => {
                   </li>
                 </ul>
               </div>
-              {gfromInquiryBtn()}
             </Card>
           </div>
         </div>
