@@ -1,0 +1,98 @@
+$blinkingdotsColor: #d48427;
+.hotspot {
+  display: block;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+  border-radius: 50%;
+  &.main-wrapper {
+    position: absolute;
+  }
+
+  &.dots-container {
+    position: relative;
+  }
+  // &.dot1,
+  // &.dot2,
+  &.dot3 {
+    position: relative; /* Add this */
+  }
+  // &.dot1::before,
+  // &.dot2::before,
+  &.dot3::before {
+    content: attr(data-text); /* Add this */
+    position: absolute; /* Add this */
+    top: 50%; /* Add this */
+    left: 50%; /* Add this */
+    transform: translate(-50%, -50%); /* Add this */
+    color: white; /* Add this */
+    font-size: 1rem; /* Add this */
+    font-family: Arial, sans-serif; /* Add this */
+    font-weight: 900;
+    text-align: center; /* Add this */
+    z-index: 4; /* Add this */
+  }
+  &.dot1::before {
+    z-index: 5; /* Adjust this based on layering */
+  }
+  &.dot2::before {
+    z-index: 5; /* Adjust this based on layering */
+  }
+  &.dot3::before {
+    z-index: 5; /* Adjust this based on layering */
+  }
+  &.dot1 {
+    width: 11px;
+    height: 11px;
+    border: 5px solid $blinkingdotsColor;
+    background-color: transparent;
+    z-index: 1;
+    opacity: 0.2;
+    animation: dot1 2s infinite;
+  }
+  &.dot2 {
+    width: 11px;
+    height: 11px;
+    background-color: $blinkingdotsColor;
+    z-index: 2;
+    animation: dot2 2s infinite;
+  }
+  &.dot3 {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: $blinkingdotsColor;
+    z-index: 3;
+    animation: dot3 1s alternate infinite;
+  }
+}
+
+@keyframes dot1 {
+  0% {
+    opacity: 0.2;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(5);
+  }
+}
+
+@keyframes dot2 {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2);
+  }
+}
+
+@keyframes dot3 {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}

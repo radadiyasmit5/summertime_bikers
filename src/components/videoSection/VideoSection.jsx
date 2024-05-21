@@ -56,10 +56,12 @@ const VideoSection = () => {
           ref={videoRef}
           src={homePage_mobile_view.src}
           alt="nothing"
-          width={100}
-          height={100}
+          width={800}
+          height={800}
           loading="eager"
-          objectFit='contain'
+          // quality={100}
+          objectFit="contain"
+          // priority
           // style={{width: "100%", height: "100%"}}
         />
       </div>
@@ -69,8 +71,8 @@ const VideoSection = () => {
             options={{
               strings: [
                 "Get Riding This Season!",
-                "Not Behind the Wheel, GET ON THE WHEELS!",
-                "Live full Throttle",
+                "Not Behind The Wheel, GET ON THE WHEELS!",
+                "Live Full Throttle",
                 "Every Motorcycle Ride is a Tiny Vacation",
                 "When Life Takes a Curve, Lean On It",
               ],
@@ -82,7 +84,7 @@ const VideoSection = () => {
         </div>
         <div
           className="link-wrapper-container text-white"
-          onClick={() => handleSectionchange(moreInfoRef)}
+          onClick={(e) => handleSectionchange(e, moreInfoRef)}
         >
           <LinksWrapper />
         </div>

@@ -3,7 +3,8 @@ import React, {createContext, useRef} from "react"
 
 export const SectionContext = createContext(null)
 export const SectionScrollContext = ({children}) => {
-  const handleSectionchange = (elementRef) => {
+  const handleSectionchange = (e, elementRef) => {
+    e.preventDefault()
     window.scrollTo({
       top: elementRef.current.offsetTop - headerRef?.current?.offsetHeight,
       behavior: "smooth",

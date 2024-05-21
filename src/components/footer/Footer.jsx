@@ -1,41 +1,55 @@
 "use client"
 import React, {useContext} from "react"
 import "./footer.scss"
-import {SectionContext} from "../context/SectionScrollContext"
-import {MapContainer, TileLayer, useMap} from "react-leaflet"
 import summertime_bikers_logo_3_no_bg from "../../../public/summertime_bikers_logo_3_no_bg.png"
 import Image from "../../../node_modules/next/image"
 import {Instagram} from "@mui/icons-material"
 import FacebookIcon from "@mui/icons-material/Facebook"
-import SociealBar from "../header/socielBar/SocielBar"
-import Button from "../buttons/Button"
 import nova_scotia_map from "../../../public/nova_scotia_map.png"
-import PinDropIcon from "@mui/icons-material/PinDrop"
-import {Tooltip} from "antd"
-import TypeWriterWrapper from "../typeWriter/TypeWriterWrapper"
-import Typewriter from "typewriter-effect"
+import {Card, Tooltip} from "antd"
+import RadarDotAnimation from "../buttons/RadarDotAnimation"
+import WarningCard from "../cards/WarningCard"
 const Footer = () => {
   // const {footerRef} = useContext(SectionContext)
-
+  const LocationsArr = [
+    {location: "Dartmouth", distance: "10km", postal: "B2W 6A3"},
+    {location: "Truro", distance: "91km", postal: "B6L 0C4"},
+    {location: "Bridgewater", distance: "103km", postal: "B4V 3J8"},
+    {location: "Kentville ", distance: "109km", postal: "B4N 0H2"},
+    {location: "Stellarton", distance: "153km", postal: "B0K 1S0"},
+    {location: "Middleton", distance: "154km", postal: "B0S 1P0"},
+    {location: "Antigonish", distance: "212km", postal: "B2G 2E2"},
+    {location: "Yarmouth", distance: "300km", postal: "B5A 2T1"},
+    {location: "Sydney 	", distance: "400km", postal: "B1S 1A8"},
+  ]
   return (
     <section id="footer">
       <div className="footer-main-container">
+        <div>
+          <h1 className="location-heading capitalize font-bold">
+            If you live near Halifax Citadel,
+            <p>
+              then this is approximately how far each Location is that does
+              Motorcycle tests.
+            </p>
+          </h1>
+        </div>
         <div className="footer-flex-1">
-          <div className="typewriter-container-footer">
-            <Typewriter
-              options={{
-                strings: [
-                  "Get Riding This Season!",
-                  "Not Behind the Wheel, GET ON THE WHEELS!",
-                  "Live full Throttle",
-                  "Every Motorcycle Ride is a Tiny Vacation",
-                  "When Life Takes a Curve, Lean On It",
-                ],
-                delay: 90,
-                autoStart: true,
-                loop: true,
-              }}
-            />
+          <div className="location-list-container">
+            <table>
+              <tbody>
+                {LocationsArr.map((e, i) => (
+                  <tr key={e.location} style={{position: "relative"}}>
+                    <td style={{position: "relative", top: "1.2rem"}}>
+                      <RadarDotAnimation num={i + 1} />
+                    </td>
+                    <td>{e.location}</td>
+                    <td>{e.distance}</td>
+                    <td>{e.postal}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
           <div className="map-wrapper-container">
             <div className="map-container">
@@ -45,31 +59,47 @@ const Footer = () => {
                 height={100}
                 className="NS_map_img"
               />
-              <Tooltip title="halifax location" placement="top" arrow>
-                <PinDropIcon className="haifax_pin pin_common" />
-              </Tooltip>
-              <Tooltip title="Dartmouth location" placement="top" arrow>
-                <PinDropIcon className="Dartmouth_pin pin_common" />
-              </Tooltip>
-              <Tooltip title="sackville location" placement="top" arrow>
-                <PinDropIcon className="sackville_pin pin_common" />
-              </Tooltip>
-              <Tooltip title="Amherst location" placement="top" arrow>
-                <PinDropIcon className="Amherst_pin pin_common" />
-              </Tooltip>
-              <Tooltip title="Antigonish location" placement="top" arrow>
-                <PinDropIcon className="Antigonish_pin pin_common" />
-              </Tooltip>
-              <Tooltip title="Bridgewater location" placement="top" arrow>
-                <PinDropIcon className="Bridgewater_pin pin_common" />
-              </Tooltip>
-              <Tooltip title="Digby location" placement="top" arrow>
-                <PinDropIcon className="Digby_pin pin_common" />
-              </Tooltip>
+
+              <div className="Dartmouth_pin pin_common">
+                <RadarDotAnimation num={1} name={"Dartmouth Location"} />
+              </div>
+
+              <div className="turo_pin pin_common">
+                <RadarDotAnimation num={2} name={"Turo Location"} />
+              </div>
+
+              <div className="Bridgewater_pin pin_common">
+                <RadarDotAnimation num={3} name={"Bridgewater Location"} />
+              </div>
+
+              <div className="Kentville_pin pin_common">
+                <RadarDotAnimation num={4} name={"Kentville Location"} />
+              </div>
+
+              <div className="Stellarton_pin pin_common">
+                <RadarDotAnimation num={5} name={"Stellarton Location"} />
+              </div>
+
+              <div className="Middleton_pin pin_common">
+                <RadarDotAnimation num={6} name={"Middleton Location"} />
+              </div>
+
+              <div className="Antigonish_pin pin_common">
+                <RadarDotAnimation num={7} name={"Antigonish Location"} />
+              </div>
+
+              <div className="Yarmouth_pin pin_common">
+                <RadarDotAnimation num={8} name={"Yarmouth Locaion"} />
+              </div>
+
+              <div className="Sydney_pin pin_common">
+                <RadarDotAnimation num={9} name={"Sydney Location"} />
+              </div>
             </div>
           </div>
         </div>
         <div></div>
+        <WarningCard />
         <div className="footer-flex-2 pt-14">
           <div className="footer-flext-1-child-1">
             <Image

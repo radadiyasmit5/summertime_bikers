@@ -9,7 +9,7 @@ const StickyGformbtn = () => {
   return (
     <Tooltip title="Click Here to Submit an Inquiry" placement="top" arrow>
       <div className="helmets-icon-wrapper">
-        <Link href="callbackGform">
+        <Link target='_blank' href="callbackGform">
           <SportsMotorsportsIcon className="helmet-icon" />
         </Link>
       </div>

@@ -14,24 +14,36 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    // border: 2px solid rgb(0, 0, 0);
+    .location-heading {
+      font-size: 3rem;
+      padding: 1rem 3rem;
+      color: black;
+      p {
+        color: #86868b;
+      }
+    }
     .footer-flex-1 {
       position: relative;
       min-height: 100%;
       width: 100%;
       display: flex;
-      flex-direction: column;
+      // flex-direction: column;
       justify-content: space-around;
       padding: 5rem 0;
       flex-wrap: wrap;
-      .typewriter-container-footer {
-        font-size: 2rem;
-        font-family: "Montserrat", sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 6rem 5rem;
-        min-width: 50%;
+      .location-list-container {
+        // border: 2px solid black;
+        table {
+          border-collapse: collapse;
+          tr {
+            td,
+            th {
+              padding: 1rem 1rem;
+              // border: 1px solid #dddddd;
+              // text-align: left;
+            }
+          }
+        }
       }
       .map-wrapper-container {
         display: flex;
@@ -39,61 +51,74 @@
         .map-container {
           position: relative;
           .NS_map_img {
-            
             object-fit: contain;
           }
-          .haifax_pin {
-            position: absolute;
-            top: 63%;
-            left: 38%;
-            transition: all 1s ease-in-out;
-            font-size: 1.8rem;
-          }
+
           .Dartmouth_pin {
             position: absolute;
-            top: 53%;
-            left: 40%;
+            top: 68%;
+            left: 46%;
             transition: all 1s ease-in-out;
             font-size: 1.8rem;
           }
-          .sackville_pin {
+          .turo_pin {
             position: absolute;
-            top: 35%;
-            left: 40%;
+            top: 52%;
+            left: 48%;
             transition: all 1s ease-in-out;
             font-size: 1.8rem;
           }
-          .Amherst_pin {
+
+          .Bridgewater_pin {
             position: absolute;
-            top: 40%;
-            left: 55%;
+            top: 77%;
+            left: 30%;
+            transition: all 1s ease-in-out;
+            font-size: 1.8rem;
+          }
+          .Kentville_pin {
+            position: absolute;
+            top: 58%;
+            left: 32%;
+            transition: all 1s ease-in-out;
+            font-size: 1.8rem;
+          }
+          .Stellarton_pin {
+            position: absolute;
+            top: 45%;
+            left: 59%;
+            transition: all 1s ease-in-out;
+            font-size: 1.8rem;
+          }
+          .Middleton_pin {
+            position: absolute;
+            top: 62%;
+            left: 23%;
             transition: all 1s ease-in-out;
             font-size: 1.8rem;
           }
           .Antigonish_pin {
             position: absolute;
-            top: 40%;
-            left: 60%;
+            top: 43%;
+            left: 68%;
             transition: all 1s ease-in-out;
             font-size: 1.8rem;
           }
-          .Bridgewater_pin {
+          .Yarmouth_pin {
             position: absolute;
-            top: 40%;
-            left: 30%;
+            top: 88%;
+            left: 8%;
             transition: all 1s ease-in-out;
             font-size: 1.8rem;
           }
-          .Digby_pin {
+          .Sydney_pin {
             position: absolute;
-            top: 40%;
-            left: 35%;
+            top: 32%;
+            left: 95%;
             transition: all 1s ease-in-out;
             font-size: 1.8rem;
           }
-          // .haifax_pin:hover {
-          //   font-size: 2rem;
-          // }
+
           .pin_common {
             cursor: pointer;
             color: rgb(185, 168, 168);
@@ -102,6 +127,7 @@
         }
       }
     }
+
     .footer-flex-2 {
       background-color: black;
       min-height: 100%;
@@ -150,10 +176,31 @@
   .logo-footer {
     width: 300px !important;
   }
-  .footer-main-container {
-    .footer-flex-1 {
-      .typewriter-container-footer {
-        display: none !important;
+  #footer {
+    .footer-main-container {
+      .location-heading {
+        font-size: 1.5rem;
+        padding: 1rem 0.8rem;
+      }
+      .footer-flex-1 {
+        padding-top: 1rem;
+        .location-list-container {
+          // border: 2px solid black;
+          table {
+            border-collapse: collapse;
+            tr {
+              td,
+              th {
+                padding: 0.6rem 0.8rem;
+                // border: 1px solid #dddddd;
+                // text-align: left;
+              }
+            }
+          }
+        }
+        .typewriter-container-footer {
+          display: none !important;
+        }
       }
     }
   }

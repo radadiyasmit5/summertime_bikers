@@ -8,6 +8,8 @@ import StickyGformbtn from "@/components/buttons/StickyGformbtn"
 import Button from "@/components/buttons/Button"
 import {useRouter as UseRouter} from "next/navigation"
 import Link from "next/link"
+import WarningCard from "@/components/cards/WarningCard"
+import WarningCardWrapper from "../../components/cards/WarningCardWrapper"
 const page = () => {
   const level1 = UseRef(null)
   const level2 = UseRef(null)
@@ -93,11 +95,11 @@ const page = () => {
   const casualtext = "text text-lg  mt-4 italic text-gray-600"
   const gfromInquiryBtn = () => {
     const onbtnClick = () => {
-      router.push("/callbackGform")
+      router.push("/formridirectionpage")
     }
     return (
       <div className="gforminquirybtn">
-        <Link href={"/callbackGform"} target="_blank">
+        <Link href={"/formridirectionpage"} target="_blank">
           <Button label="Find out how to borrow a Motorcycle" />
         </Link>
       </div>
@@ -228,7 +230,7 @@ const page = () => {
                   Learner Licence within 12 months of taking the Knowledge Test.
                   (If not, then you will need to take the Knowledge test again.)
                 </li>
-                <br/>
+                <br />
                 <h4 className="text text-2xl font-bold pt-4">Balance Test</h4>
                 <li className="text pt-3">
                   Balance Tests are only available seasonally (tests are not
@@ -240,43 +242,41 @@ const page = () => {
                   Motorcycle Learner Licence. The Balance test includes basic
                   motorcycle balancing manoeuvres and braking techniques.
                 </li>
-                <br/>
-                <p className="text pt-3 font-bold">
-                  {" "}
-                  It is recommended to do a 
-                
-                <a
+                <br />
+                <WarningCardWrapper>
+                  <p className="text">
+                    {" "}
+                    It is recommended to do a{" "}
+                    <a
                       href="https://novascotia.ca/sns/paal/rmv/paal380.asp"
-                      className="text text-blue-700 underline"
+                      className="text text-blue-700"
                       target="_blank"
                     >
                       {" "}
                       Course
-                    </a>
-                
-                  {" "}
-                  if you do not have experience
-                  with motorcycles at all.{" "}
-                </p>
-                
-                <br/>
+                    </a>{" "}
+                    if you do not have experience with motorcycles at all.{" "}
+                  </p>
+                </WarningCardWrapper>
+                <br />
                 <p className="text pt-3 ">
                   A driving school might provide you with a motorcycle for your
                   test but it is really expensive and time consuming to do the
-                  course. But if you have some experience with motorcycles, maybe
-                  an off-road dirt bike or an experience of riding a motorcycle in another
-                  country, then it does not really make sense to spend months
-                  waiting and $600 to $800!
+                  course. But if you have some experience with motorcycles,
+                  maybe an off-road dirt bike or an experience of riding a
+                  motorcycle in another country, then it does not really make
+                  sense to spend months waiting and $600 to $800!
                 </p>
-                <br/>
+                <br />
 
                 <li className="text pt-4 font-bold text-xl">
                   You need to bring a motorcycle to the test !!
                 </li>
-                <br/>
+                <br />
 
                 <h4 className="text pt-4 font-bold">
-                  Now the problem comes here for a lot of people BUT not for you. Because we can help you in that!
+                  Now the problem comes here for a lot of people BUT not for
+                  you. Because we can help you in that!
                 </h4>
 
                 <p className="text pt-3">
@@ -290,24 +290,23 @@ const page = () => {
                   vehicle inspection(MVI) and insurance for the motorcycle.
                 </p>
 
-                
                 <h5 className="text text-xl font-bold pt-3">
-                Here we come to a rescue, We will come with you to your test with our Motorcycle !
+                  Here we come to a rescue, We will come with you to your test
+                  with our Motorcycle !
                 </h5>
-                <br/>
+                <br />
                 <h5 className="text text-xl pt-3">
                   Licence plate, Vehicle permit, MVI, Insurance WE TAKE CARE OF
                   IT ALL !!
                 </h5>
-                
-                
+
                 {/* https://novascotia.ca/sns/paal/rmv/paal380.asp */}
                 <li className="text pt-3">
-                  We can do that for way cheaper. Depending upon where
-                  you get the appointment, we can be with you for as cheap as
+                  We can do that for way cheaper. Depending upon where you get
+                  the appointment, we can be with you for as cheap as
                   <span className="text text-black font-bold"> $199</span>
                 </li>
-                <br/>
+                <br />
               </ul>
               {gfromInquiryBtn()}
             </Card>
@@ -327,7 +326,7 @@ const page = () => {
                   {" "}
                   Class 6N
                 </p>
-                <br/>
+                <br />
                 <ul className="text text-lg mt-3 ">
                   <li className="text pt-2">
                     To get this, you have to have your{" "}
@@ -339,7 +338,7 @@ const page = () => {
                     <span className="test font-bold"> Road test </span> Driving
                     Examination)
                   </li>
-                  <br/>
+                  <br />
                   <li className="text pt-3">
                     Complete a{" "}
                     <span className="text font-bold">Practice period </span> .
@@ -351,11 +350,11 @@ const page = () => {
                     However, that can be reduced to 3 months if you pass an
                     approved motorcycle driver training course.
                   </li>
-                  <br/>
+                  <br />
                   <li className="text pt-4 font-bold text-xl">
                     Again, You need to bring a motorcycle to the test !!{" "}
                   </li>
-                  
+
                   <li className="text pt-3">
                     Your motorcycle must pass a pre-trip inspection before the
                     Balance Test can start. The motorcycle needs to have a valid
@@ -363,16 +362,17 @@ const page = () => {
                     permit). You need to provide proof of motor vehicle
                     inspection(MVI) and insurance for the motorcycle.
                   </li>
-                  <br/>
-                  
+                  <br />
+
                   <li className="text pt-4 font-bold text-xl">
-                  Here we come to a rescue, We will come with you to your test with our Motorcycle !{" "}
+                    Here we come to a rescue, We will come with you to your test
+                    with our Motorcycle !{" "}
                   </li>
                   <h5 className="text text-xl pt-3">
                     Licence plate, Vehicle permit, MVI, Insurance WE TAKE CARE
                     OF IT ALL !!
                   </h5>
-                  <br/>
+                  <br />
 
                   <li className="text pt-3">
                     A driving school might provide you with a motorcycle for
@@ -386,8 +386,7 @@ const page = () => {
                     cheap as
                     <span className="text font-bold"> $199</span>
                   </li>
-                  <br/>
-                  
+                  <br />
 
                   <li className="text text-center pt-5 font-bold">
                     The fee for this test is $53.00 (tax included). An
@@ -416,7 +415,7 @@ const page = () => {
                       Additional Information (C).
                     </a>
                   </li>
-                  <br/>
+                  <br />
                 </ul>
               </div>
               {gfromInquiryBtn()}
@@ -432,7 +431,7 @@ const page = () => {
                   {" "}
                   Restricted Individual with Condition 47
                 </p>
-                <br/>
+                <br />
 
                 <ul className="text text-lg mt-3 ">
                   <li className="text pt-2">
@@ -461,12 +460,11 @@ const page = () => {
                       </span>{" "}
                       (including a 6-hour &quot;Defensive driving&quot; course).
                     </li>
-                    <br/>
+                    <br />
                   </ul>
 
                   <li>
-                    Refer to access nova scotia website to know more
-                    about{" "}
+                    Refer to access nova scotia website to know more about{" "}
                     <a
                       href="https://novascotia.ca/sns/paal/rmv/paal380.asp"
                       target="_blank"
@@ -474,7 +472,7 @@ const page = () => {
                     >
                       Defensive driving course
                     </a>
-                    <br/>
+                    <br />
                   </li>
                   <li className="text pt-2">
                     Once the 2 year driving period has been completed, you will
@@ -486,6 +484,7 @@ const page = () => {
                 </ul>
               </div>
             </Card>
+            <WarningCard />
           </div>
         </div>
       </div>

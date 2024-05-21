@@ -1,0 +1,36 @@
+@import "../utils/scss/variables.scss";
+.waring-card-container {
+  margin: 1rem;
+  .ant-card-body {
+    background-color: #fdcaca;
+    border-left: 0.5rem solid red;
+    border-radius: 0.6rem;
+  }
+  .waring-text-container {
+    margin: auto 1rem;
+  }
+  .warning-card-inner-container {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+@media #{$media-mobile-480} {
+    .waring-card-container {
+     
+        .ant-card-body {
+          
+        }
+        .waring-text-container {
+          margin: auto 1rem;
+        }
+        .warning-card-inner-container {
+          display: flex;
+          justify-content: center;
+          font-size: 0.9rem;
+          font-weight: 600;
+        }
+      }
+}

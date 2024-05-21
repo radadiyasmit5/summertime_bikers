@@ -1,7 +1,5 @@
-import {useRouter} from "next/navigation"
-import './button.scss'
+import "./button.scss"
 const Button = ({label, iconURL, backgroundColor, textColor, borderColor}) => {
-  const router = useRouter()
   return (
     <button
       className={`flex justify-center items-center gap-2 px-7 py-2 border font-montserrat text-lg leading-none btn
@@ -11,9 +9,7 @@ const Button = ({label, iconURL, backgroundColor, textColor, borderColor}) => {
               : "bg-blue-600 text-white"
           } rounded-full`}
       //   onClick={onbtnClick}
-      style={{
-      
-      }}
+      style={{}}
     >
       {label}
       {iconURL && (

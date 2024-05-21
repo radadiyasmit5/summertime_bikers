@@ -7,6 +7,8 @@ import Button from "@/components/buttons/Button"
 import Link from "next/link"
 import "./withLicence.scss"
 import StickyGformbtn from "@/components/buttons/StickyGformbtn"
+import WarningCard from "@/components/cards/WarningCard"
+import WarningCardWrapper from "@/components/cards/WarningCardWrapper"
 const page = () => {
   // const [scrollTop, setScrollTop] = UseState(0)
   const stage1 = UseRef(null)
@@ -69,11 +71,11 @@ const page = () => {
   const casualtext = "text text-lg  mt-4 italic text-gray-600"
   const gfromInquiryBtn = () => {
     const onbtnClick = () => {
-      router.push("/callbackGform")
+      router.push("/formridirectionpage")
     }
     return (
       <div className="gforminquirybtn">
-        <Link href={"/callbackGform"} target="_blank">
+        <Link href={"/formridirectionpage"} target="_blank">
           <Button label="Find out how to borrow a Motorcycle" />
         </Link>
       </div>
@@ -169,7 +171,7 @@ const page = () => {
                       Knowledge Test
                     </h4>
                   </li>
-                  <br/>
+                  <br />
                   <li className="text font-bold pt-3">
                     You need to review the{" "}
                     <a
@@ -247,21 +249,21 @@ const page = () => {
                   IT ALL !!{" "}
                 </li>
                 <br />
-
-                <p className="text pt-3 font-bold">
-                  {" "}
-                  It is recommended to do a
-                  <a
-                    href="https://novascotia.ca/sns/paal/rmv/paal380.asp"
-                    className="text text-blue-700 underline"
-                    target="_blank"
-                  >
+                <WarningCardWrapper>
+                  <p className="text">
                     {" "}
-                    Course
-                  </a>{" "}
-                  if you do not have experience with motorcycles at all.{" "}
-                </p>
-
+                    It is recommended to do a
+                    <a
+                      href="https://novascotia.ca/sns/paal/rmv/paal380.asp"
+                      className="text text-blue-700 "
+                      target="_blank"
+                    >
+                      {" "}
+                      Course
+                    </a>{" "}
+                    if you do not have experience with motorcycles at all.{" "}
+                  </p>
+                </WarningCardWrapper>
                 <br />
                 <p className="text pt-3 ">
                   A driving school might provide you with a motorcycle for your
@@ -280,6 +282,7 @@ const page = () => {
                 </li>
                 <br />
 
+                {gfromInquiryBtn()}
                 <li className="text pt-3">
                   When you pass those two tests, you will get a paper licence
                   indicating that you are qualified as a Motorcycle Learner!
@@ -309,7 +312,6 @@ const page = () => {
                 <br />
               </ul>
 
-              {gfromInquiryBtn()}
               <br />
             </Card>
           </div>
@@ -397,6 +399,9 @@ const page = () => {
               <br />
               <br />
             </Card>
+            <div className="mb-10">
+              <WarningCard />
+            </div>
           </div>
         </div>
       </div>

@@ -118,44 +118,6 @@ const Header = () => {
                 {!isMenuOpen ? <MenuIcon /> : <CloseIcon />}
               </span>
             </Button>
-            {/* <Menu
-              id="basic-menu"
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
-              MenuListProps={{
-                "aria-labelledby": "basic-button",
-              }}
-            >
-              <Link
-                href="/"
-                // className="nav-link-item"
-                // onClick={() => handleSectionchange(heroRef)}
-              >
-                <MenuItem onClick={handleClose}>Home</MenuItem>
-              </Link>
-              <Link
-                href="about"
-                // className="nav-link-item"
-                // onClick={() => handleSectionchange(heroRef)}
-              >
-                <MenuItem onClick={handleClose}>About</MenuItem>
-              </Link>
-              <Link
-                href="pricing"
-                // className="nav-link-item"
-                // onClick={() => handleSectionchange(heroRef)}
-              >
-                <MenuItem onClick={handleClose}>Pricing</MenuItem>
-              </Link>
-              <Link
-                href="#"
-                // className="nav-link-item"
-                onClick={() => handleSectionchange(footerRef)}
-              >
-                <MenuItem onClick={handleClose}>Contact us</MenuItem>
-              </Link>
-            </Menu> */}
           </div>
         </nav>
         {isMenuOpen && (
@@ -173,13 +135,6 @@ const Header = () => {
               // onClick={() => handleSectionchange(heroRef)}
             >
               About
-            </Link>
-            <Link
-              href="pricing"
-              className="nav-link-item"
-              // onClick={() => handleSectionchange(heroRef)}
-            >
-              Pricing
             </Link>
             <Link
               href="#"
