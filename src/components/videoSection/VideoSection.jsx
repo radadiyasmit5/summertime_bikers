@@ -1,13 +1,11 @@
 "use client"
-import React, {useContext, useEffect, useRef} from "react"
-import TypeWriterWrapper from "../typeWriter/TypeWriterWrapper"
-// import video from './bikevideo1.mp4'
+import React, {useContext, useRef} from "react"
 import "./videosection.scss"
 import Typewriter from "typewriter-effect"
 import bikevideo2 from "../../../public/bikevideo2.mp4"
 import bikevideo2webm from "../../../public/bikevideo2.webm"
 import bikevideo2ogv from "../../../public/bikevideo2.ogv"
-import harley1 from "../../../public/harley1.jpg"
+import poster_img_home from "../../../public/poster_img_home.png"
 import Image from "next/image"
 import LinksWrapper from "../utils/LinkWrapper/LinksWrapper"
 import {SectionContext} from "../context/SectionScrollContext"
@@ -15,19 +13,7 @@ import homePage_mobile_view from "../../../public/homePage_mobile_view.png"
 
 const VideoSection = () => {
   const videoRef = useRef(null)
-  useEffect(() => {
-    // setTimeout(() => {
-    //   videoRef.current.className = "hero-video hero-video-visible"
-    // }, 500)
-  }, [])
-  const {
-    handleSectionchange,
-    moreInfoRef,
-    experienceRef,
-    technologiesRef,
-    headerRef,
-    contactRef,
-  } = useContext(SectionContext)
+  const {handleSectionchange, moreInfoRef} = useContext(SectionContext)
   return (
     <>
       {/* <div className='dummy-filler-div'></div> */}
@@ -41,7 +27,7 @@ const VideoSection = () => {
           ref={videoRef}
           controls={false}
           preload="auto"
-          poster={harley1.src}
+          poster={poster_img_home.src}
         >
           <source type="video/mp4" src={bikevideo2} />
           <source type="video/webm" src={bikevideo2webm} />

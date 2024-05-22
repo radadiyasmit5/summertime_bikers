@@ -1,10 +1,8 @@
 "use client"
 // import {shoe8} from "../assets/images"
 import {useContext} from "react"
-import Button from "../buttons/Button"
 import {SectionContext} from "../context/SectionScrollContext"
 import {Card} from "antd"
-import VisibilityIcon from "@mui/icons-material/Visibility"
 import "./moreinfoHomePage.scss"
 import {useRouter} from "next/navigation"
 const MoreInfoSection = () => {

@@ -7,28 +7,14 @@ import summertime_bikers_logo_3_no_bg from "../../../public/summertime_bikers_lo
 import Image from "next/image"
 import SociealBar from "./socielBar/SocielBar"
 import MenuIcon from "@mui/icons-material/Menu"
-import Menu from "@mui/material/Menu"
-import MenuItem from "@mui/material/MenuItem"
 import Button from "@mui/material/Button"
 import {useRouter} from "next/navigation"
 import {SectionContext} from "../context/SectionScrollContext"
-import logo_dp from "../../../public/logo_dp.png"
 import CloseIcon from "@mui/icons-material/Close"
-// import { SectionContext } from "../../context/SectionScrollContext"
-// import { Mentions, Menu } from "antd"
-
-// import SociealBar from "./socialBar/SociealBar"
 
 const Header = () => {
   const router = useRouter()
-  const {
-    handleSectionchange,
-    moreInfoRef,
-    footerRef,
-    technologiesRef,
-    headerRef,
-    contactRef,
-  } = useContext(SectionContext)
+  const {handleSectionchange, footerRef, headerRef} = useContext(SectionContext)
 
   const [anchorEl, setAnchorEl] = useState(null)
   const [isMenuOpen, setisMenuOpen] = useState(false)

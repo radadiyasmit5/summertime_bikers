@@ -1,5 +1,3 @@
-"use client"
-
 import React from "react"
 import BikeAnimationPage from "../../components/bikeAnimationPage/BikeAnimationPage.js"
 import Header from "@/components/header/Header.jsx"
