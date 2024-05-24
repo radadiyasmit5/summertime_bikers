@@ -14,20 +14,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-
-
-
   console.log("requested");
-
-
-
-
   return (
     <html lang="en">
       <body>
         <SectionScrollContext>
           {children}
-
         </SectionScrollContext>
       </body>
     </html>

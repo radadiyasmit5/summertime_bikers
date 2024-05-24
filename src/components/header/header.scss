@@ -90,6 +90,10 @@
   display: flex;
   justify-content: flex-end;
   padding-right: 2rem;
+  list-style: none;
+  svg {
+    color: white;
+  }
 }
 
 .social-bar-item {
@@ -275,7 +279,6 @@
     .social-bar-list {
       justify-content: center;
       padding: 0;
-      
     }
   }
 
@@ -328,7 +331,6 @@
     .social-bar-list {
       justify-content: center;
       padding: 0;
-      
     }
   }
   .logo-img {
