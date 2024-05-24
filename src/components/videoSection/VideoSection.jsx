@@ -51,6 +51,7 @@ const VideoSection = () => {
           // style={{width: "100%", height: "100%"}}
         />
       </div>
+    
       <div className="video-mask">
         <div className="content text-white-900 h-1 font-bold">
           <Typewriter
@@ -68,12 +69,12 @@ const VideoSection = () => {
             }}
           />
         </div>
-        <div
+        <button
           className="link-wrapper-container text-white"
           onClick={(e) => handleSectionchange(e, moreInfoRef)}
         >
           <LinksWrapper />
-        </div>
+        </button>
       </div>
     </>
   )

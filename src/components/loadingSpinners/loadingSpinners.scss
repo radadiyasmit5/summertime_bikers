@@ -1,0 +1,116 @@
+$red: #f07167;
+$orange: #fed9b7;
+$yellow: #fdfcdc;
+$green: #00afb9;
+$blue: #0081a7;
+$black: #5e6472;
+$white: #ebebeb;
+$background: white;
+// Font-size
+$default-size: 36;
+// Helper mixin
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  .l-container {
+    width: 33%;
+    min-height: 200px;
+    position: relative;
+    @include center;
+  }
+}
+
+// For motorcycle loader
+@mixin motorcycle($duration, $delay) {
+  @keyframes motorcycle {
+    from {
+      transform: translate(200%);
+      opacity: 0;
+    }
+    12.5% {
+      transform: translate(0%);
+      opacity: 1;
+    }
+    25% {
+      transform: translate(-200%);
+      opacity: 0;
+    }
+    26% {
+      opacity: 0;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  animation: motorcycle $duration + s $delay + s linear infinite;
+}
+
+@mixin motorcycle-gas($duration, $delay) {
+  @keyframes motorcycle-gas {
+    from {
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+      left: -80px;
+    }
+    50% {
+      opacity: 0;
+      left: -100px;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  animation: motorcycle-gas $duration + s $delay + s linear infinite;
+}
+
+.motorcycle-container {
+  @include center;
+  position: absolute;
+  font-size: $default-size * 2 + px;
+  * {
+    position: absolute;
+    color: $black;
+    opacity: 0;
+  }
+  .motorcycle {
+    color: $red;
+    opacity: 1;
+  }
+  .wind {
+    opacity: 1;
+    font-size: $default-size / 1.2 + px;
+    transform: scaleX(-1);
+    left: -60px;
+    color: $orange;
+    @include motorcycle-gas(1, 0.5);
+  }
+  $default-offset: -45px;
+  $duration: 1.5;
+  $delay: $duration/4;
+  .building {
+    top: $default-offset;
+    @include motorcycle($duration, 0);
+  }
+  .city {
+    top: $default-offset;
+    color: $blue;
+    @include motorcycle($duration, $delay * 2);
+  }
+  .tree {
+    top: $default-offset;
+    color: $green;
+    @include motorcycle($duration, $delay);
+  }
+  .front {
+    @include motorcycle($duration, $delay * 3);
+  }
+} // End of motorcycle loader

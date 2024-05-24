@@ -5,6 +5,8 @@ import summertime_bikers_logo_3_no_bg from "../../../public/summertime_bikers_lo
 import Image from "../../../node_modules/next/image"
 import {Instagram} from "@mui/icons-material"
 import FacebookIcon from "@mui/icons-material/Facebook"
+import EmailIcon from "@mui/icons-material/Email"
+import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import nova_scotia_map from "../../../public/nova_scotia_map.png"
 import {Card, Tooltip} from "antd"
 import RadarDotAnimation from "../buttons/RadarDotAnimation"
@@ -110,17 +112,40 @@ const Footer = () => {
             />
             <ul className="social-item-container">
               <li className="social-item">
-                <FacebookIcon className="social-icons" />
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/profile.php?id=61559950617973&mibextid=LQQJ4d"
+                >
+                  <FacebookIcon className="social-icons" />
+                </a>
               </li>
               <li className="social-item">
                 {" "}
-                <Instagram className="social-icons" />{" "}
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/summertimebikers?igsh=b2FuZ291NHUza3Fj"
+                >
+                  <Instagram className="social-icons" />{" "}
+                </a>
+              </li>
+              <li className="social-item">
+                <a href="mailto:info@summertimebikers.com">
+                  <EmailIcon className="social-icons" />
+                </a>
+              </li>
+              <li className="social-item">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/company/summertimebikers-halifax/"
+                >
+                  <LinkedInIcon className="social-icons" />
+                </a>
               </li>
             </ul>
           </div>
-          <button className="text inquiry-btn">
+          {/* <button className="text inquiry-btn">
             Submit a Personalised Inquiry
-          </button>
+          </button> */}
 
           <div className="footer-flext-1-child-2">
             <div className="footer-credits-container">

@@ -1,8 +1,11 @@
+@import "../.././components/utils/scss/variables.scss";
+
 .aboutus-page-main-container {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   height: 100%;
+  gap: 2rem;
   .aboutus-content-container {
     display: flex;
     flex-direction: column;
@@ -26,8 +29,148 @@
   .bikerAnimation-container {
     display: flex;
     align-items: center;
+    // justify-content: center;
     height: 100%;
     min-height: 100vh;
+    // width: 100%;
+    // max-width: 50%;
+  }
+}
+
+@media #{$media-desktop-1200-1450} {
+  .aboutus-page-main-container {
+    width: 100%;
+    overflow: hidden;
+    .aboutus-content-container {
+      padding: 0 4rem;
+      font-size: 2rem;
+      padding: 2rem;
+      max-width: 100%;
+      .aboutus-heading {
+        font-weight: 700;
+        font-size: 2.5rem;
+      }
+      .fill-gap-para {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media #{$media-desktop-1000-1200} {
+  .aboutus-page-main-container {
+    .aboutus-content-container {
+      padding: 0 4rem;
+      font-size: 2rem;
+      padding: 2rem;
+      max-width: 100%;
+      .aboutus-heading {
+        font-weight: 700;
+        font-size: 2.5rem;
+      }
+      .fill-gap-para {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media #{$media-tablet-768-1000} {
+  .aboutus-page-main-container {
+    .aboutus-content-container {
+      padding: 0 4rem;
+      font-size: 2rem;
+      padding: 2rem;
+      max-width: 100%;
+      .aboutus-heading {
+        font-weight: 700;
+        font-size: 2.5rem;
+      }
+      .fill-gap-para {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media #{$media-tablet-670-768} {
+  .aboutus-page-main-container {
+    .aboutus-content-container {
+      padding: 0 4rem;
+      font-size: 2rem;
+      padding: 2rem;
+      max-width: 100%;
+      .aboutus-heading {
+        font-weight: 700;
+        font-size: 2.5rem;
+      }
+      .fill-gap-para {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+@media #{$media-mobile-480-670} {
+  .aboutus-page-main-container {
+    width: 100%;
+    .aboutus-content-container {
+      // padding: 0 4rem;
+      font-size: 1.5rem;
+      padding: 1rem;
+      width: 100%;
+      max-width: 100%;
+      .aboutus-heading {
+        font-weight: 700;
+        font-size: 2rem;
+      }
+      .fill-gap-para {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+    }
+  }
+  .bikerAnimation-container {
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    // height: 100%;
+    // min-height: 100vh;
+    width: 100%;
+    // max-width: 50%;
+  }
+}
+
+@media #{$media-mobile-480} {
+  .aboutus-page-main-container {
+    width: 100%;
+    .aboutus-content-container {
+      // padding: 0 4rem;
+      font-size: 1.5rem;
+      padding: 1rem;
+      width: 100%;
+      max-width: 100%;
+      .aboutus-heading {
+        font-weight: 700;
+        font-size: 2rem;
+      }
+      .fill-gap-para {
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+    }
+  }
+  .bikerAnimation-container {
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    // height: 100%;
+    // min-height: 100vh;
+    width: 100%;
     // max-width: 50%;
   }
 }

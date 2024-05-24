@@ -75,7 +75,7 @@ const page = () => {
     }
     return (
       <div className="gforminquirybtn">
-        <Link href={"/formridirectionpage"} target="_blank">
+        <Link href={"/formridirectionpage"}>
           <Button label="Find out how to borrow a Motorcycle" />
         </Link>
       </div>

@@ -29,7 +29,7 @@ const SociealBar = () => {
                 </a>
             </li>
             <li className="social-bar-item" >
-                <a href="">
+                <a target='_blank' href="https://www.linkedin.com/company/summertimebikers-halifax/">
                     <LinkedInIcon />
                 </a>
             </li>

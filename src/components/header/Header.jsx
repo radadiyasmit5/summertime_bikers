@@ -123,12 +123,15 @@ const Header = () => {
               About
             </Link>
             <Link
-              href="#"
+              href="callbackGform"
               className="nav-link-item"
-              onClick={() => handleSectionchange(footerRef)}
+              // onClick={(e) => handleSectionchange(e,footerRef)}
             >
-              Contactus
+              Contact us
             </Link>
+            <div className="social-bar-container-mobile">
+              <SociealBar />
+            </div>
           </div>
         )}
       </header>
