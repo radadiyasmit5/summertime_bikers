@@ -88,6 +88,14 @@ const page = () => {
           className="before-card-content-wl text-lg"
           ref={beforeCardsContainerRef}
         >
+          <div className="text-xl">
+            <p>
+              If you have a full licence from any other Canadian province or US
+              state then you will have to change it to the Nova scotia licence
+              in order to start the process to obtain a motorcycle licence.
+            </p>
+            <p className="my-2"> If you have that already then,</p>
+          </div>
           <h1 className="text pt-2 before-content-heading">
             Having an NS drivers licence make things much easier
           </h1>
@@ -103,8 +111,8 @@ const page = () => {
           </h1>
           <br />
           <span>Given that you pass everything on the first attempt, </span>
-          <span>Stage 1, that is your learner&#39;s licence will cost you</span>
-          <span className="font-bold"> $15.15 </span>. In stage 2, you will
+          <span>Stage 1 (Knowledge test and Balance test) , that is your learner&#39;s licence will cost you</span>
+          <span className="font-bold"> $15.15 </span>. In stage 2 (Road test), you will
           change your licence to a full licence with a road test which will cost
           you
           <span className="font-bold"> $53 </span>
@@ -134,13 +142,19 @@ const page = () => {
               className={`${stage == 1 ? "active-wl" : ""} stage-label-wl`}
               onClick={() => handleLevelClick(1)}
             >
-              stage 1
+              <div className="stage-progressbar-label-btn-content">
+                <p className="font-bold">Stage 1</p>
+                <p>Learners Licence</p>
+              </div>
             </div>
             <div
               className={`${stage == 2 ? "active-wl" : ""} stage-label-wl`}
               onClick={() => handleLevelClick(2)}
             >
-              stage 2
+              <div className="stage-progressbar-label-btn-content">
+                <p className="font-bold">Stage 2</p>
+                <p>Full Licence</p>
+              </div>
             </div>
           </div>
         </div>
@@ -240,7 +254,7 @@ const page = () => {
                 </li>
                 <br />
                 <li className="text font-bold pt-3">
-                  Here we come to a rescue, We will come with you to your test
+                  Here we come to the rescue, We will come with you to your test
                   with our Motorcycle !
                 </li>
 
@@ -361,7 +375,7 @@ const page = () => {
                     inspection(MVI) and insurance for the motorcycle.
                   </li>
                   <li className="text pt-4 font-bold text-xl">
-                    Here we come to a rescue, We will come with you to your test
+                    Here we come to the rescue, We will come with you to your test
                     with our Motorcycle !
                   </li>
                   <br />

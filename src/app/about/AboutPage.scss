@@ -1,176 +1,255 @@
 @import "../.././components/utils/scss/variables.scss";
-
-.aboutus-page-main-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  height: 100%;
-  gap: 2rem;
-  .aboutus-content-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 4rem;
-    font-size: 2rem;
+.about-us-pahe-outer-content {
+  .aboutus-heading {
+    font-weight: 700;
+    font-size: 2.5rem;
     margin-top: 69px;
-    padding: 2rem;
-    max-width: 50%;
-    .aboutus-heading {
-      font-weight: 700;
-      font-size: 2.5rem;
-    }
-    .fill-gap-para {
-      font-size: 2rem;
-      font-weight: 700;
-    }
+    padding: 1rem 2rem 0 2rem;
   }
-
-  .bikerAnimation-container {
-    display: flex;
-    align-items: center;
-    // justify-content: center;
-    height: 100%;
-    min-height: 100vh;
-    // width: 100%;
-    // max-width: 50%;
-  }
-}
-
-@media #{$media-desktop-1200-1450} {
   .aboutus-page-main-container {
-    width: 100%;
-    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 100%;
+    justify-content: flex-start;
+    flex: 1.5;
     .aboutus-content-container {
-      padding: 0 4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      gap: 2rem;
+      align-items: center;
+      padding: 0 2rem;
       font-size: 2rem;
-      padding: 2rem;
-      max-width: 100%;
-      .aboutus-heading {
-        font-weight: 700;
-        font-size: 2.5rem;
+      // padding: 2rem;
+      max-width: 60%;
+
+      .providing-our-clients-para {
+        font-weight: 600;
       }
       .fill-gap-para {
         font-size: 2rem;
         font-weight: 700;
+      }
+      .gforminquirybtn {
+        button{
+          padding: 1rem;
+          font-weight: 700;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .bikerAnimation-container {
+      display: flex;
+      align-items: center;
+      // justify-content: center;
+      height: 100%;
+      min-height: 100vh;
+      // width: 100%;
+      // max-width: 50%;
+    }
+  }
+}
+
+@media #{$media-desktop-1450-1700} {
+  .about-us-pahe-outer-content {
+    .aboutus-heading {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-top: 69px;
+    }
+    .aboutus-page-main-container {
+      width: 100%;
+      overflow: hidden;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      flex: 1.5;
+      .aboutus-content-container {
+        padding: 0 2rem;
+        font-size: 2rem;
+        max-width: 60%;
+        // padding: 2rem;
+        // max-width: 100%;
+
+        .fill-gap-para {
+          font-size: 2rem;
+          font-weight: 700;
+        }
+        .gforminquirybtn {
+          margin: 3rem 0;
+        }
+      }
+    }
+  }
+}
+@media #{$media-desktop-1200-1450} {
+  .about-us-pahe-outer-content {
+    .aboutus-heading {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-top: 69px;
+    }
+    .aboutus-page-main-container {
+      width: 100%;
+      overflow: hidden;
+      flex-wrap: wrap;
+      gap: 0;
+      .aboutus-content-container {
+        padding: 0 4rem;
+        font-size: 1.7rem;
+        padding: 0;
+        gap: 3rem;
+        max-width: 40%;
+        .fill-gap-para {
+          font-size: 1.4rem;
+          font-weight: 700;
+        }
+      }
+      .bikerAnimation-container {
+        display: flex;
+        align-items: flex-start;
+        // justify-content: center;
+        height: 100%;
+        min-height: 100vh;
+        max-width: 40%;
+        // width: 100%;
+        // max-width: 50%;
       }
     }
   }
 }
 
 @media #{$media-desktop-1000-1200} {
-  .aboutus-page-main-container {
-    .aboutus-content-container {
-      padding: 0 4rem;
-      font-size: 2rem;
-      padding: 2rem;
-      max-width: 100%;
-      .aboutus-heading {
-        font-weight: 700;
-        font-size: 2.5rem;
-      }
-      .fill-gap-para {
+  .about-us-pahe-outer-content {
+    .aboutus-heading {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-top: 69px;
+    }
+    .aboutus-page-main-container {
+      .aboutus-content-container {
+        padding: 0 4rem;
         font-size: 2rem;
-        font-weight: 700;
+        padding: 2rem;
+        max-width: 100%;
+
+        .fill-gap-para {
+          font-size: 2rem;
+          font-weight: 700;
+        }
       }
     }
   }
 }
-
 @media #{$media-tablet-768-1000} {
-  .aboutus-page-main-container {
-    .aboutus-content-container {
-      padding: 0 4rem;
-      font-size: 2rem;
-      padding: 2rem;
-      max-width: 100%;
-      .aboutus-heading {
-        font-weight: 700;
-        font-size: 2.5rem;
-      }
-      .fill-gap-para {
+  .about-us-pahe-outer-content {
+    .aboutus-heading {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-top: 69px;
+    }
+    .aboutus-page-main-container {
+      .aboutus-content-container {
+        padding: 0 4rem;
         font-size: 2rem;
-        font-weight: 700;
+        padding: 2rem;
+        max-width: 100%;
+
+        .fill-gap-para {
+          font-size: 2rem;
+          font-weight: 700;
+        }
       }
     }
   }
 }
-
 @media #{$media-tablet-670-768} {
-  .aboutus-page-main-container {
-    .aboutus-content-container {
-      padding: 0 4rem;
-      font-size: 2rem;
-      padding: 2rem;
-      max-width: 100%;
-      .aboutus-heading {
-        font-weight: 700;
-        font-size: 2.5rem;
-      }
-      .fill-gap-para {
+  .about-us-pahe-outer-content {
+    .aboutus-heading {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-top: 69px;
+    }
+    .aboutus-page-main-container {
+      .aboutus-content-container {
+        padding: 0 4rem;
         font-size: 2rem;
-        font-weight: 700;
+        padding: 2rem;
+        max-width: 100%;
+
+        .fill-gap-para {
+          font-size: 2rem;
+          font-weight: 700;
+        }
       }
     }
   }
 }
-
 @media #{$media-mobile-480-670} {
-  .aboutus-page-main-container {
-    width: 100%;
-    .aboutus-content-container {
-      // padding: 0 4rem;
-      font-size: 1.5rem;
-      padding: 1rem;
+  .about-us-pahe-outer-content {
+    .aboutus-heading {
+      font-weight: 700;
+      font-size: 2rem;
+      margin-top: 69px;
+    }
+    .aboutus-page-main-container {
       width: 100%;
-      max-width: 100%;
-      .aboutus-heading {
-        font-weight: 700;
-        font-size: 2rem;
-      }
-      .fill-gap-para {
+      .aboutus-content-container {
+        // padding: 0 4rem;
         font-size: 1.5rem;
-        font-weight: 700;
+        padding: 1rem;
+        width: 100%;
+        max-width: 100%;
+
+        .fill-gap-para {
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
       }
     }
-  }
-  .bikerAnimation-container {
-    display: flex;
-    // align-items: center;
-    justify-content: center;
-    // height: 100%;
-    // min-height: 100vh;
-    width: 100%;
-    // max-width: 50%;
+    .bikerAnimation-container {
+      display: flex;
+      // align-items: center;
+      justify-content: center;
+      // height: 100%;
+      // min-height: 100vh;
+      width: 100%;
+      // max-width: 50%;
+    }
   }
 }
 
 @media #{$media-mobile-480} {
-  .aboutus-page-main-container {
-    width: 100%;
-    .aboutus-content-container {
-      // padding: 0 4rem;
-      font-size: 1.5rem;
-      padding: 1rem;
+  .about-us-pahe-outer-content {
+    .aboutus-heading {
+      font-weight: 700;
+      font-size: 2rem;
+      margin-top: 69px;
+    }
+    .aboutus-page-main-container {
       width: 100%;
-      max-width: 100%;
-      .aboutus-heading {
-        font-weight: 700;
-        font-size: 2rem;
-      }
-      .fill-gap-para {
+      .aboutus-content-container {
+        // padding: 0 4rem;
         font-size: 1.5rem;
-        font-weight: 700;
+        padding: 1rem;
+        width: 100%;
+        max-width: 100%;
+
+        .fill-gap-para {
+          font-size: 1.5rem;
+          font-weight: 700;
+        }
       }
     }
-  }
-  .bikerAnimation-container {
-    display: flex;
-    // align-items: center;
-    justify-content: center;
-    // height: 100%;
-    // min-height: 100vh;
-    width: 100%;
-    // max-width: 50%;
+    .bikerAnimation-container {
+      display: flex;
+      // align-items: center;
+      justify-content: center;
+      // height: 100%;
+      // min-height: 100vh;
+      width: 100%;
+      // max-width: 50%;
+    }
   }
 }

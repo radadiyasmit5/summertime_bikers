@@ -1,36 +1,52 @@
+"use client"
 import React from 'react'
 import './AboutPage.scss'
 import Header from '@/components/header/Header'
-
+import Button from "@/components/buttons/Button"
+import { useRouter as UseRouter } from "next/navigation"
+import Link from "next/link"
 import BikeAnimationPage from '@/components/bikeAnimationPage/BikeAnimationPage'
 const About = () => {
+  const router = UseRouter()
   const casualtext = "text text-lg  mt-4 italic text-gray-600"
+  const gfromInquiryBtn = () => {
+
+    return (
+      <div className="gforminquirybtn">
+        <Link href={"/formridirectionpage"}>
+          <Button label="Find out how to borrow a Motorcycle" />
+        </Link>
+      </div>
+    )
+  }
   return (
 
-    <div>
+    <div className='about-us-pahe-outer-content'>
       <Header />
+      <h1 className="aboutus-heading">
+        At Summertime Bikers Halifax, we help people get their motorcycle licence in Nova Scotia. As of now, our services include
+      </h1>
       <div className="aboutus-page-main-container">
         <div className="aboutus-content-container">
           {/* <Card> */}
           <div>
-            <h1 className="aboutus-heading">
-              At Summertime Bikers Halifax, we help people get their motorcycle licence in Nova Scotia. As of now, our services include.
-            </h1>
+
             <br />
 
             <p>
-              Breaking down the process to get motorcycle licence in Nova Scotia and provide information.
+              Breaking down the process to get a motorcycle licence in Nova Scotia and providing information.
             </p>
             <p>
-              Assessing current licence status for our clients and suggest the most efficient way to get licenced.
+              We assess the current licence status of our clients and suggest the most efficient way to get licenced.
+            </p>
+            <p className='providing-our-clients-para'>
+              Providing our clients with a motorcycle to get their test done for a nominal fee.
             </p>
             <p>
-              Providing our clients a motorcycle to get their test done for a nominal fee.
-            </p>
-            <p>
-              Also providing them with the safety gear (Helmet, Gloves, Etc.) required for the test.
+              Also providing them with the safety gear (helmet, gloves, etc.) required for the test.
             </p>
           </div>
+          {gfromInquiryBtn()}
         </div>
         <div className="bikerAnimation-container">
           <BikeAnimationPage />

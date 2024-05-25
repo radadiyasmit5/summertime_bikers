@@ -47,7 +47,7 @@ const MoreInfoSection = () => {
                   {" "}
                   endorsement
                 </span>{" "}
-                on to their regular Driver's Licence.This will let them drive a
+                on to their regular Driver's Licence. This will let them drive a
                 motorcycle as well as a regular passenger vehicle.
               </p>
             </div>

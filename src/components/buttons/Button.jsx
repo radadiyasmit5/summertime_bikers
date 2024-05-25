@@ -1,4 +1,5 @@
 import "./button.scss"
+import Image from "next/image"
 const Button = ({label, iconURL, backgroundColor, textColor, borderColor}) => {
   return (
     <button
@@ -13,7 +14,7 @@ const Button = ({label, iconURL, backgroundColor, textColor, borderColor}) => {
     >
       {label}
       {iconURL && (
-        <img
+        <Image
           src={iconURL}
           alt="ArrowRightIcon"
           className="ml-2 rounded-full bg-white w-5 h-3"

@@ -115,19 +115,28 @@ const page = () => {
               className={`${level == 1 ? "active" : ""} level-label`}
               onClick={() => handleLevelClick(1)}
             >
-              Level 1
+              <div className="level-progressbar-label-btn-content">
+                <p className="font-bold"> Level 1 </p>
+                <p>Learners Licence</p>
+              </div>
             </div>
             <div
               className={`${level == 2 ? "active" : ""} level-label`}
               onClick={() => handleLevelClick(2)}
             >
-              Level 2
+              <div className="level-progressbar-label-btn-content">
+                <p className="font-bold"> Level 2</p>
+                <p>Full Licence</p>
+              </div>
             </div>
             <div
               className={`${level == 3 ? "active" : ""} level-label`}
               onClick={() => handleLevelClick(3)}
             >
-              Level 3
+              <div className="level-progressbar-label-btn-content">
+                <p className="font-bold"> Level 3</p>
+                <p>Restrictions Lifted</p>
+              </div>
             </div>
           </div>
         </div>
@@ -291,7 +300,7 @@ const page = () => {
                 </p>
 
                 <h5 className="text text-xl font-bold pt-3">
-                  Here we come to a rescue, We will come with you to your test
+                  Here we come to the rescue, We will come with you to your test
                   with our Motorcycle !
                 </h5>
                 <br />
@@ -329,7 +338,7 @@ const page = () => {
                 <br />
                 <ul className="text text-lg mt-3 ">
                   <li className="text pt-2">
-                    To get this, you have to have your{" "}
+                  This is basically changing your learners licence to a full licence. To get this, you have to have your{" "}
                     <span className="text font-bold">
                       {" "}
                       Learner Motorcycle Licence{" "}
@@ -365,7 +374,7 @@ const page = () => {
                   <br />
 
                   <li className="text pt-4 font-bold text-xl">
-                    Here we come to a rescue, We will come with you to your test
+                    Here we come to the rescue, We will come with you to your test
                     with our Motorcycle !{" "}
                   </li>
                   <h5 className="text text-xl pt-3">
