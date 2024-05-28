@@ -92,7 +92,7 @@ const page = () => {
             <p>
               If you have a full licence from any other Canadian province or US
               state then you will have to change it to the Nova scotia licence
-              in order to start the process to obtain a motorcycle licence.
+              in order to obtain a motorcycle licence.
             </p>
             <p className="my-2"> If you have that already then,</p>
           </div>
@@ -111,10 +111,13 @@ const page = () => {
           </h1>
           <br />
           <span>Given that you pass everything on the first attempt, </span>
-          <span>Stage 1 (Knowledge test and Balance test) , that is your learner&#39;s licence will cost you</span>
-          <span className="font-bold"> $15.15 </span>. In stage 2 (Road test), you will
-          change your licence to a full licence with a road test which will cost
-          you
+          <span>
+            Stage 1 (Knowledge test and Balance test) , that is your
+            learner&#39;s licence will cost you
+          </span>
+          <span className="font-bold"> $15.15 </span>. In stage 2 (Road test),
+          you will change your licence to a full licence with a road test which
+          will cost you
           <span className="font-bold"> $53 </span>
           <p className="text py-2">
             So
@@ -375,8 +378,8 @@ const page = () => {
                     inspection(MVI) and insurance for the motorcycle.
                   </li>
                   <li className="text pt-4 font-bold text-xl">
-                    Here we come to the rescue, We will come with you to your test
-                    with our Motorcycle !
+                    Here we come to the rescue, We will come with you to your
+                    test with our Motorcycle !
                   </li>
                   <br />
                   <h5 className="text text-xl pt-3">

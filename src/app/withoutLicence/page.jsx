@@ -17,8 +17,15 @@ const page = () => {
   const progressbarRef = UseRef(null)
   const [level, setlevel] = UseState(1)
   const router = UseRouter()
+  const [progressBarSticky, setprogressBarSticky] = UseState(false)
   // const [levelintitalPositions, setlevelintitalPositions] = UseState(null)
   const onScroll = (e) => {
+    const stickyprogressBarOfset = progressbarRef.current.offsetTop
+    if (window.pageYOffset > stickyprogressBarOfset - 69) {
+      setprogressBarSticky(true)
+    } else {
+      setprogressBarSticky(false)
+    }
     if (
       level1.current?.getBoundingClientRect().top -
         69 -
@@ -108,9 +115,28 @@ const page = () => {
   return (
     <>
       <div className="main-conatiner">
+        <div className={`before-card-content font-bold`}>
+          <p>
+            If you do not hold any drivers licence then you will have to go
+            through the general learners licence before you can appear for a
+            motorcycle learners licence(Online test and Balance test).{" "}
+          </p>
+          <p className="my-8 afterwich-para">
+            After which, you will need to do a road test in order to get a full
+            licence. The final level will be to remove the restrictions.
+          </p>
+          <p className={`mt-2 ${casualtext} text-lg`}>
+            All three levels are explained below!
+          </p>
+        </div>
         <div style={{postion: "relative"}}>
           <Header />
-          <div className="progress-bar" ref={progressbarRef}>
+          <div
+            className={`progress-bar ${
+              progressBarSticky ? "progressBarSticky" : ""
+            }`}
+            ref={progressbarRef}
+          >
             <div
               className={`${level == 1 ? "active" : ""} level-label`}
               onClick={() => handleLevelClick(1)}
@@ -338,7 +364,8 @@ const page = () => {
                 <br />
                 <ul className="text text-lg mt-3 ">
                   <li className="text pt-2">
-                  This is basically changing your learners licence to a full licence. To get this, you have to have your{" "}
+                    This is basically changing your learners licence to a full
+                    licence. To get this, you have to have your{" "}
                     <span className="text font-bold">
                       {" "}
                       Learner Motorcycle Licence{" "}
@@ -374,8 +401,8 @@ const page = () => {
                   <br />
 
                   <li className="text pt-4 font-bold text-xl">
-                    Here we come to the rescue, We will come with you to your test
-                    with our Motorcycle !{" "}
+                    Here we come to the rescue, We will come with you to your
+                    test with our Motorcycle !{" "}
                   </li>
                   <h5 className="text text-xl pt-3">
                     Licence plate, Vehicle permit, MVI, Insurance WE TAKE CARE

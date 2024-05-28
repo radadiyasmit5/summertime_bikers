@@ -14,14 +14,14 @@ const About = () => {
     return (
       <div className="gforminquirybtn">
         <Link href={"/formridirectionpage"}>
-          <Button label="Find out how to borrow a Motorcycle" />
+          <Button label="Find out how to borrow a Motorcycle" iconURL={null} backgroundColor={null} textColor={null} borderColor={null} />
         </Link>
       </div>
     )
   }
   return (
 
-    <div className='about-us-pahe-outer-content'>
+    <div className='about-us-page-outer-content'>
       <Header />
       <h1 className="aboutus-heading">
         At Summertime Bikers Halifax, we help people get their motorcycle licence in Nova Scotia. As of now, our services include
