@@ -9,6 +9,8 @@ import "./withLicence.scss"
 import StickyGformbtn from "@/components/buttons/StickyGformbtn"
 import WarningCard from "@/components/cards/WarningCard"
 import WarningCardWrapper from "@/components/cards/WarningCardWrapper"
+import PromotionBar from "@/components/PromotionBar/PromotionBar"
+
 const page = () => {
   // const [scrollTop, setScrollTop] = UseState(0)
   const stage1 = UseRef(null)
@@ -134,6 +136,7 @@ const page = () => {
           </p>
         </div>
         <div style={{postion: "relative"}}>
+          <PromotionBar />
           <Header />
           <div
             className={`progress-bar-wl ${

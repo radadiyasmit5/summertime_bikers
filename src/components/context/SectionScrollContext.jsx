@@ -6,7 +6,10 @@ export const SectionScrollContext = ({children}) => {
   const handleSectionchange = (e, elementRef) => {
     e.preventDefault()
     window.scrollTo({
-      top: elementRef.current.offsetTop - headerRef?.current?.offsetHeight,
+      top:
+        elementRef.current.offsetTop -
+        headerRef?.current?.offsetHeight -
+        PromotionBarRef.current.offsetHeight,
       behavior: "smooth",
     })
   }
@@ -14,6 +17,7 @@ export const SectionScrollContext = ({children}) => {
   const footerRef = useRef(null)
   const technologiesRef = useRef(null)
   const headerRef = useRef(null)
+  const PromotionBarRef = useRef(null)
   const contactRef = useRef(null)
   return (
     <SectionContext.Provider
@@ -24,6 +28,7 @@ export const SectionScrollContext = ({children}) => {
         technologiesRef,
         headerRef,
         contactRef,
+        PromotionBarRef,
       }}
     >
       {children}

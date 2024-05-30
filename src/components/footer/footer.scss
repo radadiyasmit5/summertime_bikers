@@ -151,8 +151,13 @@
             border-radius: 2rem;
             .social-icons {
               font-size: 2rem;
+              text-align: center;
             }
           }
+        }
+
+        .logo-img {
+          width: 100%;
         }
       }
       .inquiry-btn {
@@ -174,9 +179,9 @@
 }
 
 @media #{$media-mobile-480} {
-  .logo-footer {
-    width: 300px !important;
-  }
+  // .logo-footer {
+  //   width: 300px !important;
+  // }
   #footer {
     .footer-main-container {
       .location-heading {
@@ -201,6 +206,13 @@
         }
         .typewriter-container-footer {
           display: none !important;
+        }
+      }
+      .footer-flex-2 {
+        .footer-flext-1-child-1 {
+          .logo-img{
+            width: 100%;
+          }
         }
       }
     }

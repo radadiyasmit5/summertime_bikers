@@ -10,6 +10,7 @@ import {useRouter as UseRouter} from "next/navigation"
 import Link from "next/link"
 import WarningCard from "@/components/cards/WarningCard"
 import WarningCardWrapper from "../../components/cards/WarningCardWrapper"
+import PromotionBar from "@/components/PromotionBar/PromotionBar"
 const page = () => {
   const level1 = UseRef(null)
   const level2 = UseRef(null)
@@ -130,6 +131,7 @@ const page = () => {
           </p>
         </div>
         <div style={{postion: "relative"}}>
+          <PromotionBar />
           <Header />
           <div
             className={`progress-bar ${

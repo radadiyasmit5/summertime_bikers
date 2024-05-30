@@ -1,0 +1,11 @@
+.promotionbar-container {
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  width: 100%;
+  height: 1.7rem;
+  background-color: rgb(53 149 207);
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+}

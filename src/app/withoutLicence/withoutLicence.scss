@@ -4,16 +4,15 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
   .before-card-content {
-    margin-top: 69px;
+    margin-top: calc(69px + 1.7rem);
     padding: 1rem 2.5rem;
     font-size: 1.3rem;
     .afterwich-para {
       color: #86868b;
-      
     }
   }
   .progress-bar {
-    height: 5vh;
+    height: 3.5rem;
     width: 100%;
     position: sticky;
     padding: 0 1rem;
@@ -52,7 +51,7 @@
   }
   .progressBarSticky {
     position: fixed;
-    top: 75px;
+    top: calc(69px + 1.7rem);
   }
   .level-container {
     margin-top: 2rem;
@@ -141,17 +140,25 @@
 
 // }
 @media #{$media-mobile-480} {
-  .level-container {
-    .level-card {
-      .level-heading {
-        // font-size: 1.5rem;
+  .main-conatiner {
+    .progress-bar {
+      height: 5rem;
+      .level-label {
+        height: 5rem;
       }
     }
-    .level-1 {
-    }
-    .level-2 {
-    }
-    .level-3 {
+    .level-container {
+      .level-card {
+        .level-heading {
+          // font-size: 1.5rem;
+        }
+      }
+      .level-1 {
+      }
+      .level-2 {
+      }
+      .level-3 {
+      }
     }
   }
 }

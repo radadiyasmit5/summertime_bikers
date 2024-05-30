@@ -3,6 +3,7 @@ import Header from '@/components/header/Header'
 import React, { Suspense } from 'react'
 import { LoadingSpinner } from '../../components/loadingSpinners/LoadingSpinner'
 import './callbackGform.scss'
+import PromotionBar from '@/components/PromotionBar/PromotionBar'
 const page = () => {
 
     return (<>
@@ -10,6 +11,7 @@ const page = () => {
         <div className='form-container'>
 
             <div className='form-outer-container'>
+                <PromotionBar/>
                 <Header />
 
                 <div className='form-inner-container' >
@@ -21,7 +23,7 @@ const page = () => {
                                 width: "100%",
                                 color: 'black',
                                 position: 'fixed',
-                                top: '75px',
+                                top: 'calc(69px + 1.7rem)',
                                 left: 0,
                                 bottom: 0,
                                 right: 0,

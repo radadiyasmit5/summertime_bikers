@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "../.././components/utils/scss/variables.scss";
+
 .main-conatiner-wl {
   position: relative;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
 
   .before-card-content-wl {
-    margin-top: 69px;
+    margin-top: calc(69px + 1.7rem);
     padding: 1rem 2.5rem;
     // font-size: ;
     .before-content-heading {
@@ -63,7 +65,7 @@
   }
   .progressBarSticky {
     position: fixed;
-    top: 75px;
+    top: calc(69px + 1.7rem);
   }
   .stage-container-wl {
     // margin-top: calc(5vh + 69px);
@@ -122,6 +124,29 @@
           .stage-heading {
           }
         }
+      }
+    }
+  }
+}
+
+@media #{$media-mobile-480} {
+  .main-conatiner-wl {
+    .progress-bar-wl {
+      .stage-label-wl {
+        height: 5rem;
+      }
+    }
+    .level-container {
+      .level-card {
+        .level-heading {
+          // font-size: 1.5rem;
+        }
+      }
+      .level-1 {
+      }
+      .level-2 {
+      }
+      .level-3 {
       }
     }
   }

@@ -6,6 +6,7 @@ import Button from "@/components/buttons/Button"
 import { useRouter as UseRouter } from "next/navigation"
 import Link from "next/link"
 import BikeAnimationPage from '@/components/bikeAnimationPage/BikeAnimationPage'
+import PromotionBar from '@/components/PromotionBar/PromotionBar'
 const About = () => {
   const router = UseRouter()
   const casualtext = "text text-lg  mt-4 italic text-gray-600"
@@ -22,6 +23,7 @@ const About = () => {
   return (
 
     <div className='about-us-page-outer-content'>
+      <PromotionBar />
       <Header />
       <h1 className="aboutus-heading">
         At Summertime Bikers Halifax, we help people get their motorcycle licence in Nova Scotia. As of now, our services include
