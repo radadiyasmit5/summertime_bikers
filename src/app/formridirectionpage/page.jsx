@@ -5,6 +5,8 @@ import "./formridirection.scss"
 import Button from "@/components/buttons/Button.jsx"
 import Link from "next/link.js"
 import PromotionBar from "@/components/PromotionBar/PromotionBar.jsx"
+import StickyGformbtn from "@/components/buttons/StickyGformbtn"
+
 const page = () => {
   return (
     <div>
@@ -45,6 +47,7 @@ const page = () => {
           <BikeAnimationPage />
         </div>
       </div>
+      <StickyGformbtn />
     </div>
   )
 }

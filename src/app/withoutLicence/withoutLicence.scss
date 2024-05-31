@@ -142,6 +142,9 @@
 @media #{$media-mobile-480} {
   .main-conatiner {
     .progress-bar {
+      z-index: 100;
+    }
+    .progress-bar {
       height: 5rem;
       .level-label {
         height: 5rem;
