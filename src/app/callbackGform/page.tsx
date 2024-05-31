@@ -32,7 +32,7 @@ const page = () => {
                                 margin: 0,
                                 padding: 0,
                                 overflow: 'scroll',
-                                zIndex: '999999'
+                                zIndex: '100'
                             }}
                             // style={{ width: '100%', height: '100%' }}
                             height={100}

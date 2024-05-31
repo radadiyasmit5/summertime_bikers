@@ -1,25 +1,18 @@
 import React from "react"
 import "./loadingSpinners.scss"
-import {
-  faBuilding,
-  faCity,
-  faMotorcycle,
-  faWind,
-  faTree,
-} from "@fortawesome/free-solid-svg-icons"
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+
 
 export const LoadingSpinner = () => {
   return (
     <div className="container">
       <div className="l-container">
         <div className="motorcycle-container">
-          <FontAwesomeIcon className="building" icon={faBuilding}  color='black'/>
-          <FontAwesomeIcon className="city" icon={faCity} />
-          <FontAwesomeIcon className="motorcycle" icon={faMotorcycle} />
-          <FontAwesomeIcon className="wind" icon={faWind} />
-          <FontAwesomeIcon className="tree" icon={faTree} />
-          <FontAwesomeIcon className="building front" icon={faBuilding} />
+          <i className="building fas fa-building"></i>
+          <i className="city fas fa-city"></i>
+          <i className="motorcycle fas fa-motorcycle"></i>
+          <i className="wind fas fa-wind"></i>
+          <i className="tree fas fa-tree"></i>
+          <i className="building front fas fa-building"></i>
         </div>
       </div>
     </div>

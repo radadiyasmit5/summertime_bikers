@@ -2,6 +2,7 @@
 import React, {useContext} from "react"
 import "./promotionbar.scss"
 import {SectionContext} from "../context/SectionScrollContext"
+import Link from "next/link"
 const PromotionBar = () => {
   const {PromotionBarRef} = useContext(SectionContext)
 
@@ -9,13 +10,12 @@ const PromotionBar = () => {
     <div className="promotionbar-container" ref={PromotionBarRef}>
       <div className="promotionbar-content-container">
         <span>
-          <a
-            href="https://google.com"
+          <Link
+            href={"/formridirectionpage"}
             className="underline cursor-pointer"
-            target="_blank"
           >
-            Findout more for discounts
-          </a>
+            Findout How to borrow a MotorCycle for your Test
+          </Link>
         </span>
       </div>
     </div>

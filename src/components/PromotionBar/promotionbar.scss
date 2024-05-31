@@ -1,3 +1,4 @@
+@import "../utils/scss/variables.scss";
 .promotionbar-container {
   position: fixed;
   z-index: 10000;
@@ -8,4 +9,13 @@
   color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
+}
+
+@media #{$media-mobile-480} {
+  .promotionbar-container {
+    align-items: center;
+    .promotionbar-content-container {
+      font-size: 0.9rem;
+    }
+  }
 }

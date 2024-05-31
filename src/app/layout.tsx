@@ -17,6 +17,10 @@ export default function RootLayout({
   console.log("requested");
   return (
     <html lang="en">
+      <head>
+
+        <script src="https://kit.fontawesome.com/bfe3889fa9.js" crossOrigin="anonymous" defer></script>
+      </head>
       <body>
         <SectionScrollContext>
           {children}

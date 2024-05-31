@@ -3,6 +3,7 @@
 import Link from "next/link"
 import React, {useContext, useState} from "react"
 import "./header.scss"
+import '../../app/main.scss'
 import summertime_bikers_logo_3_no_bg from "../../../public/summertime_bikers_logo_3_no_bg.png"
 import Image from "next/image"
 import SociealBar from "./socielBar/SocielBar"

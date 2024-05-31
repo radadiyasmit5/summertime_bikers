@@ -2,12 +2,13 @@ import React from "react"
 import BikeAnimationPage from "../../components/bikeAnimationPage/BikeAnimationPage.js"
 import Header from "@/components/header/Header.jsx"
 import "./formridirection.scss"
-import {Card} from "antd"
 import Button from "@/components/buttons/Button.jsx"
 import Link from "next/link.js"
+import PromotionBar from "@/components/PromotionBar/PromotionBar.jsx"
 const page = () => {
   return (
     <div>
+      <PromotionBar />
       <Header />
       <div className="ridirection-page-main-container">
         <div className="ridirect-content-container">
@@ -35,7 +36,7 @@ const page = () => {
             </p>
           </div>
           <div className="ridirect-content-btn">
-            <Link href={'callbackGform'} target='_blank'>
+            <Link href={"callbackGform"} target="_blank">
               <Button label={"Fill out a Form"} />
             </Link>
           </div>
