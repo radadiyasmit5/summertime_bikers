@@ -13,6 +13,8 @@ import '@fortawesome/fontawesome-svg-core/styles.css';
 import PromotionBar from '@/components/PromotionBar/PromotionBar'
 const page = () => {
   library.add(fas);
+  console.log('in page');
+  
   return (
     <>
       <PromotionBar />
