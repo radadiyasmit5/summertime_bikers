@@ -14,7 +14,7 @@ const PromotionBar = () => {
             href={"/formridirectionpage"}
             className="underline cursor-pointer"
           >
-            Findout How to borrow a MotorCycle for your Test
+            Find out how to borrow a Motorcycle for your test
           </Link>
         </span>
       </div>
