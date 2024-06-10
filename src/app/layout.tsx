@@ -25,6 +25,7 @@ export default function RootLayout({
         <SectionScrollContext>
           {children}
         </SectionScrollContext>
+        <Analytics />
       </body>
     </html>
   )
