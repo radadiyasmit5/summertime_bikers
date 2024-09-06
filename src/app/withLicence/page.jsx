@@ -1,8 +1,8 @@
 "use client"
 import Header from "@/components/header/Header"
-import {useRef as UseRef} from "react"
-import {useEffect as UseEffect, useState as UseState} from "react"
-import {Card} from "antd"
+import { useRef as UseRef } from "react"
+import { useEffect as UseEffect, useState as UseState } from "react"
+import { Card } from "antd"
 import Button from "@/components/buttons/Button"
 import Link from "next/link"
 import "./withLicence.scss"
@@ -29,17 +29,17 @@ const page = () => {
     }
     if (
       stage1.current?.getBoundingClientRect().top -
-        69 -
-        progressbarRef.current.clientHeight <=
+      69 -
+      progressbarRef.current.clientHeight <=
       100
     ) {
       setStage(1)
     }
     if (
       stage2.current?.getBoundingClientRect().top -
-        69 -
-        progressbarRef.current.clientHeight -
-        beforeCardsContainerRef.current.clientHeight <=
+      69 -
+      progressbarRef.current.clientHeight -
+      beforeCardsContainerRef.current.clientHeight <=
       100
     ) {
       setStage(2)
@@ -135,13 +135,12 @@ const page = () => {
             <br />
           </p>
         </div>
-        <div style={{postion: "relative"}}>
+        <div style={{ postion: "relative" }}>
           <PromotionBar />
           <Header />
           <div
-            className={`progress-bar-wl ${
-              progressBarSticky ? "progressBarSticky" : ""
-            }`}
+            className={`progress-bar-wl ${progressBarSticky ? "progressBarSticky" : ""
+              }`}
             ref={progressbarRef}
           >
             <div
@@ -411,7 +410,7 @@ const page = () => {
                     Endorsement is placed on your regular Driver&#39;s Licence .
                     (This is in the form of a large letter: A, D, etc.) There is
                     no further waiting period, and all special driving
-                    restrictions are lifted.{" "}
+                    restrictions are lifted.Cost for this endorsement is $11.99{" "}
                   </li>
                 </ul>
               </div>
