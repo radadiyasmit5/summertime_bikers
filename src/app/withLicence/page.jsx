@@ -120,10 +120,12 @@ const page = () => {
           <span className="font-bold"> $15.15 </span>. In stage 2 (Road test),
           you will change your licence to a full licence with a road test which
           will cost you
-          <span className="font-bold"> $53 </span>
+          <span className="font-bold"> $53. </span>
+          <span> A Motorcycle Endorsement is placed on your regular Driver's Licence, Which will cost you $11.99 </span>
+
           <p className="text py-2">
             So
-            <span className="font-bold"> $68.15 </span>
+            <span className="font-bold"> $80.14 </span>
             is all you will be spending on a motorcycle licence if you know
             someone who can come with you with a motorcycle for your tests.
           </p>
