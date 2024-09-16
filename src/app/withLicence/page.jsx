@@ -121,7 +121,7 @@ const page = () => {
           you will change your licence to a full licence with a road test which
           will cost you
           <span className="font-bold"> $53. </span>
-          <span> A Motorcycle Endorsement is placed on your regular Driver's Licence, Which will cost you $11.99 </span>
+          <span> A Motorcycle Endorsement is placed on your regular Driver's Licence, Which will cost you  <span className="font-bold">$11.99</span> </span>
 
           <p className="text py-2">
             So
