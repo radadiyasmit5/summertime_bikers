@@ -1,7 +1,7 @@
 "use client"
 // import { Link, Outlet } from "react-router-dom"
 import Link from "next/link"
-import React, {useContext, useState} from "react"
+import React, { useContext, useState } from "react"
 import "./header.scss"
 import '../../app/main.scss'
 import summertime_bikers_logo_3_no_bg from "../../../public/summertime_bikers_logo_3_no_bg.png"
@@ -9,13 +9,13 @@ import Image from "next/image"
 import SociealBar from "./socielBar/SocielBar"
 import MenuIcon from "@mui/icons-material/Menu"
 import Button from "@mui/material/Button"
-import {useRouter} from "next/navigation"
-import {SectionContext} from "../context/SectionScrollContext"
+import { useRouter } from "next/navigation"
+import { SectionContext } from "../context/SectionScrollContext"
 import CloseIcon from "@mui/icons-material/Close"
 
 const Header = () => {
   const router = useRouter()
-  const {handleSectionchange, footerRef, headerRef} = useContext(SectionContext)
+  const { handleSectionchange, footerRef, headerRef } = useContext(SectionContext)
 
   const [anchorEl, setAnchorEl] = useState(null)
   const [isMenuOpen, setisMenuOpen] = useState(false)
@@ -56,7 +56,7 @@ const Header = () => {
               <Link
                 href="/"
                 className="nav-link-item"
-                // onClick={() => handleSectionchange(heroRef)}
+              // onClick={() => handleSectionchange(heroRef)}
               >
                 Home
               </Link>
@@ -65,7 +65,7 @@ const Header = () => {
               <Link
                 href="about"
                 className="nav-link-item"
-                // onClick={() => handleSectionchange(experienceRef)}
+              // onClick={() => handleSectionchange(experienceRef)}
               >
                 About
               </Link>
@@ -81,10 +81,10 @@ const Header = () => {
             </li> */}
             <li>
               <Link
-                href="callbackGform"
+                href="winterBreak"
                 className="nav-link-item"
-                // as={"contactus"}
-                // onClick={() => handleSectionchange(footerRef)}
+              // as={"contactus"}
+              // onClick={() => handleSectionchange(footerRef)}
               >
                 Contact us
               </Link>
@@ -101,7 +101,7 @@ const Header = () => {
               aria-expanded={open ? "true" : undefined}
               onClick={handleClick}
             >
-              <span style={{color: "white"}}>
+              <span style={{ color: "white" }}>
                 {!isMenuOpen ? <MenuIcon /> : <CloseIcon />}
               </span>
             </Button>
@@ -112,21 +112,21 @@ const Header = () => {
             <Link
               href="/"
               className="nav-link-item"
-              // onClick={() => handleSectionchange(heroRef)}
+            // onClick={() => handleSectionchange(heroRef)}
             >
               Home
             </Link>
             <Link
               href="about"
               className="nav-link-item"
-              // onClick={() => handleSectionchange(heroRef)}
+            // onClick={() => handleSectionchange(heroRef)}
             >
               About
             </Link>
             <Link
-              href="callbackGform"
+              href="winterBreak"
               className="nav-link-item"
-              // onClick={(e) => handleSectionchange(e,footerRef)}
+            // onClick={(e) => handleSectionchange(e,footerRef)}
             >
               Contact us
             </Link>
