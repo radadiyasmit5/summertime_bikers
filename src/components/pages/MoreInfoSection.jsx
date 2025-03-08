@@ -111,7 +111,7 @@ const MoreInfoSection = () => {
                       regular <p> Driver's Licence</p>
                     </div>
                     <p className="text p-3 font-palanquin text-justify info-text info-text ">
-                      You have a Valid Class 5, Class 7 or a licence from any
+                      You have a Valid Class 5, Class 7, Class 1 or a licence from any
                       other Province
                     </p>
                     {/* <div className="text text-center text-2xl eyeIcon-Wrapper">

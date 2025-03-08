@@ -5,6 +5,7 @@ import {useEffect as UseEffect, useState as UseState} from "react"
 import {Card} from "antd"
 import "./withoutLicence.scss"
 import StickyGformbtn from "@/components/buttons/StickyGformbtn"
+import StickyEstimateBtn from "@/components/buttons/StickyEstimateBtn"
 import Button from "@/components/buttons/Button"
 import {useRouter as UseRouter} from "next/navigation"
 import Link from "next/link"
@@ -237,7 +238,7 @@ const page = () => {
                   explained later This comes in two parts,
                 </li>
                 <li className="text font-bold pt-3">A knowledge test</li>
-                <li className={`${casualtext}`}>What you’re tested on ? </li>
+                <li className={`${casualtext}`}>What you're tested on ? </li>
                 <li className="pt-1">
                   You need to review the
                   <a
@@ -245,7 +246,7 @@ const page = () => {
                     target="_blank"
                     href="https://novascotia.ca/sns/rmv/handbook/DH-Chapter8.pdf"
                   >
-                    Driver&#39;s Handbook{" "}
+                    Driver's Handbook{" "}
                   </a>
                   to prepare for the Knowledge Test.
                 </li>
@@ -255,7 +256,7 @@ const page = () => {
                   questions. To pass, you need to answer at least 16 correctly.
                 </li>
                 <li className="pt-2">
-                  If you don’t pass the Knowledge Test, you need to pay for
+                  If you don't pass the Knowledge Test, you need to pay for
                   another test and take the test again on the spot if it works
                   for you.
                 </li>
@@ -317,9 +318,9 @@ const page = () => {
                 </h4>
 
                 <p className="text pt-3">
-                  You need to transport your own or someone else’s motorcycle by
+                  You need to transport your own or someone else's motorcycle by
                   trailer or have someone who has a Motorcycle Licence drive it
-                  to the test for you (you can’t drive the motorcycle to the
+                  to the test for you (you can't drive the motorcycle to the
                   test yourself). Your motorcycle must pass a pre-trip
                   inspection before the Balance Test can start. The motorcycle
                   needs to have a valid licence plate and vehicle permit (or
@@ -357,7 +358,7 @@ const page = () => {
                 </h1>
                 <p className="text text-center font-bold level-subHeading">
                   {" "}
-                  Newly Licenced Motorcycle Driver&#39;s Licence{" "}
+                  Newly Licenced Motorcycle Driver's Licence{" "}
                 </p>
                 <p className="text text-center level-subheading-2 font-bold">
                   {" "}
@@ -381,7 +382,7 @@ const page = () => {
                     Complete a{" "}
                     <span className="text font-bold">Practice period </span> .
                     Before you can take your &quot;Advanced skills&quot; road
-                    test, you usually need to have your Learner&#39;s Motorcycle
+                    test, you usually need to have your Learner's Motorcycle
                     Licence for at least 6 months.
                   </li>
                   <li className={`${casualtext} ml-4`}>
@@ -415,7 +416,7 @@ const page = () => {
                   <li className="text pt-3">
                     A driving school might provide you with a motorcycle for
                     your test but it is really expensive and time consuming to
-                    do the course. You can also borrow someone else’s bike or
+                    do the course. You can also borrow someone else's bike or
                     buy your own. Which is difficult and/or expensive.
                   </li>
                   <li className="text pt-3">
@@ -435,11 +436,11 @@ const page = () => {
                       target="_blank"
                     >
                       {" "}
-                      Newly Licenced Driver&#39;s Licence, Additional
+                      Newly Licenced Driver's Licence, Additional
                       Information (F)
                     </a>
                     , on how to arrange a road test. See also the N.S.
-                    Driver&#39;s Handbook.
+                    Driver's Handbook.
                   </li>
                   <li className="text text-center pt-5 font-bold">
                     Once you have this licence, there are special restrictions
@@ -483,7 +484,7 @@ const page = () => {
                       Have a{" "}
                       <span className="text font-bold">
                         {" "}
-                        Newly Licensed Motorcycle Driver&#39;s Licence.{" "}
+                        Newly Licensed Motorcycle Driver's Licence{" "}
                       </span>
                     </li>
                     <li className="text  pt-3">
@@ -526,6 +527,7 @@ const page = () => {
           </div>
         </div>
       </div>
+      <StickyEstimateBtn />
       <StickyGformbtn />
     </>
   )

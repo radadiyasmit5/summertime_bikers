@@ -7,6 +7,7 @@ import Button from "@/components/buttons/Button"
 import Link from "next/link"
 import "./withLicence.scss"
 import StickyGformbtn from "@/components/buttons/StickyGformbtn"
+import StickyEstimateBtn from "@/components/buttons/StickyEstimateBtn"
 import WarningCard from "@/components/cards/WarningCard"
 import WarningCardWrapper from "@/components/cards/WarningCardWrapper"
 import PromotionBar from "@/components/PromotionBar/PromotionBar"
@@ -109,13 +110,13 @@ const page = () => {
           </p>
           <br />
           <h1 className="py-3 font-bold letstalkmoney-heading">
-            LET’S TALK <span className="text-black">MONEY</span> FIRST !
+            LET'S TALK <span className="text-black">MONEY</span> FIRST !
           </h1>
           <br />
           <span>Given that you pass everything on the first attempt, </span>
           <span>
             Stage 1 (Knowledge test and Balance test) , that is your
-            learner&#39;s licence will cost you
+            learner's licence will cost you
           </span>
           <span className="font-bold"> $15.15 </span>. In stage 2 (Road test),
           you will change your licence to a full licence with a road test which
@@ -131,7 +132,7 @@ const page = () => {
           </p>
           <br />
           <p className="text rightplace-para font-bold text-center py-3">
-            If you don’t know anyone like that then you are at the{" "}
+            If you don't know anyone like that then you are at the{" "}
             <span className="text text-black font-bold">right place</span>. Keep
             reading, you will find out why !
             <br />
@@ -200,7 +201,7 @@ const page = () => {
                       href="https://novascotia.ca/sns/rmv/handbook/DH-Chapter8.pdf"
                       target="_blank"
                     >
-                      Driver&#39;s Handbook
+                      Driver's Handbook
                     </a>{" "}
                     to prepare for the Knowledge Test.
                   </li>
@@ -211,7 +212,7 @@ const page = () => {
                     correctly.{" "}
                   </li>
                   <li className="pt-1">
-                    If you don’t pass the Knowledge Test, you need to pay for
+                    If you don't pass the Knowledge Test, you need to pay for
                     another test and take the test again on the spot if it works
                     for you.
                   </li>
@@ -250,9 +251,9 @@ const page = () => {
                 <br />
 
                 <li className="pt-2">
-                  You need to transport your own or someone else’s motorcycle by
+                  You need to transport your own or someone else's motorcycle by
                   trailer or have someone who has a Motorcycle Licence drive it
-                  to the test for you (You can’t drive the motorcycle to the
+                  to the test for you (You can't drive the motorcycle to the
                   test yourself). Your motorcycle must pass a pre-trip
                   inspection before the Balance Test can start. The motorcycle
                   needs to have a valid licence plate and vehicle permit (or
@@ -351,7 +352,7 @@ const page = () => {
 
                 <ul className="text text-lg mt-3 ">
                   <li className="text pt-2">
-                    Now that you have got your learner&#39;s licence, you might
+                    Now that you have got your learner's licence, you might
                     wanna move to a full licence.
                     <span className="text font-bold">
                       {" "}
@@ -395,7 +396,7 @@ const page = () => {
                   <li className="text pt-3">
                     A driving school might provide you with a motorcycle for
                     your test but it is really expensive and time consuming to
-                    do the course. You can also borrow someone else’s bike or
+                    do the course. You can also borrow someone else's bike or
                     buy your own. Which is difficult and/or expensive.
                   </li>
                   <li className="text pt-3">
@@ -409,7 +410,7 @@ const page = () => {
                   {gfromInquiryBtn()}
                   <li className="text pt-3">
                     Once you fulfil those 3 requirements, a Motorcycle
-                    Endorsement is placed on your regular Driver&#39;s Licence .
+                    Endorsement is placed on your regular Driver's Licence .
                     (This is in the form of a large letter: A, D, etc.) There is
                     no further waiting period, and all special driving
                     restrictions are lifted.Cost for this endorsement is $11.99{" "}
@@ -426,6 +427,7 @@ const page = () => {
           </div>
         </div>
       </div>
+      <StickyEstimateBtn />
       <StickyGformbtn />
     </>
   )

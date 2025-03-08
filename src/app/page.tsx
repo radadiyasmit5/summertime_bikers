@@ -11,6 +11,8 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import PromotionBar from '@/components/PromotionBar/PromotionBar'
+import StickyEstimateBtn from '@/components/buttons/StickyEstimateBtn'
+
 const page = () => {
   library.add(fas);
   console.log('in page');
@@ -23,6 +25,7 @@ const page = () => {
       <VideoSection />
       <MoreInfoSection />
       <Footer />
+      <StickyEstimateBtn />
       <StickyGformbtn />
     </>
   )

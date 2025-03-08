@@ -8,6 +8,8 @@ import Link from "next/link"
 import BikeAnimationPage from '@/components/bikeAnimationPage/BikeAnimationPage'
 import PromotionBar from '@/components/PromotionBar/PromotionBar'
 import StickyGformbtn from '@/components/buttons/StickyGformbtn'
+import StickyEstimateBtn from '@/components/buttons/StickyEstimateBtn'
+
 const About = () => {
   const router = UseRouter()
   const casualtext = "text text-lg  mt-4 italic text-gray-600"
@@ -55,6 +57,7 @@ const About = () => {
           <BikeAnimationPage />
         </div>
       </div>
+      <StickyEstimateBtn />
       <StickyGformbtn />
     </div>
   )
