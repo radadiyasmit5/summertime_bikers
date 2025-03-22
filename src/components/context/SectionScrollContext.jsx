@@ -1,15 +1,25 @@
 "use client"
 import React, {createContext, useRef} from "react"
 
-export const SectionContext = createContext(null)
+export const SectionContext = createContext({
+  handleSectionchange: () => {},
+  moreInfoRef: null,
+  footerRef: null,
+  technologiesRef: null,
+  headerRef: null,
+  PromotionBarRef: null,
+  contactRef: null,
+})
+
 export const SectionScrollContext = ({children}) => {
   const handleSectionchange = (e, elementRef) => {
     e.preventDefault()
+    if (!elementRef?.current) return
     window.scrollTo({
       top:
         elementRef.current.offsetTop -
-        headerRef?.current?.offsetHeight -
-        PromotionBarRef.current.offsetHeight,
+        (headerRef?.current?.offsetHeight || 0) -
+        (PromotionBarRef?.current?.offsetHeight || 0),
       behavior: "smooth",
     })
   }
