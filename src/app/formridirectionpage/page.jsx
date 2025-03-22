@@ -10,8 +10,16 @@ import PromotionBar from "@/components/PromotionBar/PromotionBar.jsx"
 import StickyGformbtn from "@/components/buttons/StickyGformbtn"
 import FormModal from "@/components/modals/FormModal"
 
-const page = () => {
+const Page = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <div>
@@ -43,7 +51,7 @@ const page = () => {
             </p>
           </div>
           <div className="ridirect-content-btn">
-            <Button label={"Fill out a Form"} onClick={() => setIsModalOpen(true)} />
+            <Button label={"Fill out a Form"} onClick={handleOpenModal} />
           </div>
         </div>
         <div className="bikerAnimation-container">
@@ -53,10 +61,10 @@ const page = () => {
       <StickyGformbtn />
       <FormModal 
         isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
+        onClose={handleCloseModal} 
       />
     </div>
   )
 }
 
-export default page
+export default Page

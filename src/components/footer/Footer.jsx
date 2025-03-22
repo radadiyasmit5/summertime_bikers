@@ -60,6 +60,7 @@ const Footer = () => {
                 width={700}
                 height={100}
                 className="NS_map_img"
+                alt="Nova Scotia Map"
               />
 
               <div className="Dartmouth_pin pin_common">
@@ -107,8 +108,7 @@ const Footer = () => {
             <Image
               className="logo-img logo-footer"
               src={summertime_bikers_logo_3_no_bg}
-              alt="nothing"
-              // onClick={onLogoClick}
+              alt="Summertime Bikers Logo"
             />
             <ul className="social-item-container">
               <li className="social-item">
