@@ -14,11 +14,22 @@ const About = () => {
   const router = UseRouter()
   const casualtext = "text text-lg  mt-4 italic text-gray-600"
   const gfromInquiryBtn = () => {
+    const handleClick = () => {
+      // This function will be called when the button is clicked
+      // The actual navigation is handled by the Link component
+    };
 
     return (
       <div className="gforminquirybtn">
         <Link href={"/formridirectionpage"}>
-          <Button label="Find out how to borrow a Motorcycle" iconURL={null} backgroundColor={null} textColor={null} borderColor={null} />
+          <Button 
+            label="Find out how to borrow a Motorcycle" 
+            iconURL={null} 
+            backgroundColor={null} 
+            textColor={null} 
+            borderColor={null}
+            onClick={handleClick}
+          />
         </Link>
       </div>
     )
