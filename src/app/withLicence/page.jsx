@@ -7,7 +7,6 @@ import Button from "@/components/buttons/Button"
 import Link from "next/link"
 import "./withLicence.scss"
 import StickyGformbtn from "@/components/buttons/StickyGformbtn"
-import StickyEstimateBtn from "@/components/buttons/StickyEstimateBtn"
 import WarningCard from "@/components/cards/WarningCard"
 import WarningCardWrapper from "@/components/cards/WarningCardWrapper"
 import PromotionBar from "@/components/PromotionBar/PromotionBar"
@@ -22,28 +21,30 @@ const page = () => {
   const [stage, setStage] = UseState(1)
   const [progressBarSticky, setprogressBarSticky] = UseState(false)
   const onScroll = () => {
-    const stickyprogressBarOfset = progressbarRef.current.offsetTop
+    if (!progressbarRef.current) return;
+    
+    const stickyprogressBarOfset = progressbarRef.current.offsetTop;
     if (window.pageYOffset > stickyprogressBarOfset) {
-      setprogressBarSticky(true)
+      setprogressBarSticky(true);
     } else {
-      setprogressBarSticky(false)
+      setprogressBarSticky(false);
     }
     if (
       stage1.current?.getBoundingClientRect().top -
       69 -
-      progressbarRef.current.clientHeight <=
+      progressbarRef.current?.clientHeight <=
       100
     ) {
-      setStage(1)
+      setStage(1);
     }
     if (
       stage2.current?.getBoundingClientRect().top -
       69 -
-      progressbarRef.current.clientHeight -
-      beforeCardsContainerRef.current.clientHeight <=
+      progressbarRef.current?.clientHeight -
+      beforeCardsContainerRef.current?.clientHeight <=
       100
     ) {
-      setStage(2)
+      setStage(2);
     }
   }
   UseEffect(() => {
@@ -131,7 +132,7 @@ const page = () => {
             someone who can come with you with a motorcycle for your tests.
           </p>
           <br />
-          <p className="text rightplace-para font-bold text-center py-3">
+          <p className="text font-bold text-center py-3">
             If you don't know anyone like that then you are at the{" "}
             <span className="text text-black font-bold">right place</span>. Keep
             reading, you will find out why !
@@ -258,12 +259,12 @@ const page = () => {
                   vehicle inspection(MVI) and insurance for the motorcycle.
                 </li>
                 <br />
-                <li className="text font-bold pt-3">
+                <li className="text font-bold text-xl pt-3">
                   Here we come to the rescue, We will come with you to your test
                   with our Motorcycle !
                 </li>
 
-                <li className="text font-bold pt-3">
+                <li className="text font-bold text-xl pt-3">
                   Licence plate, Vehicle permit, MVI, Insurance WE TAKE CARE OF
                   IT ALL !!{" "}
                 </li>
@@ -379,12 +380,12 @@ const page = () => {
                     permit). You need to provide proof of motor vehicle
                     inspection(MVI) and insurance for the motorcycle.
                   </li>
-                  <li className="text pt-4 font-bold text-xl">
+                  <li className="text font-bold pt-4 font-bold text-xl">
                     Here we come to the rescue, We will come with you to your
                     test with our Motorcycle !
                   </li>
                   <br />
-                  <h5 className="text text-xl pt-3">
+                  <h5 className="text font-bold text-xl pt-3">
                     Licence plate, Vehicle permit, MVI, Insurance WE TAKE CARE
                     OF IT ALL !!
                   </h5>
@@ -421,10 +422,20 @@ const page = () => {
             <div className="mb-10">
               <WarningCard />
             </div>
+            <div className="estimation-section">
+              <div className="estimation-card">
+                <h3 className="estimation-heading">Want to Know the Cost?</h3>
+                <p className="estimation-text">Get a quick estimate for your motorcycle licensing process.</p>
+                <div className="estimation-button-container">
+                  <Link href="/estimate">
+                    <button className="btn">Get Your Estimate</button>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <StickyEstimateBtn />
       <StickyGformbtn />
     </>
   )

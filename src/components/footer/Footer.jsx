@@ -7,10 +7,12 @@ import {Instagram} from "@mui/icons-material"
 import FacebookIcon from "@mui/icons-material/Facebook"
 import EmailIcon from "@mui/icons-material/Email"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
+import FeedbackIcon from "@mui/icons-material/Feedback"
 import nova_scotia_map from "../../../public/nova_scotia_map.png"
 import {Card, Tooltip} from "antd"
 import RadarDotAnimation from "../buttons/RadarDotAnimation"
 import WarningCard from "../cards/WarningCard"
+import Link from 'next/link'
 const Footer = () => {
   // const {footerRef} = useContext(SectionContext)
   const LocationsArr = [
@@ -140,6 +142,13 @@ const Footer = () => {
                 >
                   <LinkedInIcon className="social-icons" />
                 </a>
+              </li>
+              <li className="social-item">
+                <Link href="/feedback">
+                  <Tooltip title="Share Your Feedback">
+                    <FeedbackIcon className="social-icons" />
+                  </Tooltip>
+                </Link>
               </li>
             </ul>
           </div>

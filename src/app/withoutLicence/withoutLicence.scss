@@ -169,11 +169,21 @@
           position: relative;
 
           &:before {
-            content: "•";
-            color: var(--primary-color);
+            content: "";
             position: absolute;
             left: 0;
-            font-size: 1.25rem;
+          }
+        }
+
+        &.list-disc {
+          li {
+            &:before {
+              content: "•";
+              color: var(--primary-color);
+              position: absolute;
+              left: 0;
+              font-size: 1.25rem;
+            }
           }
         }
       }

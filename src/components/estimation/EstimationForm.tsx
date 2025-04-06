@@ -40,7 +40,7 @@ const EstimationForm = () => {
         </div>
       </div>
       <StickyGformbtn />
-      <StickyEstimateBtn />
+      {/* <StickyEstimateBtn /> */}
     </div>
   );
 };

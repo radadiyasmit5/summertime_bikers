@@ -1,7 +1,6 @@
 import { SectionScrollContext } from '@/components/context/SectionScrollContext'
 import icon from '../favicon2.ico'
 import { Analytics } from "@vercel/analytics/react"
-import StickyEstimateBtn from '@/components/buttons/StickyEstimateBtn'
 import StickyGformbtn from '@/components/buttons/StickyGformbtn'
 
 export const metadata = {
@@ -31,7 +30,6 @@ export default function RootLayout({
       <body>
         <SectionScrollContext>
           {children}
-          <StickyEstimateBtn />
           <StickyGformbtn />
         </SectionScrollContext>
         <Analytics />

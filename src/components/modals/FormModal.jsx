@@ -1,27 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { Modal } from 'antd';
-import { FaMotorcycle } from 'react-icons/fa';
-import { MdDirectionsBike } from 'react-icons/md';
+import { FaCar } from 'react-icons/fa';
+import { FaPersonWalking } from 'react-icons/fa6';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import './FormModal.scss';
 
 const FormModal = ({ isOpen, onClose }) => {
   const [modalWidth, setModalWidth] = useState(600);
+  const [isMobile, setIsMobile] = useState(true);
   const router = useRouter();
 
   useEffect(() => {
     const handleResize = () => {
-      setModalWidth(window.innerWidth >= 992 ? 1400 : 600);
+      const width = window.innerWidth;
+      setIsMobile(width < 768);
+      
+      if (width >= 1024) {
+        setModalWidth(1000);
+      } else if (width >= 768) {
+        setModalWidth(700);
+      } else {
+        setModalWidth(width - 32);
+      }
     };
 
-    // Set initial width
     handleResize();
-
-    // Add event listener
     window.addEventListener('resize', handleResize);
-
-    // Cleanup
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -29,6 +34,21 @@ const FormModal = ({ isOpen, onClose }) => {
     onClose();
     router.push(path);
   };
+
+  const cards = [
+    {
+      icon: <FaCar size={40} />,
+      title: "I have a regular drivers licence.",
+      description: "Click here if you already have a regular driver's licence.",
+      path: '/withLicence'
+    },
+    {
+      icon: <FaPersonWalking size={40} />,
+      title: "I do not have a regular drivers licence.",
+      description: "Click here if you don't have a regular driver's licence yet.",
+      path: '/withoutLicence'
+    }
+  ];
 
   return (
     <Modal
@@ -45,46 +65,58 @@ const FormModal = ({ isOpen, onClose }) => {
         <p className="modal-subtitle">Select the appropriate option</p>
         
         <div className="cards-container">
-          <div 
-            className="license-card"
-            onClick={() => handleCardClick('/withLicence')}
-            role="button"
-            tabIndex={0}
-          >
-            <div className="card-content">
-              <div className="card-title">
-                <FaMotorcycle size={40} />
-                <p>I have a regular drivers license.</p>
+          {!isMobile ? (
+            // Desktop and tablet view - show cards side by side
+            cards.map((card, index) => (
+              <div 
+                key={index}
+                className="license-card"
+                onClick={() => handleCardClick(card.path)}
+                role="button"
+                tabIndex={0}
+              >
+                <div className="card-content">
+                  <div className="card-title">
+                    {card.icon}
+                    <p>{card.title}</p>
+                  </div>
+                  {/* <p className="card-description">
+                    {card.description}
+                  </p> */}
+                </div>
               </div>
-              <p className="card-description">
-                Click here if you already have a regular driver's license.
-              </p>
+            ))
+          ) : (
+            // Mobile view - stack cards vertically
+            <div className="mobile-cards-stack">
+              {cards.map((card, index) => (
+                <div 
+                  key={index}
+                  className="license-card"
+                  onClick={() => handleCardClick(card.path)}
+                  role="button"
+                  tabIndex={0}
+                >
+                  <div className="card-content">
+                    <div className="card-title">
+                      {card.icon}
+                      <p>{card.title}</p>
+                    </div>
+                    {/* <p className="card-description">
+                      {card.description}
+                    </p> */}
+                  </div>
+                </div>
+              ))}
             </div>
-          </div>
-
-          <div 
-            className="license-card"
-            onClick={() => handleCardClick('/withoutLicence')}
-            role="button"
-            tabIndex={0}
-          >
-            <div className="card-content">
-              <div className="card-title">
-                <MdDirectionsBike size={40} />
-                <p>I do not have a regular drivers license.</p>
-              </div>
-              <p className="card-description">
-                Click here if you don't have a regular driver's license yet.
-              </p>
-            </div>
-          </div>
+          )}
         </div>
 
         <div className="modal-footer">
           <p className="footer-text">Ready to start your journey?</p>
           <Link href="/callbackGform">
-            <button className="fill-out-form-btn flex justify-center items-center gap-2 px-7 py-2 border font-montserrat text-lg leading-none btn bg-blue-600 text-white rounded-full">
-              Fill out Form anyways
+            <button className="fill-out-form-btn">
+              Fill out Form
             </button>
           </Link>
         </div>

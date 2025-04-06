@@ -5,7 +5,6 @@ import {useEffect as UseEffect, useState as UseState} from "react"
 import {Card} from "antd"
 import "./withoutLicence.scss"
 import StickyGformbtn from "@/components/buttons/StickyGformbtn"
-import StickyEstimateBtn from "@/components/buttons/StickyEstimateBtn"
 import Button from "@/components/buttons/Button"
 import {useRouter as UseRouter} from "next/navigation"
 import Link from "next/link"
@@ -22,11 +21,13 @@ const page = () => {
   const [progressBarSticky, setprogressBarSticky] = UseState(false)
   // const [levelintitalPositions, setlevelintitalPositions] = UseState(null)
   const onScroll = (e) => {
-    const stickyprogressBarOfset = progressbarRef.current.offsetTop
+    if (!progressbarRef.current) return;
+    
+    const stickyprogressBarOfset = progressbarRef.current.offsetTop;
     if (window.pageYOffset > stickyprogressBarOfset) {
-      setprogressBarSticky(true)
+      setprogressBarSticky(true);
     } else {
-      setprogressBarSticky(false)
+      setprogressBarSticky(false);
     }
     if (
       level1.current?.getBoundingClientRect().top -
@@ -34,7 +35,7 @@ const page = () => {
         progressbarRef.current?.clientHeight <=
       0
     ) {
-      setlevel(1)
+      setlevel(1);
     }
     if (
       level2.current?.getBoundingClientRect().top -
@@ -42,7 +43,7 @@ const page = () => {
         progressbarRef.current?.clientHeight <=
       100
     ) {
-      setlevel(2)
+      setlevel(2);
     }
     if (
       level3.current?.getBoundingClientRect().top -
@@ -50,7 +51,7 @@ const page = () => {
         progressbarRef.current?.clientHeight <=
       100
     ) {
-      setlevel(3)
+      setlevel(3);
     }
   }
   UseEffect(() => {
@@ -123,7 +124,7 @@ const page = () => {
             through the general learners licence before you can appear for a
             motorcycle learners licence(Online test and Balance test).{" "}
           </p>
-          <p className="my-8 afterwich-para">
+          <p className="my-8 ">
             After which, you will need to do a road test in order to get a full
             licence. The final level will be to remove the restrictions.
           </p>
@@ -329,7 +330,7 @@ const page = () => {
                   with our Motorcycle !
                 </h5>
                 <br />
-                <h5 className="text text-xl pt-3">
+                <h5 className="text text-xl font-bold pt-3">
                   Licence plate, Vehicle permit, MVI, Insurance WE TAKE CARE OF
                   IT ALL !!
                 </h5>
@@ -403,7 +404,7 @@ const page = () => {
                     Here we come to the rescue, We will come with you to your
                     test with our Motorcycle !{" "}
                   </li>
-                  <h5 className="text text-xl pt-3">
+                  <h5 className="text font-bold text-xl pt-3">
                     Licence plate, Vehicle permit, MVI, Insurance WE TAKE CARE
                     OF IT ALL !!
                   </h5>
@@ -480,7 +481,7 @@ const page = () => {
                       Have a{" "}
                       <span className="text font-bold">
                         {" "}
-                        Newly Licensed Motorcycle Driver's Licence{" "}
+                        Newly licenced Motorcycle Driver's Licence{" "}
                       </span>
                     </li>
                     <li className="text  pt-3">
@@ -523,7 +524,6 @@ const page = () => {
           </div>
         </div>
       </div>
-      <StickyEstimateBtn />
       <StickyGformbtn />
     </>
   )

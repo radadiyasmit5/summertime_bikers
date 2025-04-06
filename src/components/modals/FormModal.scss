@@ -1,44 +1,52 @@
 .form-modal {
   .ant-modal {
-    max-width: 1400px;
-    margin: 0 auto;
+    margin: 7rem auto 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    .ant-modal-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
   }
 
   .ant-modal-content {
-    padding: 2.5rem;
-    border-radius: 1rem;
+    padding: 2rem;
+    border-radius: 1.25rem;
+    background: white;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
     position: relative;
-    max-width: 1400px;
+    overflow: visible;
+    max-width: 95%;
     margin: 0 auto;
 
-    // Style the close button
     .ant-modal-close {
       position: absolute;
-      top: 0.5rem;
-      right: 1rem;
-      width: 2rem;
-      height: 2rem;
+      top: -12px;
+      right: -12px;
+      width: 32px;
+      height: 32px;
       display: flex;
       align-items: center;
       justify-content: center;
       border-radius: 50%;
-      background: rgba(0, 0, 0, 0.05);
+      background: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      border: 2px solid #f0f0f0;
       transition: all 0.3s ease;
-      z-index: 1;
+      z-index: 9999;
 
       &:hover {
-        background: rgba(0, 0, 0, 0.1);
+        transform: scale(1.1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
       }
 
       .close-icon {
-        font-size: 1.5rem;
-        color: #000;
+        font-size: 1.25rem;
+        color: #666;
         line-height: 1;
-        transition: color 0.3s ease;
-
-        &:hover {
-          color: #666;
-        }
       }
     }
   }
@@ -48,41 +56,45 @@
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    min-height: 60vh;
   }
 
   .modal-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 700;
     text-align: center;
-    color: #000;
-    margin-bottom: 0.5rem;
-    width: 100%;
-    padding: 0 3rem;
+    color: #1a1a1a;
+    margin-bottom: 0.75rem;
+    max-width: 600px;
   }
 
   .modal-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     text-align: center;
     color: #666;
-    margin-bottom: 1.5rem;
-    width: 100%;
-    padding: 0 3rem;
+    margin-bottom: 2rem;
+    max-width: 500px;
   }
 
   .cards-container {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     justify-content: center;
     width: 100%;
-    padding: 2rem;
     margin-bottom: 2rem;
+
+    .mobile-cards-stack {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
 
     .license-card {
       flex: 1;
-      min-height: 300px;
-      padding: 2.5rem;
-      border-radius: 1.5rem;
+      max-width: 400px;
+      min-height: 240px;
+      padding: 2rem;
+      border-radius: 1rem;
       background-color: #f8f9fa;
       border: 2px solid #e9ecef;
       cursor: pointer;
@@ -92,9 +104,9 @@
       justify-content: center;
 
       &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        border-color: rgb(74 157 201);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        border-color: #4A9DC9;
         background-color: white;
       }
 
@@ -105,16 +117,16 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: 1.5rem;
-          margin-bottom: 1.5rem;
+          gap: 1rem;
+          margin-bottom: 1.25rem;
           
           svg {
-            font-size: 4rem;
-            color: rgb(74 157 201);
+            font-size: 3rem;
+            color: #4A9DC9;
           }
 
           p {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             font-weight: 600;
             margin: 0;
             color: #333;
@@ -124,7 +136,7 @@
 
         .card-description {
           color: #666;
-          font-size: 1.2rem;
+          font-size: 1rem;
           line-height: 1.5;
         }
       }
@@ -132,47 +144,54 @@
   }
 
   .modal-footer {
-    margin-top: auto;
+    margin-top: 2rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    gap: 1rem;
 
     .footer-text {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       color: #666;
-      margin-bottom: 1.5rem;
     }
 
     .fill-out-form-btn {
-      padding: 1rem 2.5rem;
-      font-size: 1.2rem;
-      background-color: rgb(74 157 201);
+      padding: 0.875rem 2rem;
+      font-size: 1.1rem;
+      background: linear-gradient(135deg, #4A9DC9, #32A8E7);
       color: white;
+      font-weight: 600;
       border: none;
       border-radius: 9999px;
+      min-width: 200px;
+      white-space: nowrap;
       transition: all 0.3s ease;
-      min-width: 250px;
+      cursor: pointer;
 
       &:hover {
-        background-color: rgb(50, 168, 231);
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(74, 157, 201, 0.3);
+        box-shadow: 0 8px 16px rgba(74, 157, 201, 0.3);
+      }
+
+      &:active {
+        transform: translateY(-1px);
       }
     }
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
   .form-modal {
+    .modal-title {
+      font-size: 1.75rem;
+    }
+
     .cards-container {
-      flex-direction: column;
-      padding: 1rem;
-      
+      gap: 1.5rem;
+
       .license-card {
-        min-height: 250px;
-        padding: 2rem;
+        padding: 1.75rem;
       }
     }
   }
@@ -180,50 +199,70 @@
 
 @media (max-width: 768px) {
   .form-modal {
+    .ant-modal {
+      margin: 6rem auto 1.5rem;
+    }
+    
+    .ant-modal-content {
+      padding: 1.5rem;
+      margin: 0 auto;
+
+      .ant-modal-close {
+        top: -10px;
+        right: -10px;
+      }
+    }
+
     .modal-title {
-      font-size: 2rem;
-      padding: 0 1rem;
+      font-size: 1.5rem;
     }
 
     .modal-subtitle {
-      font-size: 1.1rem;
-      padding: 0 1rem;
+      font-size: 1rem;
     }
 
     .cards-container {
-      gap: 2rem;
-      
-      .license-card {
-        min-height: 200px;
-        padding: 1.5rem;
+      padding: 0 1rem;
 
-        .card-content {
-          .card-title {
-            gap: 1rem;
-            
-            svg {
-              font-size: 3rem;
+      .mobile-cards-stack {
+        width: 100%;
+        gap: 1rem;
+
+        .license-card {
+          width: 100%;
+          max-width: none;
+          min-height: auto;
+          padding: 1.25rem;
+          margin: 0;
+
+          .card-content {
+            .card-title {
+              gap: 0.75rem;
+              margin-bottom: 1rem;
+
+              svg {
+                font-size: 2.5rem;
+              }
+
+              p {
+                font-size: 1.2rem;
+              }
             }
 
-            p {
-              font-size: 1.3rem;
+            .card-description {
+              font-size: 0.95rem;
             }
-          }
-
-          .card-description {
-            font-size: 1rem;
           }
         }
       }
     }
 
     .modal-footer {
-      padding: 1.5rem;
+      padding: 0 1rem;
 
       .fill-out-form-btn {
-        padding: 0.8rem 2rem;
-        font-size: 1.1rem;
-        min-width: 200px;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
       }
     }
   }
@@ -231,109 +270,111 @@
 
 @media (max-width: 480px) {
   .form-modal {
-    .ant-modal-content {
-      padding: 1rem;
-      border-radius: 1.25rem;
-      margin: 0.5rem;
-      max-height: 90vh;
-      overflow-y: auto;
-
-      .ant-modal-close {
-        top: 0.25rem;
-        right: 0.5rem;
-        width: 2.25rem;
-        height: 2.25rem;
-
-        .close-icon {
-          font-size: 1.5rem;
-        }
-      }
+    .ant-modal {
+      margin: 5.5rem auto 1rem;
     }
-
-    .modal-content {
-      padding-top: 1.25rem;
-      gap: 1.5rem;
+    
+    .ant-modal-content {
+      padding: 1.25rem;
+      margin: 0 auto;
+      
+      .ant-modal-close {
+        top: 10px;
+        right: 10px;
+        background-color: white;
+        border: 1px solid #f0f0f0;
+      }
     }
 
     .modal-title {
-      font-size: 1.5rem;
-      padding: 0 2.5rem;
-      line-height: 1.3;
-    }
-
-    .modal-subtitle {
-      font-size: 0.9rem;
-      padding: 0 2rem;
-      line-height: 1.4;
+      font-size: 1.25rem;
     }
 
     .cards-container {
-      gap: 1rem;
-      margin: 0.5rem 0;
-    }
+      padding: 0;
 
-    .license-card {
-      border-radius: 0.75rem;
-      overflow: hidden;
-      background: #fff;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      .mobile-cards-stack {
+        gap: 0.75rem;
 
-      &:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-      }
+        .license-card {
+          padding: 1rem;
 
-      .card-content {
-        padding: 1.25rem;
-      }
+          .card-content {
+            .card-title {
+              gap: 0.5rem;
+              margin-bottom: 0.75rem;
 
-      .card-title {
-        font-size: 1.1rem;
-        margin-bottom: 0.5rem;
+              svg {
+                font-size: 2.25rem;
+              }
 
-        p {
-          font-size: 0.9rem;
-          margin: 0.25rem 0;
+              p {
+                font-size: 1.1rem;
+              }
+            }
+
+            .card-description {
+              font-size: 0.9rem;
+            }
+          }
         }
-      }
-
-      .card-description {
-        font-size: 0.85rem;
-        line-height: 1.4;
       }
     }
 
     .modal-footer {
-      gap: 0.75rem;
-
+      padding: 0;
+      
       .footer-text {
+        font-size: 1rem;
+      }
+      
+      .fill-out-form-btn {
+        width: 100%;
+        padding: 0.75rem 1rem;
         font-size: 0.95rem;
       }
+    }
+  }
+}
 
-      .fill-out-form-btn {
-        padding: 0.5rem 1.5rem;
-        font-size: 0.9rem;
-        min-width: 130px;
+/* Add an extra breakpoint for very small devices */
+@media (max-width: 360px) {
+  .form-modal {
+    .ant-modal {
+      margin: 6.5rem auto 1rem;
+    }
+    
+    .ant-modal-content {
+      padding: 1rem;
+    }
+    
+    .modal-content {
+      padding: 0.5rem;
+    }
+    
+    .modal-title {
+      font-size: 1.1rem;
+    }
+    
+    .modal-subtitle {
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .cards-container {
+      .mobile-cards-stack {
+        .license-card {
+          padding: 0.75rem;
+        }
       }
     }
-
-    // Add touch-friendly button styles
-    button {
-      min-height: 44px;
-      padding: 0.75rem 1.5rem;
-      font-size: 1rem;
-      border-radius: 0.75rem;
-      width: 100%;
-      max-width: 280px;
-      background: #1890ff;
-      color: white;
-      border: none;
-      box-shadow: 0 2px 8px rgba(24, 144, 255, 0.2);
-      transition: all 0.3s ease;
-
-      &:active {
-        transform: scale(0.98);
-        box-shadow: 0 1px 4px rgba(24, 144, 255, 0.2);
+    
+    .modal-footer {
+      margin-top: 1.5rem;
+      
+      .fill-out-form-btn {
+        padding: 0.6rem 0.75rem;
+        font-size: 0.9rem;
       }
     }
   }

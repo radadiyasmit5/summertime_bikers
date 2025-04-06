@@ -8,7 +8,6 @@ import Link from "next/link"
 import BikeAnimationPage from '@/components/bikeAnimationPage/BikeAnimationPage'
 import PromotionBar from '@/components/PromotionBar/PromotionBar'
 import StickyGformbtn from '@/components/buttons/StickyGformbtn'
-import StickyEstimateBtn from '@/components/buttons/StickyEstimateBtn'
 
 const About = () => {
   const router = UseRouter()
@@ -31,42 +30,39 @@ const About = () => {
     )
   }
   return (
-
-    <div className='about-us-page-outer-content'>
+    <>
       <PromotionBar />
       <Header />
-      <h1 className="aboutus-heading">
-        At Summertime Bikers Halifax, we help people get their motorcycle licence in Nova Scotia. As of now, our services include
-      </h1>
-      <div className="aboutus-page-main-container">
-        <div className="aboutus-content-container">
-          {/* <Card> */}
-          <div>
-
-            <br />
-
-            <p>
-              Breaking down the process to get a motorcycle licence in Nova Scotia and providing information.
-            </p>
-            <p>
-              We assess the current licence status of our clients and suggest the most efficient way to get licenced.
-            </p>
-            <p className='providing-our-clients-para'>
-              Providing our clients with a motorcycle to get their test done for a nominal fee.
-            </p>
-            <p>
-              Also providing them with the safety gear (helmet, gloves, etc.) required for the test.
-            </p>
+      <div className='about-us-page-outer-content'>
+        <h1 className="aboutus-heading">
+          At Summertime Bikers Halifax, we help people get their motorcycle licence in Nova Scotia. As of now, our services include
+        </h1>
+        <div className="aboutus-page-main-container">
+          <div className="aboutus-content-container">
+            <div>
+              <br />
+              <p>
+                Breaking down the process to get a motorcycle licence in Nova Scotia and providing information.
+              </p>
+              <p>
+                To assess the current licence status of our clients and suggest the most efficient way to get licenced.
+              </p>
+              <p className='providing-our-clients-para'>
+                Providing our clients with a motorcycle to get their test done for a nominal fee.
+              </p>
+              <p>
+                Also providing them with the safety gear (helmet, gloves, etc.) required for the test.
+              </p>
+            </div>
+            {gfromInquiryBtn()}
           </div>
-          {gfromInquiryBtn()}
-        </div>
-        <div className="bikerAnimation-container">
-          <BikeAnimationPage />
+          <div className="bikerAnimation-container">
+            <BikeAnimationPage />
+          </div>
         </div>
       </div>
-      <StickyEstimateBtn />
       <StickyGformbtn />
-    </div>
+    </>
   )
 }
 

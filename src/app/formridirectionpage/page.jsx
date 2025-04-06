@@ -38,7 +38,7 @@ const Page = () => {
             <p>
               As you don't have a valid licence, no rental company can rent out
               a bike to you. Even if you can find a motorcycle, you cannot drive
-              it to the test centre because you are not licensed in the first
+              it to the test centre because you are not licenced in the first
               place.
             </p>
             <br />
