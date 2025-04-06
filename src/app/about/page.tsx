@@ -23,11 +23,7 @@ const About = () => {
       <div className="gforminquirybtn">
         <Link href={"/formridirectionpage"}>
           <Button 
-            label="Find out how to borrow a Motorcycle" 
-            iconURL={null} 
-            backgroundColor={null} 
-            textColor={null} 
-            borderColor={null}
+            label="Find out how to borrow a Motorcycle"
             onClick={handleClick}
           />
         </Link>
