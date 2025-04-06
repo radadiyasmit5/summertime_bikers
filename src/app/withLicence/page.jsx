@@ -424,6 +424,17 @@ const page = () => {
             <div className="mb-10">
               <WarningCard />
             </div>
+            <div className="estimation-section">
+              <div className="estimation-card">
+                <h3 className="estimation-heading">Want to Know the Cost?</h3>
+                <p className="estimation-text">Get a quick estimate for your motorcycle training and licensing process.</p>
+                <div className="estimation-button-container">
+                  <Link href="/estimate">
+                    <button className="btn">Get Your Estimate</button>
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
