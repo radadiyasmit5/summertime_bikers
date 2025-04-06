@@ -9,6 +9,25 @@
   color: rgb(255, 255, 255);
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  .promotionbar-content-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    
+    span {
+      a {
+        color: white;
+        text-decoration: underline;
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+  }
 }
 
 @media #{$media-mobile-480} {

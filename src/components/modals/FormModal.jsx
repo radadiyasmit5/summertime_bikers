@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Modal } from 'antd';
 import { FaMotorcycle } from 'react-icons/fa';
 import { MdDirectionsBike } from 'react-icons/md';
@@ -6,28 +6,46 @@ import Link from 'next/link';
 import './FormModal.scss';
 
 const FormModal = ({ isOpen, onClose }) => {
+  const [modalWidth, setModalWidth] = useState(600);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setModalWidth(window.innerWidth >= 992 ? 1400 : 600);
+    };
+
+    // Set initial width
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <Modal
       open={isOpen}
       onCancel={onClose}
       footer={null}
-      width={600}
+      width={modalWidth}
       className="form-modal"
       closeIcon={<span className="close-icon">×</span>}
+      centered
     >
       <div className="modal-content">
-        <h2 className="modal-title">Choose Your Ride</h2>
-        <p className="modal-subtitle">Select the option that best fits your needs</p>
+        <h2 className="modal-title">Find more information here</h2>
+        <p className="modal-subtitle">Select the appropriate option</p>
         
         <div className="cards-container">
           <div className="license-card">
             <div className="card-content">
               <div className="card-title">
                 <FaMotorcycle size={40} />
-                <p>I have a driver's license</p>
+                <p>I have a regular drivers license.</p>
               </div>
               <p className="card-description">
-                Choose this option if you have a valid driver's license and want to ride a motorcycle.
+                
               </p>
             </div>
           </div>
@@ -36,11 +54,9 @@ const FormModal = ({ isOpen, onClose }) => {
             <div className="card-content">
               <div className="card-title">
                 <MdDirectionsBike size={40} />
-                <p>I don't have a driver's license</p>
+                <p>I do not have a regular drivers license.</p>
               </div>
-              <p className="card-description">
-                Choose this option if you don't have a driver's license and want to ride a bicycle.
-              </p>
+              
             </div>
           </div>
         </div>
@@ -48,7 +64,9 @@ const FormModal = ({ isOpen, onClose }) => {
         <div className="modal-footer">
           <p className="footer-text">Ready to start your journey?</p>
           <Link href="/form">
-            <button className="fill-out-form-btn">Fill out Form</button>
+            <button className="fill-out-form-btn flex justify-center items-center gap-2 px-7 py-2 border font-montserrat text-lg leading-none btn bg-blue-600 text-white rounded-full">
+              Fill out Form anyways
+            </button>
           </Link>
         </div>
       </div>
