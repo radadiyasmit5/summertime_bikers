@@ -1,108 +1,219 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import "../.././components/utils/scss/variables.scss";
+/* Apply border-box to every element globally */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 .main-conatiner-wl {
   position: relative;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
+  font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  padding-top: calc(var(--header-height) + 1.7rem + 0.5rem);
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--background-color);
+  max-width: 100%;
 
   .before-card-content-wl {
-    margin-top: calc(69px + 1.7rem);
-    padding: 1rem 2.5rem;
-    // font-size: ;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(74, 157, 201, 0.1), rgba(50, 168, 231, 0.1));
+    border-radius: var(--border-radius);
+    margin: 0 0.75rem;
+    animation: fadeIn 0.6s ease-out forwards;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    width: calc(100% - 1.5rem);
+
     .before-content-heading {
-      font-size: 1.5rem;
-      line-height: 1.1;
-      font-weight: 600;
-      letter-spacing: 0;
-      padding: 1rem 0;
-    }
-    .letstalkmoney-heading {
-      color: #86868b;
       font-size: 1.3rem;
+      line-height: 1.3;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      padding: 0.5rem 0;
+      color: var(--text-color);
     }
+
+    .letstalkmoney-heading {
+      font-size: 1.2rem;
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin: 0.75rem 0;
+    }
+
     .rightplace-para {
-      color: #86868b;
+      font-size: 1rem;
+      line-height: 1.5;
+      color: var(--text-color);
+      margin: 0.75rem 0;
+      padding: 1rem;
+      background-color: var(--card-background);
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
   }
 
   .progress-bar-wl {
-    height: 5vh;
-    width: 100%;
+    height: auto;
+    width: calc(100% - 1.5rem);
     position: sticky;
-    padding: 0 1rem;
-    top: 100px;
+    padding: 0.5rem;
+    top: calc(var(--header-height) + 1.7rem + 0.25rem);
     left: 0;
-    // margin-top: 75px;
-    background-color: white;
+    background-color: var(--card-background);
     display: flex;
-    justify-content: space-around;
-    // align-items: center;
-    z-index: 1000;
+    flex-direction: row;
+    z-index: 100;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius);
+    margin: 0 0.75rem;
+    gap: 0.5rem;
+
     .stage-label-wl {
       width: 100%;
-      height: 3rem;
-      border: 2px solid #86868b;
-      background-color: white;
-      border-radius: 1rem;
+      height: auto;
+      min-height: 2.5rem;
+      border: 2px solid var(--primary-color);
+      background-color: var(--card-background);
+      border-radius: var(--border-radius);
+      margin: 0;
+      z-index: 1000;
+      cursor: pointer;
+      transition: all var(--transition-speed);
+      padding: 0.5rem 0.75rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 0.4rem;
-      z-index: 1000;
-      cursor: pointer;
+
+      &:hover {
+        background-color: rgba(74, 157, 201, 0.1);
+      }
+
       .stage-progressbar-label-btn-content {
         width: 100%;
         text-align: center;
+        font-weight: 600;
+        font-size: 0.95rem;
+        line-height: 1.2;
       }
     }
+
     .active-wl {
-      background-color: rgb(231, 239, 241);
-      color: rgb(74, 67, 67);
-      border: 2px solid #0071e3;
-      border-radius: 1rem;
+      background-color: var(--primary-color);
+      color: white;
+      border: 2px solid var(--primary-color);
     }
   }
+
   .progressBarSticky {
     position: fixed;
-    top: calc(69px + 1.7rem);
+    top: calc(var(--header-height) + 1.7rem + 0.25rem);
+    animation: fadeIn 0.3s ease-out forwards;
+    width: calc(100% - 1.5rem);
+    margin: 0 0.75rem;
+    z-index: 100;
   }
+
   .stage-container-wl {
-    // margin-top: calc(5vh + 69px);
+    margin-top: 0.5rem;
     position: relative;
+    padding: 0 0.25rem;
+    width: 100%;
+    max-width: 100%;
+
     .stage-card {
-      background-color: #f5f5f7;
-      border-radius: 22px;
+      background-color: var(--card-background);
+      border-radius: var(--border-radius);
       cursor: default;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+      margin-bottom: 1rem;
+      padding: 1.25rem 0.75rem;
+      width: calc(100% - 0.5rem);
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      box-sizing: border-box;
+      display: block;
+
       .stage-heading {
-        font-size: 1.7rem;
-        // font-size: 40px;
-        line-height: 1.1;
-        font-weight: 600;
-        letter-spacing: 0;
+        font-size: 1.4rem;
+        line-height: 1.3;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0.75rem;
       }
+
+      .stage-subHeading {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--text-color);
+        margin-bottom: 0.5rem;
+        line-height: 1.3;
+      }
+
+      .stage-subheading-2 {
+        font-size: 1rem;
+        color: var(--text-color);
+        opacity: 0.8;
+        margin-bottom: 0.5rem;
+        line-height: 1.3;
+      }
+
+      ul {
+        font-weight: 400;
+        line-height: 1.5;
+        letter-spacing: -0.01em;
+        padding: 0.75rem 0.5rem;
+        list-style-type: none;
+        font-size: 1rem;
+
+        li {
+          margin-bottom: 0.75rem;
+          padding-left: 1.25rem;
+          position: relative;
+
+          &:before {
+            content: "•";
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+            font-size: 1.25rem;
+          }
+        }
+      }
+
       .gforminquirybtn {
         display: flex;
         justify-content: center;
-        margin: 2rem 0;
+        margin: 1.25rem 0 0.25rem;
 
         button {
-          background: linear-gradient(to right, #4A9DC9, #32A8E7);
+          background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
           color: white;
           font-weight: 600;
-          font-size: 1.2rem;
-          padding: 1rem 2.5rem;
+          font-size: 1rem;
+          padding: 0.75rem 1.25rem;
           border-radius: 9999px;
           border: none;
           box-shadow: 0 4px 15px rgba(74, 157, 201, 0.3);
-          transition: all 0.3s ease;
-          min-width: 250px;
+          transition: all var(--transition-speed);
+          width: 100%;
+          max-width: 280px;
           cursor: pointer;
 
           &:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(74, 157, 201, 0.4);
-            background: linear-gradient(to right, #32A8E7, #4A9DC9);
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
           }
 
           &:active {
@@ -111,71 +222,122 @@
           }
         }
       }
-      .stage-subHeading {
-        font-size: 1.45rem;
+    }
+  }
+}
+
+// Tablet styles (481px to 768px)
+@media screen and (min-width: 481px) {
+  .main-conatiner-wl {
+    gap: 1.5rem;
+    padding-top: calc(var(--header-height) + 1.7rem + 0.75rem);
+
+    .before-card-content-wl {
+      padding: 1.75rem;
+      margin: 0 1.5rem;
+      width: calc(100% - 3rem);
+
+      .before-content-heading {
+        font-size: 1.5rem;
       }
-      .stage-subheading-2 {
-        font-size: 1.3rem;
-        color: #86868b;
+
+      .letstalkmoney-heading {
+        font-size: 1.4rem;
       }
-      ul {
-        font-weight: 400;
-        line-height: 1.33;
-        letter-spacing: -0.01em;
+
+      .rightplace-para {
+        font-size: 1.1rem;
+        padding: 1.25rem;
       }
     }
-    .stage-1 {
-      height: 100%;
-      border-radius: 1rem;
-      padding: 1.25rem;
-      padding-top: 3.25rem;
-      .stage-1-card {
-        .stage-1-wl {
-          height: 100%;
-          border-radius: 1rem;
-          .stage-heading {
-          }
+
+    .progress-bar-wl {
+      padding: 0.75rem;
+      gap: 0.75rem;
+      width: calc(100% - 3rem);
+      margin: 0 1.5rem;
+
+      .stage-label-wl {
+        margin: 0;
+        min-height: 2.75rem;
+
+        .stage-progressbar-label-btn-content {
+          font-size: 1rem;
         }
       }
     }
-    .stage-2 {
-      height: 100%;
-      border-radius: 1rem;
-      padding: 1.25rem;
-      .stage-2-card {
-        .stage-2-wl {
-          height: 100%;
-          border-radius: 1rem;
-          .stage-heading {
-          }
-        }
+
+    .stage-container-wl {
+      padding: 0 1rem;
+      max-width: 100%;
+
+      .stage-card {
+        padding: 1.75rem;
+        width: calc(100% - 2rem);
+        margin: 0 auto 1rem auto;
       }
     }
   }
 }
 
-@media #{$media-mobile-480} {
+// Desktop styles (769px and above)
+@media screen and (min-width: 769px) {
   .main-conatiner-wl {
-    .progress-bar {
-      z-index: 100;
+    gap: 2rem;
+    padding-top: calc(var(--header-height) + 1.7rem + 1rem);
+
+    .before-card-content-wl {
+      margin: 0 2rem;
+      padding: 2rem;
+      width: calc(100% - 4rem);
+
+      .before-content-heading {
+        font-size: 1.75rem;
+      }
+
+      .letstalkmoney-heading {
+        font-size: 1.6rem;
+      }
+
+      .rightplace-para {
+        font-size: 1.2rem;
+        padding: 1.5rem;
+      }
     }
+
     .progress-bar-wl {
+      padding: 1rem;
+      gap: 1rem;
+      width: calc(100% - 4rem);
+      margin: 0 2rem;
+
       .stage-label-wl {
-        height: 5rem;
+        min-height: 3rem;
       }
     }
-    .level-container {
-      .level-card {
-        .level-heading {
-          // font-size: 1.5rem;
-        }
+
+    .stage-container-wl {
+      padding: 0 1.5rem;
+      max-width: 100%;
+
+      .stage-card {
+        padding: 2rem;
+        width: calc(100% - 3rem);
+        margin: 0 auto 1rem auto;
       }
-      .level-1 {
-      }
-      .level-2 {
-      }
-      .level-3 {
-      }
+    }
+  }
+}
+
+// Touch device optimizations
+@media (hover: none) {
+  .main-conatiner-wl {
+    .stage-card:hover {
+      transform: none;
+    }
+
+    .gforminquirybtn button:hover {
+      transform: none;
     }
   }
 }

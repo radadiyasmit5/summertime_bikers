@@ -23,7 +23,7 @@ const page = () => {
   // const [levelintitalPositions, setlevelintitalPositions] = UseState(null)
   const onScroll = (e) => {
     const stickyprogressBarOfset = progressbarRef.current.offsetTop
-    if (window.pageYOffset > stickyprogressBarOfset - 69) {
+    if (window.pageYOffset > stickyprogressBarOfset) {
       setprogressBarSticky(true)
     } else {
       setprogressBarSticky(false)
@@ -117,7 +117,7 @@ const page = () => {
   return (
     <>
       <div className="main-conatiner">
-        <div className={`before-card-content font-bold`}>
+        <div className="before-card-content font-bold">
           <p>
             If you do not hold any drivers licence then you will have to go
             through the general learners licence before you can appear for a
@@ -131,41 +131,37 @@ const page = () => {
             All three levels are explained below!
           </p>
         </div>
-        <div style={{postion: "relative"}}>
-          <PromotionBar />
-          <Header />
+        <PromotionBar />
+        <Header />
+        <div 
+          className={`progress-bar ${progressBarSticky ? "progressBarSticky" : ""}`}
+          ref={progressbarRef}
+        >
           <div
-            className={`progress-bar ${
-              progressBarSticky ? "progressBarSticky" : ""
-            }`}
-            ref={progressbarRef}
+            className={`${level == 1 ? "active" : ""} level-label`}
+            onClick={() => handleLevelClick(1)}
           >
-            <div
-              className={`${level == 1 ? "active" : ""} level-label`}
-              onClick={() => handleLevelClick(1)}
-            >
-              <div className="level-progressbar-label-btn-content">
-                <p className="font-bold"> Level 1 </p>
-                <p>Learners Licence</p>
-              </div>
+            <div className="level-progressbar-label-btn-content">
+              <p className="font-bold"> Level 1 </p>
+              <p>Learners Licence</p>
             </div>
-            <div
-              className={`${level == 2 ? "active" : ""} level-label`}
-              onClick={() => handleLevelClick(2)}
-            >
-              <div className="level-progressbar-label-btn-content">
-                <p className="font-bold"> Level 2</p>
-                <p>Full Licence</p>
-              </div>
+          </div>
+          <div
+            className={`${level == 2 ? "active" : ""} level-label`}
+            onClick={() => handleLevelClick(2)}
+          >
+            <div className="level-progressbar-label-btn-content">
+              <p className="font-bold"> Level 2</p>
+              <p>Full Licence</p>
             </div>
-            <div
-              className={`${level == 3 ? "active" : ""} level-label`}
-              onClick={() => handleLevelClick(3)}
-            >
-              <div className="level-progressbar-label-btn-content">
-                <p className="font-bold"> Level 3</p>
-                <p>Restrictions Lifted</p>
-              </div>
+          </div>
+          <div
+            className={`${level == 3 ? "active" : ""} level-label`}
+            onClick={() => handleLevelClick(3)}
+          >
+            <div className="level-progressbar-label-btn-content">
+              <p className="font-bold"> Level 3</p>
+              <p>Restrictions Lifted</p>
             </div>
           </div>
         </div>
@@ -350,7 +346,7 @@ const page = () => {
             </Card>
           </div>
 
-          <div className={`level-2 p-5`} ref={level2}>
+          <div className={`level-2`} ref={level2}>
             <Card className="level-2-card level-card">
               <div className="stage-2">
                 <h1 className="text pt-2 level-heading text-center">
@@ -460,7 +456,7 @@ const page = () => {
               {gfromInquiryBtn()}
             </Card>
           </div>
-          <div className={`level-3 p-5`} ref={level3}>
+          <div className={`level-3`} ref={level3}>
             <Card className="level-3-card level-card">
               <div className="stage-3">
                 <h1 className="text pt-2 level-heading text-center">

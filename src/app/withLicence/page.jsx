@@ -138,36 +138,33 @@ const page = () => {
             <br />
           </p>
         </div>
-        <div style={{ postion: "relative" }}>
-          <PromotionBar />
-          <Header />
+        <PromotionBar />
+        <Header />
+        <div
+          className={`progress-bar-wl ${progressBarSticky ? "progressBarSticky" : ""}`}
+          ref={progressbarRef}
+        >
           <div
-            className={`progress-bar-wl ${progressBarSticky ? "progressBarSticky" : ""
-              }`}
-            ref={progressbarRef}
+            className={`${stage == 1 ? "active-wl" : ""} stage-label-wl`}
+            onClick={() => handleLevelClick(1)}
           >
-            <div
-              className={`${stage == 1 ? "active-wl" : ""} stage-label-wl`}
-              onClick={() => handleLevelClick(1)}
-            >
-              <div className="stage-progressbar-label-btn-content">
-                <p className="font-bold">Stage 1</p>
-                <p>Learners Licence</p>
-              </div>
+            <div className="stage-progressbar-label-btn-content">
+              <p className="font-bold">Stage 1</p>
+              <p>Learners Licence</p>
             </div>
-            <div
-              className={`${stage == 2 ? "active-wl" : ""} stage-label-wl`}
-              onClick={() => handleLevelClick(2)}
-            >
-              <div className="stage-progressbar-label-btn-content">
-                <p className="font-bold">Stage 2</p>
-                <p>Full Licence</p>
-              </div>
+          </div>
+          <div
+            className={`${stage == 2 ? "active-wl" : ""} stage-label-wl`}
+            onClick={() => handleLevelClick(2)}
+          >
+            <div className="stage-progressbar-label-btn-content">
+              <p className="font-bold">Stage 2</p>
+              <p>Full Licence</p>
             </div>
           </div>
         </div>
         <div className="stage-container-wl">
-          <div className={`stage-1 p-16`} ref={stage1}>
+          <div className={`stage-1`} ref={stage1}>
             <Card className="stage-1-card stage-card">
               <div className="stage-1-wl">
                 <h1 className="text pt-2 stage-heading text-center">
@@ -338,7 +335,7 @@ const page = () => {
             </Card>
           </div>
 
-          <div className={`stage-2 p-10`} ref={stage2}>
+          <div className={`stage-2 `} ref={stage2}>
             <Card className="stage-2-card stage-card">
               <div className="stage-2-wl">
                 <h1 className="text pt-2 stage-heading text-center">
