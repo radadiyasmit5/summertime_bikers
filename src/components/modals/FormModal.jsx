@@ -62,7 +62,7 @@ const FormModal = ({ isOpen, onClose }) => {
     >
       <div className="modal-content">
         <h2 className="modal-title">Find more information here</h2>
-        <p className="modal-subtitle">Select the appropriate option</p>
+        <p className="modal-subtitle">Select the appropriate option or fill out the form by clicking the button below</p>
         
         <div className="cards-container">
           {!isMobile ? (

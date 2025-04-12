@@ -51,7 +51,7 @@ const Page = () => {
             </p>
           </div>
           <div className="ridirect-content-btn">
-            <Button label={"Fill out a Form"} onClick={handleOpenModal} />
+            <Button label={"Learn more"} onClick={handleOpenModal} />
           </div>
         </div>
         <div className="bikerAnimation-container">
