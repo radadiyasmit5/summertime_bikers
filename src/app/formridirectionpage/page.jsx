@@ -1,4 +1,6 @@
-import React from "react"
+"use client"
+
+import React, { useState } from "react"
 import BikeAnimationPage from "../../components/bikeAnimationPage/BikeAnimationPage.js"
 import Header from "@/components/header/Header.jsx"
 import "./formridirection.scss"
@@ -6,8 +8,19 @@ import Button from "@/components/buttons/Button.jsx"
 import Link from "next/link.js"
 import PromotionBar from "@/components/PromotionBar/PromotionBar.jsx"
 import StickyGformbtn from "@/components/buttons/StickyGformbtn"
+import FormModal from "@/components/modals/FormModal"
 
-const page = () => {
+const Page = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div>
       <PromotionBar />
@@ -23,9 +36,9 @@ const page = () => {
             <br />
 
             <p>
-              As you don’t have a valid licence, no rental company can rent out
+              As you don't have a valid licence, no rental company can rent out
               a bike to you. Even if you can find a motorcycle, you cannot drive
-              it to the test centre because you are not licensed in the first
+              it to the test centre because you are not licenced in the first
               place.
             </p>
             <br />
@@ -38,9 +51,7 @@ const page = () => {
             </p>
           </div>
           <div className="ridirect-content-btn">
-            <Link href={"callbackGform"} target="_blank">
-              <Button label={"Fill out a Form"} />
-            </Link>
+            <Button label={"Learn more"} onClick={handleOpenModal} />
           </div>
         </div>
         <div className="bikerAnimation-container">
@@ -48,8 +59,12 @@ const page = () => {
         </div>
       </div>
       <StickyGformbtn />
+      <FormModal 
+        isOpen={isModalOpen} 
+        onClose={handleCloseModal} 
+      />
     </div>
   )
 }
 
-export default page
+export default Page

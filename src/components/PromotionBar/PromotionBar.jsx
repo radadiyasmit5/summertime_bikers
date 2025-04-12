@@ -12,7 +12,7 @@ const PromotionBar = () => {
         <span>
           <Link
             href={"/formridirectionpage"}
-            className="underline cursor-pointer"
+            className="underline cursor-pointer text-white hover:text-gray-200"
           >
             Find out how to borrow a Motorcycle for your test
           </Link>

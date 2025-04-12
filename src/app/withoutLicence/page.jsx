@@ -21,11 +21,13 @@ const page = () => {
   const [progressBarSticky, setprogressBarSticky] = UseState(false)
   // const [levelintitalPositions, setlevelintitalPositions] = UseState(null)
   const onScroll = (e) => {
-    const stickyprogressBarOfset = progressbarRef.current.offsetTop
-    if (window.pageYOffset > stickyprogressBarOfset - 69) {
-      setprogressBarSticky(true)
+    if (!progressbarRef.current) return;
+    
+    const stickyprogressBarOfset = progressbarRef.current.offsetTop;
+    if (window.pageYOffset > stickyprogressBarOfset) {
+      setprogressBarSticky(true);
     } else {
-      setprogressBarSticky(false)
+      setprogressBarSticky(false);
     }
     if (
       level1.current?.getBoundingClientRect().top -
@@ -33,7 +35,7 @@ const page = () => {
         progressbarRef.current?.clientHeight <=
       0
     ) {
-      setlevel(1)
+      setlevel(1);
     }
     if (
       level2.current?.getBoundingClientRect().top -
@@ -41,7 +43,7 @@ const page = () => {
         progressbarRef.current?.clientHeight <=
       100
     ) {
-      setlevel(2)
+      setlevel(2);
     }
     if (
       level3.current?.getBoundingClientRect().top -
@@ -49,7 +51,7 @@ const page = () => {
         progressbarRef.current?.clientHeight <=
       100
     ) {
-      setlevel(3)
+      setlevel(3);
     }
   }
   UseEffect(() => {
@@ -116,13 +118,13 @@ const page = () => {
   return (
     <>
       <div className="main-conatiner">
-        <div className={`before-card-content font-bold`}>
+        <div className="before-card-content font-bold">
           <p>
             If you do not hold any drivers licence then you will have to go
             through the general learners licence before you can appear for a
             motorcycle learners licence(Online test and Balance test).{" "}
           </p>
-          <p className="my-8 afterwich-para">
+          <p className="my-8 ">
             After which, you will need to do a road test in order to get a full
             licence. The final level will be to remove the restrictions.
           </p>
@@ -130,41 +132,37 @@ const page = () => {
             All three levels are explained below!
           </p>
         </div>
-        <div style={{postion: "relative"}}>
-          <PromotionBar />
-          <Header />
+        <PromotionBar />
+        <Header />
+        <div 
+          className={`progress-bar ${progressBarSticky ? "progressBarSticky" : ""}`}
+          ref={progressbarRef}
+        >
           <div
-            className={`progress-bar ${
-              progressBarSticky ? "progressBarSticky" : ""
-            }`}
-            ref={progressbarRef}
+            className={`${level == 1 ? "active" : ""} level-label`}
+            onClick={() => handleLevelClick(1)}
           >
-            <div
-              className={`${level == 1 ? "active" : ""} level-label`}
-              onClick={() => handleLevelClick(1)}
-            >
-              <div className="level-progressbar-label-btn-content">
-                <p className="font-bold"> Level 1 </p>
-                <p>Learners Licence</p>
-              </div>
+            <div className="level-progressbar-label-btn-content">
+              <p className="font-bold"> Level 1 </p>
+              <p>Learners Licence</p>
             </div>
-            <div
-              className={`${level == 2 ? "active" : ""} level-label`}
-              onClick={() => handleLevelClick(2)}
-            >
-              <div className="level-progressbar-label-btn-content">
-                <p className="font-bold"> Level 2</p>
-                <p>Full Licence</p>
-              </div>
+          </div>
+          <div
+            className={`${level == 2 ? "active" : ""} level-label`}
+            onClick={() => handleLevelClick(2)}
+          >
+            <div className="level-progressbar-label-btn-content">
+              <p className="font-bold"> Level 2</p>
+              <p>Full Licence</p>
             </div>
-            <div
-              className={`${level == 3 ? "active" : ""} level-label`}
-              onClick={() => handleLevelClick(3)}
-            >
-              <div className="level-progressbar-label-btn-content">
-                <p className="font-bold"> Level 3</p>
-                <p>Restrictions Lifted</p>
-              </div>
+          </div>
+          <div
+            className={`${level == 3 ? "active" : ""} level-label`}
+            onClick={() => handleLevelClick(3)}
+          >
+            <div className="level-progressbar-label-btn-content">
+              <p className="font-bold"> Level 3</p>
+              <p>Restrictions Lifted</p>
             </div>
           </div>
         </div>
@@ -237,7 +235,7 @@ const page = () => {
                   explained later This comes in two parts,
                 </li>
                 <li className="text font-bold pt-3">A knowledge test</li>
-                <li className={`${casualtext}`}>What you’re tested on ? </li>
+                <li className={`${casualtext}`}>What you're tested on ? </li>
                 <li className="pt-1">
                   You need to review the
                   <a
@@ -245,7 +243,7 @@ const page = () => {
                     target="_blank"
                     href="https://novascotia.ca/sns/rmv/handbook/DH-Chapter8.pdf"
                   >
-                    Driver&#39;s Handbook{" "}
+                    Driver's Handbook{" "}
                   </a>
                   to prepare for the Knowledge Test.
                 </li>
@@ -255,7 +253,7 @@ const page = () => {
                   questions. To pass, you need to answer at least 16 correctly.
                 </li>
                 <li className="pt-2">
-                  If you don’t pass the Knowledge Test, you need to pay for
+                  If you don't pass the Knowledge Test, you need to pay for
                   another test and take the test again on the spot if it works
                   for you.
                 </li>
@@ -317,9 +315,9 @@ const page = () => {
                 </h4>
 
                 <p className="text pt-3">
-                  You need to transport your own or someone else’s motorcycle by
+                  You need to transport your own or someone else's motorcycle by
                   trailer or have someone who has a Motorcycle Licence drive it
-                  to the test for you (you can’t drive the motorcycle to the
+                  to the test for you (you can't drive the motorcycle to the
                   test yourself). Your motorcycle must pass a pre-trip
                   inspection before the Balance Test can start. The motorcycle
                   needs to have a valid licence plate and vehicle permit (or
@@ -332,7 +330,7 @@ const page = () => {
                   with our Motorcycle !
                 </h5>
                 <br />
-                <h5 className="text text-xl pt-3">
+                <h5 className="text text-xl font-bold pt-3">
                   Licence plate, Vehicle permit, MVI, Insurance WE TAKE CARE OF
                   IT ALL !!
                 </h5>
@@ -349,7 +347,7 @@ const page = () => {
             </Card>
           </div>
 
-          <div className={`level-2 p-5`} ref={level2}>
+          <div className={`level-2`} ref={level2}>
             <Card className="level-2-card level-card">
               <div className="stage-2">
                 <h1 className="text pt-2 level-heading text-center">
@@ -357,7 +355,7 @@ const page = () => {
                 </h1>
                 <p className="text text-center font-bold level-subHeading">
                   {" "}
-                  Newly Licenced Motorcycle Driver&#39;s Licence{" "}
+                  Newly Licenced Motorcycle Driver's Licence{" "}
                 </p>
                 <p className="text text-center level-subheading-2 font-bold">
                   {" "}
@@ -381,7 +379,7 @@ const page = () => {
                     Complete a{" "}
                     <span className="text font-bold">Practice period </span> .
                     Before you can take your &quot;Advanced skills&quot; road
-                    test, you usually need to have your Learner&#39;s Motorcycle
+                    test, you usually need to have your Learner's Motorcycle
                     Licence for at least 6 months.
                   </li>
                   <li className={`${casualtext} ml-4`}>
@@ -406,7 +404,7 @@ const page = () => {
                     Here we come to the rescue, We will come with you to your
                     test with our Motorcycle !{" "}
                   </li>
-                  <h5 className="text text-xl pt-3">
+                  <h5 className="text font-bold text-xl pt-3">
                     Licence plate, Vehicle permit, MVI, Insurance WE TAKE CARE
                     OF IT ALL !!
                   </h5>
@@ -415,7 +413,7 @@ const page = () => {
                   <li className="text pt-3">
                     A driving school might provide you with a motorcycle for
                     your test but it is really expensive and time consuming to
-                    do the course. You can also borrow someone else’s bike or
+                    do the course. You can also borrow someone else's bike or
                     buy your own. Which is difficult and/or expensive.
                   </li>
                   <li className="text pt-3">
@@ -435,11 +433,11 @@ const page = () => {
                       target="_blank"
                     >
                       {" "}
-                      Newly Licenced Driver&#39;s Licence, Additional
+                      Newly Licenced Driver's Licence, Additional
                       Information (F)
                     </a>
                     , on how to arrange a road test. See also the N.S.
-                    Driver&#39;s Handbook.
+                    Driver's Handbook.
                   </li>
                   <li className="text text-center pt-5 font-bold">
                     Once you have this licence, there are special restrictions
@@ -459,7 +457,7 @@ const page = () => {
               {gfromInquiryBtn()}
             </Card>
           </div>
-          <div className={`level-3 p-5`} ref={level3}>
+          <div className={`level-3`} ref={level3}>
             <Card className="level-3-card level-card">
               <div className="stage-3">
                 <h1 className="text pt-2 level-heading text-center">
@@ -483,7 +481,7 @@ const page = () => {
                       Have a{" "}
                       <span className="text font-bold">
                         {" "}
-                        Newly Licensed Motorcycle Driver&#39;s Licence.{" "}
+                        Newly licenced Motorcycle Driver's Licence{" "}
                       </span>
                     </li>
                     <li className="text  pt-3">

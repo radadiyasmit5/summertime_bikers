@@ -1,255 +1,302 @@
 @import "../.././components/utils/scss/variables.scss";
+
 .about-us-page-outer-content {
+  background: linear-gradient(to bottom, #ffffff, #f8fafc);
+  min-height: 100vh;
+  padding-top: calc(var(--header-height) + 1.7rem);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   .aboutus-heading {
-    font-weight: 700;
+    font-weight: 800;
     font-size: 2.5rem;
-    margin-top: calc(69px + 1.7rem);
-    padding: 1rem 2rem 0 2rem;
+    line-height: 1.3;
+    margin-top: 1rem;
+    padding: 2rem 2rem;
+    color: #1a1a1a;
+    max-width: 1200px;
+    text-align: center;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(to right, #4A9DC9, #32A8E7);
+      border-radius: 2px;
+    }
   }
+
   .aboutus-page-main-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    height: 100%;
-    justify-content: space-around;
-    flex: 1.5;
+    width: 100%;
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+    gap: 3rem;
+
     .aboutus-content-container {
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: center;
       gap: 2rem;
-      align-items: center;
-      padding: 0 2rem;
-      font-size: 2rem;
-      // padding: 2rem;
-      max-width: 60%;
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
+      animation: fadeIn 0.6s ease-out;
+
+      p {
+        font-size: 1.25rem;
+        line-height: 1.6;
+        color: #4a5568;
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+        position: relative;
+        
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 12px;
+          width: 6px;
+          height: 6px;
+          background: #4A9DC9;
+          border-radius: 50%;
+        }
+      }
 
       .providing-our-clients-para {
         font-weight: 600;
+        color: #2d3748;
+        background: linear-gradient(120deg, rgba(74,157,201,0.1) 0%, rgba(50,168,231,0.1) 100%);
+        padding: 1.5rem;
+        border-radius: 12px;
+        border-left: 4px solid #4A9DC9;
+        
+        &::before {
+          display: none;
+        }
       }
-      .fill-gap-para {
-        font-size: 2rem;
-        font-weight: 700;
-      }
+
       .gforminquirybtn {
+        margin-top: 2rem;
+        align-self: center;
+
         button {
-          padding: 1rem;
-          font-weight: 700;
-          font-size: 1.5rem;
+          background: linear-gradient(135deg, #4A9DC9, #32A8E7);
+          color: white;
+          font-weight: 600;
+          font-size: 1.2rem;
+          padding: 1.2rem 3rem;
+          border-radius: 12px;
+          border: none;
+          box-shadow: 0 10px 25px rgba(74, 157, 201, 0.3);
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          position: relative;
+          overflow: hidden;
+          width: auto;
+          min-width: 300px;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+          }
+
+          &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(74, 157, 201, 0.4);
+
+            &::before {
+              left: 100%;
+            }
+          }
+
+          &:active {
+            transform: translateY(-1px);
+          }
         }
       }
     }
 
     .bikerAnimation-container {
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
       display: flex;
       align-items: center;
-      // justify-content: center;
-      height: 100%;
-      min-height: 100vh;
-      // width: 100%;
-      // max-width: 50%;
-    }
-  }
-}
+      justify-content: center;
+      position: relative;
+      min-height: 400px;
 
-@media #{$media-desktop-1450-1700} {
-  .about-us-page-outer-content {
-    .aboutus-heading {
-      font-weight: 700;
-      font-size: 2.5rem;
-      margin-top: calc(69px + 1.7rem);
-    }
-    .aboutus-page-main-container {
-      width: 100%;
-      overflow: hidden;
-      flex-wrap: nowrap;
-      justify-content: space-around;
-      flex: 1.5;
-      .aboutus-content-container {
-        padding: 0 2rem;
-        font-size: 2rem;
-        max-width: 60%;
-        // padding: 2rem;
-        // max-width: 100%;
-
-        .fill-gap-para {
-          font-size: 2rem;
-          font-weight: 700;
-        }
-        .gforminquirybtn {
-          margin: 3rem 0;
-        }
+      &::before {
+        content: '';
+        position: absolute;
+        width: 90%;
+        height: 90%;
+        background: radial-gradient(circle, rgba(74,157,201,0.1) 0%, rgba(255,255,255,0) 70%);
+        border-radius: 50%;
+        z-index: -1;
       }
     }
   }
 }
-@media #{$media-desktop-1200-1450} {
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .about-us-page-outer-content {
     .aboutus-heading {
-      font-weight: 700;
       font-size: 2.5rem;
-      margin-top: calc(69px + 1.7rem);
+      padding: 2rem 4rem;
     }
+
     .aboutus-page-main-container {
-      width: 100%;
-      overflow: hidden;
-      flex-wrap: wrap;
-      gap: 0;
+      flex-direction: row;
+      align-items: center;
+      padding: 0 4rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .about-us-page-outer-content {
+    .aboutus-heading {
+      font-size: 2.25rem;
+      padding: 2rem;
+    }
+
+    .aboutus-page-main-container {
+      flex-direction: column;
+      align-items: center;
+      
       .aboutus-content-container {
-        padding: 0 4rem;
-        font-size: 1.7rem;
-        padding: 0;
-        gap: 3rem;
-        max-width: 40%;
-        .fill-gap-para {
-          font-size: 1.4rem;
-          font-weight: 700;
-        }
+        max-width: 800px;
+        width: 100%;
       }
+
       .bikerAnimation-container {
-        display: flex;
-        align-items: flex-start;
-        // justify-content: center;
-        height: 100%;
-        min-height: 100vh;
-        max-width: 40%;
-        // width: 100%;
-        // max-width: 50%;
-      }
-    }
-  }
-}
-
-@media #{$media-desktop-1000-1200} {
-  .about-us-page-outer-content {
-    .aboutus-heading {
-      font-weight: 700;
-      font-size: 2.5rem;
-      margin-top: calc(69px + 1.7rem);
-    }
-    .aboutus-page-main-container {
-      .aboutus-content-container {
-        padding: 0 4rem;
-        font-size: 2rem;
-        padding: 2rem;
-        max-width: 100%;
-
-        .fill-gap-para {
-          font-size: 2rem;
-          font-weight: 700;
-        }
-      }
-    }
-  }
-}
-@media #{$media-tablet-768-1000} {
-  .about-us-page-outer-content {
-    .aboutus-heading {
-      font-weight: 700;
-      font-size: 2.5rem;
-      margin-top: calc(69px + 1.7rem);
-    }
-    .aboutus-page-main-container {
-      .aboutus-content-container {
-        padding: 0 4rem;
-        font-size: 2rem;
-        padding: 2rem;
-        max-width: 100%;
-
-        .fill-gap-para {
-          font-size: 2rem;
-          font-weight: 700;
-        }
-      }
-    }
-  }
-}
-@media #{$media-tablet-670-768} {
-  .about-us-page-outer-content {
-    .aboutus-heading {
-      font-weight: 700;
-      font-size: 2.5rem;
-      margin-top: calc(69px + 1.7rem);
-    }
-    .aboutus-page-main-container {
-      .aboutus-content-container {
-        padding: 0 4rem;
-        font-size: 2rem;
-        padding: 2rem;
-        max-width: 100%;
-
-        .fill-gap-para {
-          font-size: 2rem;
-          font-weight: 700;
-        }
-      }
-    }
-  }
-}
-@media #{$media-mobile-480-670} {
-  .about-us-page-outer-content {
-    .aboutus-heading {
-      font-weight: 700;
-      font-size: 2rem;
-      margin-top: calc(69px + 1.7rem);
-    }
-    .aboutus-page-main-container {
-      width: 100%;
-      .aboutus-content-container {
-        // padding: 0 4rem;
-        font-size: 1.5rem;
-        padding: 1rem;
         width: 100%;
-        max-width: 100%;
-
-        .fill-gap-para {
-          font-size: 1.5rem;
-          font-weight: 700;
-        }
+        max-width: 800px;
       }
-    }
-    .bikerAnimation-container {
-      display: flex;
-      // align-items: center;
-      justify-content: center;
-      // height: 100%;
-      // min-height: 100vh;
-      width: 100%;
-      // max-width: 50%;
     }
   }
 }
 
-@media #{$media-mobile-480} {
+@media screen and (max-width: 768px) {
   .about-us-page-outer-content {
     .aboutus-heading {
-      font-weight: 700;
       font-size: 2rem;
-      margin-top: calc(69px + 1.7rem);
-    }
-    .aboutus-page-main-container {
-      width: 100%;
-      .aboutus-content-container {
-        // padding: 0 4rem;
-        font-size: 1.5rem;
-        padding: 1rem;
-        width: 100%;
-        max-width: 100%;
+      padding: 1.5rem 2rem;
 
-        .fill-gap-para {
-          font-size: 1.5rem;
-          font-weight: 700;
+      &::after {
+        width: 60px;
+      }
+    }
+
+    .aboutus-page-main-container {
+      padding: 0 1.5rem;
+      gap: 2rem;
+      
+      .aboutus-content-container {
+        p {
+          font-size: 1.1rem;
+        }
+
+        .gforminquirybtn {
+          button {
+            width: 100%;
+            font-size: 1.1rem;
+            padding: 1rem 2rem;
+            min-width: 250px;
+          }
         }
       }
     }
-    .bikerAnimation-container {
-      display: flex;
-      // align-items: center;
-      justify-content: center;
-      // height: 100%;
-      // min-height: 100vh;
-      width: 100%;
-      // max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-us-page-outer-content {
+    padding-top: calc(var(--header-height) + 1.7rem + 0.5rem);
+    
+    .aboutus-heading {
+      font-size: 1.5rem;
+      padding: 1.5rem 1rem;
+      margin-top: 0;
+
+      &::after {
+        width: 50px;
+        height: 3px;
+      }
+    }
+
+    .aboutus-page-main-container {
+      padding: 0 1rem;
+      gap: 1.5rem;
+      margin: 1rem auto;
+      
+      .aboutus-content-container {
+        max-width: 100%;
+        
+        p {
+          font-size: 1rem;
+          padding-left: 1rem;
+          margin-bottom: 0.75rem;
+
+          &::before {
+            width: 4px;
+            height: 4px;
+            top: 10px;
+          }
+        }
+        
+        .providing-our-clients-para {
+          padding: 1rem;
+        }
+        
+        .gforminquirybtn {
+          margin-top: 1rem;
+          
+          button {
+            width: 100%;
+            font-size: 1rem;
+            padding: 0.75rem 1.5rem;
+            min-width: 0;
+          }
+        }
+      }
+      
+      .bikerAnimation-container {
+        min-height: 300px;
+        
+        &::before {
+          width: 90%;
+          height: 90%;
+        }
+      }
     }
   }
 }

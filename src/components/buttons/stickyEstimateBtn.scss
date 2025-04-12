@@ -1,13 +1,13 @@
 @import "../utils/scss/variables.scss";
 @import "./stickyButton.scss";
 
-.helmets-icon-wrapper {
+.estimate-icon-wrapper {
   @extend .sticky-button;
-  bottom: 2rem;
+  bottom: 8rem;
 }
 
 @media #{$media-mobile-480} {
-  .helmets-icon-wrapper {
-    bottom: 4rem;
+  .estimate-icon-wrapper {
+    bottom: 11rem;
   }
-}
+} 

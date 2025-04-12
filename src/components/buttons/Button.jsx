@@ -1,16 +1,12 @@
 import "./button.scss"
 import Image from "next/image"
-const Button = ({label, iconURL, backgroundColor, textColor, borderColor}) => {
+
+const Button = ({label, iconURL, backgroundColor, textColor, borderColor, onClick}) => {
   return (
     <button
-      className={`flex justify-center items-center gap-2 px-7 py-2 border font-montserrat text-lg leading-none btn
-        	${
-            backgroundColor
-              ? `${backgroundColor} ${textColor} ${borderColor}`
-              : "bg-blue-600 text-white"
-          } rounded-full`}
-      //   onClick={onbtnClick}
-      style={{}}
+      className={`btn flex justify-center items-center gap-2 font-montserrat leading-none
+        ${backgroundColor ? `${backgroundColor} ${textColor} ${borderColor}` : ''}`}
+      onClick={onClick}
     >
       {label}
       {iconURL && (

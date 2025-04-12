@@ -7,10 +7,12 @@ import {Instagram} from "@mui/icons-material"
 import FacebookIcon from "@mui/icons-material/Facebook"
 import EmailIcon from "@mui/icons-material/Email"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
+import FeedbackIcon from "@mui/icons-material/Feedback"
 import nova_scotia_map from "../../../public/nova_scotia_map.png"
 import {Card, Tooltip} from "antd"
 import RadarDotAnimation from "../buttons/RadarDotAnimation"
 import WarningCard from "../cards/WarningCard"
+import Link from 'next/link'
 const Footer = () => {
   // const {footerRef} = useContext(SectionContext)
   const LocationsArr = [
@@ -60,6 +62,7 @@ const Footer = () => {
                 width={700}
                 height={100}
                 className="NS_map_img"
+                alt="Nova Scotia Map"
               />
 
               <div className="Dartmouth_pin pin_common">
@@ -107,8 +110,7 @@ const Footer = () => {
             <Image
               className="logo-img logo-footer"
               src={summertime_bikers_logo_3_no_bg}
-              alt="nothing"
-              // onClick={onLogoClick}
+              alt="Summertime Bikers Logo"
             />
             <ul className="social-item-container">
               <li className="social-item">
@@ -140,6 +142,13 @@ const Footer = () => {
                 >
                   <LinkedInIcon className="social-icons" />
                 </a>
+              </li>
+              <li className="social-item">
+                <Link href="/feedback">
+                  <Tooltip title="Share Your Feedback">
+                    <FeedbackIcon className="social-icons" />
+                  </Tooltip>
+                </Link>
               </li>
             </ul>
           </div>
