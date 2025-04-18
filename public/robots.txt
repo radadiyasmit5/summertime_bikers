@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://summertimebikers.com
+
+# Sitemaps
+Sitemap: https://summertimebikers.com/sitemap.xml
