@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url><loc>https://summertimebikers.com/api/cron</loc><lastmod>2025-04-18T17:21:16.389Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://summertimebikers.com/about</loc><lastmod>2025-04-18T17:21:16.389Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://summertimebikers.com/feedback</loc><lastmod>2025-04-18T17:21:16.389Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://summertimebikers.com/withoutLicence</loc><lastmod>2025-04-18T17:21:16.389Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://summertimebikers.com/withLicence</loc><lastmod>2025-04-18T17:21:16.389Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://summertimebikers.com/formridirectionpage</loc><lastmod>2025-04-18T17:21:16.389Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://summertimebikers.com/estimate</loc><lastmod>2025-04-18T17:21:16.389Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://summertimebikers.com</loc><lastmod>2025-04-18T17:21:16.389Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+</urlset>

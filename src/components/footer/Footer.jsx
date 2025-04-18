@@ -1,30 +1,30 @@
 "use client"
-import React, {useContext} from "react"
+import React, { useContext } from "react"
 import "./footer.scss"
 import summertime_bikers_logo_3_no_bg from "../../../public/summertime_bikers_logo_3_no_bg.png"
 import Image from "../../../node_modules/next/image"
-import {Instagram} from "@mui/icons-material"
+import { Instagram } from "@mui/icons-material"
 import FacebookIcon from "@mui/icons-material/Facebook"
 import EmailIcon from "@mui/icons-material/Email"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 import FeedbackIcon from "@mui/icons-material/Feedback"
 import nova_scotia_map from "../../../public/nova_scotia_map.png"
-import {Card, Tooltip} from "antd"
+import { Card, Tooltip } from "antd"
 import RadarDotAnimation from "../buttons/RadarDotAnimation"
 import WarningCard from "../cards/WarningCard"
 import Link from 'next/link'
 const Footer = () => {
   // const {footerRef} = useContext(SectionContext)
   const LocationsArr = [
-    {location: "Dartmouth", distance: "10km", postal: "B2W 6A3"},
-    {location: "Truro", distance: "91km", postal: "B6L 0C4"},
-    {location: "Bridgewater", distance: "103km", postal: "B4V 3J8"},
-    {location: "Kentville ", distance: "109km", postal: "B4N 0H2"},
-    {location: "Stellarton", distance: "153km", postal: "B0K 1S0"},
-    {location: "Middleton", distance: "154km", postal: "B0S 1P0"},
-    {location: "Antigonish", distance: "212km", postal: "B2G 2E2"},
-    {location: "Yarmouth", distance: "300km", postal: "B5A 2T1"},
-    {location: "Sydney 	", distance: "400km", postal: "B1S 1A8"},
+    { location: "Dartmouth", distance: "10km", postal: "B2W 6A3" },
+    { location: "Truro", distance: "91km", postal: "B6L 0C4" },
+    { location: "Bridgewater", distance: "103km", postal: "B4V 3J8" },
+    { location: "Kentville ", distance: "109km", postal: "B4N 0H2" },
+    { location: "Stellarton", distance: "153km", postal: "B0K 1S0" },
+    { location: "Middleton", distance: "154km", postal: "B0S 1P0" },
+    { location: "Antigonish", distance: "212km", postal: "B2G 2E2" },
+    { location: "Yarmouth", distance: "300km", postal: "B5A 2T1" },
+    { location: "Sydney 	", distance: "400km", postal: "B1S 1A8" },
   ]
   return (
     <section id="footer">
@@ -34,7 +34,7 @@ const Footer = () => {
             If you live near Halifax Citadel,
             <p>
               then this is approximately how far each Location is that does
-              Motorcycle tests.
+              Motorcycle Balance tests.
             </p>
           </h1>
         </div>
@@ -43,8 +43,8 @@ const Footer = () => {
             <table>
               <tbody>
                 {LocationsArr.map((e, i) => (
-                  <tr key={e.location} style={{position: "relative"}}>
-                    <td style={{position: "relative", top: "1.2rem"}}>
+                  <tr key={e.location} style={{ position: "relative" }}>
+                    <td style={{ position: "relative", top: "1.2rem" }}>
                       <RadarDotAnimation num={i + 1} />
                     </td>
                     <td>{e.location}</td>
@@ -159,10 +159,13 @@ const Footer = () => {
           <div className="footer-flext-1-child-2">
             <div className="footer-credits-container">
               <h2 className="text text-white text-2xl text-center">Get In Touch</h2>
-              <p className="text text-white text-m pt-10">
+              <p className="text text-white text-m pt-10 text-center">
                 <a href="mailto:info@summertimebikers.com">
                   info@summertimebikers.com
                 </a>
+              </p>
+              <p className="text text-white text-xs pt-4 company-name text-center">
+                Owned And Operated By SummerTime Bikers Instructional Services
               </p>
             </div>
           </div>
