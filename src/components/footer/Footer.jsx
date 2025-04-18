@@ -159,12 +159,12 @@ const Footer = () => {
           <div className="footer-flext-1-child-2">
             <div className="footer-credits-container">
               <h2 className="text text-white text-2xl text-center">Get In Touch</h2>
-              <p className="text text-white text-m pt-10">
+              <p className="text text-white text-m pt-10 text-center">
                 <a href="mailto:info@summertimebikers.com">
                   info@summertimebikers.com
                 </a>
               </p>
-              <p className="text text-white text-xs pt-4 company-name">
+              <p className="text text-white text-xs pt-4 company-name text-center">
                 Owned And Operated By SummerTime Bikers Instructional Services
               </p>
             </div>

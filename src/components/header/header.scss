@@ -3,7 +3,7 @@
   --main-txt-color: rgb(255, 255, 255);
   --hover-txt-color: rgb(21, 102, 179);
   --promotion-bar-height: 1.7rem;
-  --promotion-bar-height-mobile: 1.4rem;
+  --promotion-bar-height-mobile: 1.7rem; // Keep consistent height across devices
 }
 
 .Header {
@@ -182,7 +182,7 @@
 /* Mobile (up to 767px) */
 @media screen and (max-width: 767px) {
   .Header {
-    top: var(--promotion-bar-height-mobile);
+    top: var(--promotion-bar-height); // Use same height for consistency
     padding: 0;
 
     .Navbar {
@@ -263,6 +263,8 @@
 /* Mobile Small (up to 479px) */
 @media screen and (max-width: 479px) {
   .Header {
+    top: var(--promotion-bar-height); // Use same height for consistency
+
     .Navbar {
       padding: 0.5rem 0.75rem;
     }
