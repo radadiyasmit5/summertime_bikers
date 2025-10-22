@@ -60,7 +60,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/callbackGform" className="nav-link-item">
+            <Link href="/winterBreak" className="nav-link-item">
               Contact us
             </Link>
           </li>
@@ -95,9 +95,9 @@ const Header = () => {
             About
           </Link>
           <Link
-            href="/callbackGform"
+            href="/winterBreak"
             className="nav-link-item"
-            onClick={() => handleNavClick('/callbackGform')}
+            onClick={() => handleNavClick('/winterBreak')}
           >
             Contact us
           </Link>
