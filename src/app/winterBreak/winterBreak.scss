@@ -1,0 +1,177 @@
+@import "../.././components/utils/scss/variables.scss";
+
+.winter-break-page-outer-content {
+    .winterbreak-heading {
+        font-weight: 700;
+        font-size: 2.5rem;
+        margin-top: calc(69px + 1.7rem);
+        padding: 1rem 2rem 0 2rem;
+        line-height: 1.4;
+        text-align: center;
+    }
+
+    .winterbreak-page-main-container {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        height: 100%;
+        padding: 2rem;
+
+        .winterbreak-content-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 2rem;
+            max-width: 60%;
+
+            .winterbreak-message {
+                text-align: center;
+
+                h2 {
+                    font-size: 2.5rem;
+                    font-weight: 700;
+                    margin-bottom: 1.5rem;
+                    color: #0066cc; /* Standard blue color */
+                }
+
+                p {
+                    font-size: 1.5rem;
+                    margin-bottom: 1rem;
+                    color: #333333; /* Dark gray for text */
+                }
+            }
+        }
+
+        .bikerAnimation-container {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            min-height: 60vh;
+        }
+    }
+}
+
+@media #{$media-desktop-1200-1450} {
+    .winter-break-page-outer-content {
+        .winterbreak-heading {
+            font-size: 2.2rem;
+        }
+
+        .winterbreak-page-main-container {
+            .winterbreak-content-container {
+                max-width: 50%;
+                
+                .winterbreak-message {
+                    h2 {
+                        font-size: 2.2rem;
+                    }
+                    
+                    p {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media #{$media-tablet-768-1000} {
+    .winter-break-page-outer-content {
+        .winterbreak-heading {
+            font-size: 2rem;
+            padding: 1rem 1.5rem 0 1.5rem;
+        }
+
+        .winterbreak-page-main-container {
+            flex-direction: column;
+            
+            .winterbreak-content-container {
+                max-width: 100%;
+                padding: 1.5rem;
+            }
+
+            .bikerAnimation-container {
+                min-height: 40vh;
+            }
+        }
+    }
+}
+
+@media #{$media-mobile-480-670} {
+    .winter-break-page-outer-content {
+        .winterbreak-heading {
+            font-size: 1.5rem;
+            padding: 0.75rem;
+            margin-top: calc(50px + 1rem);
+            line-height: 1.3;
+        }
+
+        .winterbreak-page-main-container {
+            padding: 0.75rem;
+            flex-direction: column;
+            
+            .winterbreak-content-container {
+                padding: 1rem;
+                max-width: 100%;
+                order: 1;
+                
+                .winterbreak-message {
+                    h2 {
+                        font-size: 1.75rem;
+                        margin-bottom: 1rem;
+                    }
+                    
+                    p {
+                        font-size: 1.1rem;
+                        line-height: 1.4;
+                        margin-bottom: 0.75rem;
+                    }
+                }
+            }
+
+            .bikerAnimation-container {
+                min-height: 250px;
+                width: 100%;
+                order: 2;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+@media #{$media-mobile-480} {
+    .winter-break-page-outer-content {
+        .winterbreak-heading {
+            font-size: 1.3rem;
+            padding: 0.5rem;
+            margin-top: calc(45px + 0.75rem);
+        }
+
+        .winterbreak-page-main-container {
+            padding: 0.5rem;
+            
+            .winterbreak-content-container {
+                padding: 0.75rem;
+                
+                .winterbreak-message {
+                    h2 {
+                        font-size: 1.5rem;
+                        margin-bottom: 0.75rem;
+                    }
+                    
+                    p {
+                        font-size: 1rem;
+                        line-height: 1.3;
+                        margin-bottom: 0.5rem;
+                    }
+                }
+            }
+
+            .bikerAnimation-container {
+                min-height: 200px;
+                margin-top: 0.75rem;
+            }
+        }
+    }
+}
