@@ -114,7 +114,7 @@ const FormModal = ({ isOpen, onClose }) => {
 
         <div className="modal-footer">
           <p className="footer-text">Ready to start your journey?</p>
-          <Link href="/winterBreak">
+          <Link href="/callbackGform">
             <button className="fill-out-form-btn">
               Fill out Form
             </button>
